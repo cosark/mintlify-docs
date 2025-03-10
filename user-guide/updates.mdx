@@ -1,0 +1,177 @@
+---
+title: 'Application Updates'
+description: 'Keep your applications secure and up-to-date with RepoCloud's update system'
+---
+
+## Keeping Applications Updated
+
+Maintaining up-to-date applications is crucial for security, performance, and accessing the latest features. RepoCloud simplifies this process with a one-click update system that allows you to easily keep your applications current while preserving your data and configurations.
+
+<Frame>
+  ![Application Updates](/images/application-updates.png)
+</Frame>
+
+## RepoCloud's Update Philosophy
+
+RepoCloud maintains a repository of application templates that are regularly updated to include the latest stable versions of all applications in our marketplace. Our approach to updates prioritizes:
+
+<CardGroup cols={2}>
+  <Card title="Security" icon="shield-halved">
+    Security patches and fixes are prioritized in our update workflow
+  </Card>
+  <Card title="Stability" icon="check-double">
+    We deploy stable, tested versions rather than bleeding-edge releases
+  </Card>
+  <Card title="Data Preservation" icon="database">
+    Updates are designed to preserve existing data and configurations
+  </Card>
+  <Card title="Simplicity" icon="wand-magic-sparkles">
+    The update process is user-friendly and requires minimal effort
+  </Card>
+</CardGroup>
+
+## The "Rebuild" Feature
+
+The primary method for updating your applications on RepoCloud is through the "Rebuild" feature, which allows you to update your application to the latest version with a single click.
+
+### How Rebuilding Works
+
+<Steps>
+  <Step title="Prepare Update">
+    RepoCloud creates a new container with the latest version of your application
+  </Step>
+  <Step title="Preserve Data">
+    Your application data stored in persistent volumes is preserved
+  </Step>
+  <Step title="Apply Configuration">
+    Your custom configurations and environment variables are applied to the new container
+  </Step>
+  <Step title="Switch Containers">
+    Traffic is redirected to the new container, minimizing downtime
+  </Step>
+  <Step title="Cleanup">
+    The old container is removed once the update is confirmed successful
+  </Step>
+</Steps>
+
+<Note>
+  The rebuild process typically takes just a few minutes, with only seconds of potential downtime during the final switch.
+</Note>
+
+## Performing an Update
+
+Updating your application is straightforward:
+
+<Steps>
+  <Step title="Access Instance Management">
+    Navigate to your application's management page in the RepoCloud dashboard
+  </Step>
+  <Step title="Check Current Version">
+    View the current version information displayed in the "Overview" section
+  </Step>
+  <Step title="Initiate Rebuild">
+    Click the "Rebuild" button to start the update process
+  </Step>
+  <Step title="Confirm Action">
+    Confirm the rebuild when prompted
+  </Step>
+  <Step title="Monitor Progress">
+    A progress indicator will show the status of the update
+  </Step>
+</Steps>
+
+## Update Frequency
+
+RepoCloud regularly updates application templates, but the frequency varies depending on the application:
+
+- **Critical Security Updates**: Applied as soon as they're available
+- **Major Version Updates**: Typically within 1-2 weeks of stable release
+- **Minor Updates**: Incorporated into our templates on a regular schedule
+
+<Warning>
+  While the rebuild process is designed to be safe, it's always good practice to create a backup of critical data before performing any update.
+</Warning>
+
+## What Gets Updated
+
+When you rebuild an application, the following components are updated:
+
+- **Application Code**: The core application is updated to the latest stable version
+- **Dependencies**: Associated libraries and dependencies are updated
+- **Base System**: The underlying container system may be updated for security and performance
+- **Configuration**: Default configurations may be updated to reflect best practices
+
+The following elements are preserved during updates:
+
+- **User Data**: All user-generated content and database information
+- **Custom Configurations**: Your environment variables and custom settings
+- **Domains**: Any custom domains and SSL certificates remain configured
+- **User Accounts**: Application user accounts and permissions
+
+## Update Notifications
+
+RepoCloud provides several ways to stay informed about available updates:
+
+1. **Dashboard Indicators**: Visual indicators on your dashboard when updates are available
+2. **Email Notifications**: Optional email alerts for critical security updates
+3. **Update Logs**: Detailed logs of what's included in each update
+
+## Major Version Updates
+
+Sometimes, applications undergo significant changes between major versions that require special attention:
+
+<AccordionGroup>
+  <Accordion title="Data Migration">
+    Major version updates may include database schema changes that require data migration. RepoCloud attempts to handle these automatically, but some applications may require manual intervention.
+  </Accordion>
+  <Accordion title="Breaking Changes">
+    Major updates can introduce breaking changes to APIs or features. Review the update notes carefully before proceeding with major version updates.
+  </Accordion>
+  <Accordion title="Plugin Compatibility">
+    For applications that support plugins or extensions, major updates may affect compatibility. You may need to update or replace incompatible plugins after updating.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  For applications with extensive customizations or critical business functions, consider testing the update in a separate instance before updating your production environment.
+</Tip>
+
+## Troubleshooting Updates
+
+If you encounter issues during or after an update:
+
+<AccordionGroup>
+  <Accordion title="Failed Update">
+    If an update fails to complete:
+    - Check the error message in the update logs
+    - Verify that your application has sufficient resources
+    - Attempt the rebuild again after a few minutes
+    - Contact support if the issue persists
+  </Accordion>
+  <Accordion title="Post-Update Issues">
+    If your application behaves unexpectedly after an update:
+    - Check application-specific logs for errors
+    - Verify that your custom configurations are still correctly applied
+    - Consider restoring from a backup if available
+    - For complex issues, consult the application's documentation or contact support
+  </Accordion>
+  <Accordion title="Reverting Updates">
+    RepoCloud does not provide a direct "rollback" feature, as updates often include important security patches. If you need to revert to a previous version:
+    - Restore from a backup if available
+    - Contact support for assistance with complex cases
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Environment Variables" icon="gear" href="/user-guide/environment-variables">
+    Learn how to configure your applications with custom settings
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/user-guide/troubleshooting">
+    Resolve common issues with your applications
+  </Card>
+  <Card title="Platform Apps" icon="server" href="/platforms/introduction">
+    Explore our platform apps for advanced control and customization
+  </Card>
+</CardGroup> 

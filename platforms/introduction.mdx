@@ -1,0 +1,107 @@
+---
+title: 'Platform Apps Overview'
+description: 'Advanced deployment options with full root access and dedicated IPv4'
+---
+
+## Platform Apps
+
+While RepoCloud's standard deployment options meet most users' needs, some scenarios require greater control and flexibility. For these cases, we offer "Platform Apps" - specialized applications that provide enhanced capabilities for advanced users.
+
+<Frame>
+  ![Platform Apps](/images/platform-apps.png)
+</Frame>
+
+## What Are Platform Apps?
+
+Platform Apps are specialized deployment options that provide more control and flexibility than standard RepoCloud applications. They function as platforms-within-a-platform, offering deeper access to the underlying system while still benefiting from RepoCloud's managed infrastructure.
+
+Key features of Platform Apps include:
+
+<CardGroup cols={2}>
+  <Card title="Dedicated IPv4" icon="network-wired">
+    Unlike standard apps, Platform Apps come with their own dedicated IPv4 address
+  </Card>
+  <Card title="Root Access" icon="key">
+    Full root/administrator access to your environment
+  </Card>
+  <Card title="CI/CD Integration" icon="arrows-spin">
+    Built-in continuous integration and deployment pipelines
+  </Card>
+  <Card title="Familiar Interfaces" icon="display">
+    Similar experiences to popular platforms like Heroku, Vercel, or Netlify
+  </Card>
+</CardGroup>
+
+## Available Platform Apps
+
+RepoCloud currently offers two Platform Apps:
+
+<CardGroup cols={2}>
+  <Card title="Coolify" icon="snowflake" href="/platforms/coolify">
+    Self-hosted Heroku/Netlify alternative with a powerful dashboard and extensive application template library
+  </Card>
+  <Card title="Dokploy" icon="docker" href="/platforms/dokploy">
+    Container management platform that simplifies deploying and managing Docker containers
+  </Card>
+</CardGroup>
+
+## When to Use Platform Apps
+
+Platform Apps are ideal for users who:
+
+1. **Need Root Access**: Require shell access for advanced configuration or troubleshooting
+2. **Require Dedicated IP**: Have applications that need their own dedicated IPv4 address
+3. **Deploy Custom Applications**: Want to deploy applications not in our standard marketplace
+4. **Need Advanced CI/CD**: Require integrated continuous integration and deployment workflows
+5. **Prefer Familiar Interfaces**: Want experience similar to Heroku, Vercel, or Netlify
+
+<Note>
+  While Platform Apps offer more control, they also require more technical knowledge to manage effectively. They're best suited for users comfortable with server administration concepts.
+</Note>
+
+## Technical Considerations
+
+When using Platform Apps, be aware of these technical details:
+
+- **Manual Scaling**: Autoscaling is not available for Platform Apps; scaling must be performed manually
+- **Resource Requirements**: Platform Apps typically require more resources than standard applications
+- **User Responsibility**: With greater control comes more responsibility for security and updates
+- **Pricing**: Platform Apps are billed at the same rates as standard applications, but typically consume more resources
+
+## Deployment Process
+
+Deploying a Platform App follows the same general process as standard applications:
+
+<Steps>
+  <Step title="Select Platform App">
+    Choose either Coolify or Dokploy from the marketplace
+  </Step>
+  <Step title="Choose Resources">
+    Select appropriate resources - we recommend at least 2GB RAM for Platform Apps
+  </Step>
+  <Step title="Configure Settings">
+    Set up initial authentication and basic configuration options
+  </Step>
+  <Step title="Deploy">
+    Launch your Platform App instance
+  </Step>
+  <Step title="Access Platform">
+    Use the provided URL to access your Platform App's dashboard
+  </Step>
+  <Step title="Deploy Applications">
+    Use the Platform App's interface to deploy your custom applications
+  </Step>
+</Steps>
+
+## Next Steps
+
+Learn more about our available Platform Apps:
+
+<CardGroup>
+  <Card title="Coolify" icon="snowflake" href="/platforms/coolify">
+    Explore the features and capabilities of Coolify
+  </Card>
+  <Card title="Dokploy" icon="docker" href="/platforms/dokploy">
+    Discover how Dokploy can streamline your container deployments
+  </Card>
+</CardGroup> 

@@ -1,0 +1,262 @@
+---
+title: 'Coolify'
+description: 'Deploy and manage applications with root access using the Coolify platform'
+---
+
+## Coolify on RepoCloud
+
+Coolify is a self-hosted Heroku/Netlify alternative available as a platform app on RepoCloud. It provides a modern, intuitive interface for deploying and managing applications while giving you full root access and a dedicated IPv4 address.
+
+<Frame>
+  ![Coolify Platform](/images/coolify-platform.png)
+</Frame>
+
+## What is Coolify?
+
+Coolify is an open-source, self-hostable platform that simplifies the deployment and management of applications, databases, and services. As a platform app on RepoCloud, Coolify gives you more control and flexibility than standard applications while still benefiting from RepoCloud's managed infrastructure.
+
+<CardGroup cols={2}>
+  <Card title="Full Control" icon="key">
+    Root access and complete control over your environment
+  </Card>
+  <Card title="Familiar Interface" icon="display">
+    Intuitive UI similar to Heroku, Netlify, and Vercel
+  </Card>
+  <Card title="Dedicated IPv4" icon="network-wired">
+    Your own dedicated IP address
+  </Card>
+  <Card title="CI/CD Built-in" icon="arrows-spin">
+    Integrated continuous integration and deployment
+  </Card>
+</CardGroup>
+
+## Key Features
+
+### Application Deployment
+
+Coolify provides a seamless deployment experience for various application types:
+
+- **Frontend Applications**: Deploy static sites built with React, Vue, Angular, etc.
+- **Backend Applications**: Deploy Node.js, Python, PHP, Ruby, Go, and more
+- **Full-Stack Applications**: Deploy combined frontend and backend solutions
+- **Docker Applications**: Deploy any containerized application
+
+### Built-in Templates
+
+Coolify comes with a wide range of pre-configured templates for quick deployment:
+
+- **Web Frameworks**: Next.js, Nuxt, SvelteKit, Laravel, Django, etc.
+- **CMS Platforms**: WordPress, Ghost, Strapi, and more
+- **Tools & Utilities**: Plausible Analytics, n8n, Uptime Kuma, etc.
+- **Custom Templates**: Create and save your own deployment templates
+
+### Database Management
+
+Deploy and manage databases directly within Coolify:
+
+- **Relational Databases**: MySQL, PostgreSQL, MariaDB
+- **NoSQL Databases**: MongoDB, Redis
+- **Search Engines**: Elasticsearch, Meilisearch
+- **Database Management**: Backups, restoration, and monitoring
+
+### Advanced Features
+
+Coolify offers advanced features for a complete deployment platform:
+
+- **Git Integration**: Connect to GitHub, GitLab, or Bitbucket for automatic deployments
+- **Custom Domains**: Connect your own domains with automatic SSL
+- **Environment Variables**: Securely manage environment variables and secrets
+- **Resource Monitoring**: Track resource usage and application performance
+- **Team Collaboration**: Invite team members and manage permissions
+- **Webhooks & API**: Automate workflows with webhooks and API access
+
+## Getting Started with Coolify
+
+### Deploying Coolify on RepoCloud
+
+<Steps>
+  <Step title="Access Marketplace">
+    Navigate to the RepoCloud marketplace and search for "Coolify"
+  </Step>
+  <Step title="Select Resources">
+    Choose resources for your Coolify instance (we recommend at least 2GB RAM / 1 vCPU)
+  </Step>
+  <Step title="Configure Settings">
+    Set up basic configuration options, including admin credentials
+  </Step>
+  <Step title="Deploy">
+    Click "Deploy" to launch your Coolify instance
+  </Step>
+  <Step title="Access Coolify Dashboard">
+    Once deployment is complete, click on the provided URL to access your Coolify dashboard
+  </Step>
+</Steps>
+
+<Note>
+  Coolify requires more resources than some standard applications due to its platform nature. We recommend starting with at least 2GB RAM and scaling up as needed.
+</Note>
+
+### Initial Configuration
+
+After accessing your Coolify dashboard for the first time, complete the initial setup:
+
+<Steps>
+  <Step title="Create Admin Account">
+    Set up your administrator account with a secure password
+  </Step>
+  <Step title="Connect Git Providers">
+    Connect your GitHub, GitLab, or other Git providers for seamless deployment
+  </Step>
+  <Step title="Set Up SSH Keys">
+    Generate or import SSH keys for secure Git access
+  </Step>
+  <Step title="Configure Resources">
+    Define resource limits for your applications and services
+  </Step>
+</Steps>
+
+## Deploying Applications with Coolify
+
+### From Git Repositories
+
+<Steps>
+  <Step title="Create New Application">
+    In the Coolify dashboard, click "New Resource" and select "Application"
+  </Step>
+  <Step title="Select Source">
+    Choose your Git provider and select the repository
+  </Step>
+  <Step title="Configure Build">
+    Set build commands, environment variables, and other settings
+  </Step>
+  <Step title="Deploy">
+    Click "Deploy" to build and deploy your application
+  </Step>
+</Steps>
+
+### Using Templates
+
+<Steps>
+  <Step title="Create from Template">
+    In the Coolify dashboard, click "New Resource" and select "Template"
+  </Step>
+  <Step title="Choose Template">
+    Browse available templates and select one that matches your needs
+  </Step>
+  <Step title="Configure Settings">
+    Adjust settings specific to the template
+  </Step>
+  <Step title="Deploy">
+    Click "Deploy" to provision your application from the template
+  </Step>
+</Steps>
+
+### Managing Deployed Applications
+
+Once your applications are deployed, you can manage them through the Coolify dashboard:
+
+- **Monitoring**: View logs, resource usage, and application status
+- **Updates**: Deploy updates from Git or manually
+- **Scaling**: Adjust resources allocated to each application
+- **Domains**: Manage custom domains and SSL certificates
+- **Environment**: Update environment variables and configuration
+- **Backups**: Create and manage backups of your applications and databases
+
+<Tip>
+  Coolify provides direct terminal access to your applications, allowing you to run commands, troubleshoot issues, and customize your environment beyond what's possible with standard RepoCloud applications.
+</Tip>
+
+## Comparison with Standard Applications
+
+<AccordionGroup>
+  <Accordion title="Control & Access">
+    **Standard RepoCloud Applications**:
+    - No terminal/SSH access
+    - Managed through RepoCloud dashboard only
+    - Limited to container configuration
+    
+    **Coolify Platform**:
+    - Full terminal/SSH access
+    - Root access to the environment
+    - Complete control over configuration
+    - Access to the Docker runtime
+  </Accordion>
+  <Accordion title="Networking">
+    **Standard RepoCloud Applications**:
+    - Shared IP address
+    - Automatic SSL via RepoCloud
+    
+    **Coolify Platform**:
+    - Dedicated IPv4 address
+    - Can run services on any port
+    - Manages its own SSL certificates
+    - Can configure custom networking
+  </Accordion>
+  <Accordion title="Application Support">
+    **Standard RepoCloud Applications**:
+    - Limited to applications in the RepoCloud marketplace
+    
+    **Coolify Platform**:
+    - Deploy any application that can run in a container
+    - Custom Dockerfiles and docker-compose support
+    - Create and save custom templates
+  </Accordion>
+</AccordionGroup>
+
+## Technical Considerations
+
+When using Coolify on RepoCloud, keep these technical considerations in mind:
+
+- **Resource Requirements**: Coolify itself requires resources in addition to what your applications need
+- **Manual Scaling**: Unlike standard RepoCloud applications, Coolify instances don't support autoscaling
+- **Maintenance Responsibility**: With greater control comes more responsibility for security and updates
+- **Backup Management**: You're responsible for backing up your Coolify configuration and data
+
+## Upgrading Coolify
+
+To upgrade your Coolify instance to the latest version:
+
+<Steps>
+  <Step title="Access Terminal">
+    Use the terminal access feature in the RepoCloud dashboard
+  </Step>
+  <Step title="Run Upgrade Command">
+    Execute the Coolify upgrade command as recommended in the Coolify documentation
+  </Step>
+  <Step title="Verify Upgrade">
+    Check the Coolify dashboard to confirm the new version is running
+  </Step>
+</Steps>
+
+## Use Cases for Coolify
+
+Coolify is ideal for users who:
+
+- Need to deploy custom applications not available in the standard RepoCloud marketplace
+- Require more control over their deployment environment
+- Want a Heroku/Netlify-like experience with full control
+- Need to deploy multiple applications and services in a single environment
+- Have advanced CI/CD requirements
+- Require access to terminal commands and system configuration
+
+## Getting Help
+
+If you encounter issues with Coolify:
+
+- **Coolify Documentation**: [https://coolify.io/docs](https://coolify.io/docs)
+- **GitHub Repository**: [https://github.com/coollabsio/coolify](https://github.com/coollabsio/coolify)
+- **RepoCloud Support**: [team@repocloud.io](mailto:team@repocloud.io)
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Dokploy" icon="docker" href="/platforms/dokploy">
+    Explore another platform option for container management
+  </Card>
+  <Card title="Platform Overview" icon="server" href="/platforms/introduction">
+    Learn more about platform apps on RepoCloud
+  </Card>
+  <Card title="Technical Details" icon="gears" href="/platform/technical-details">
+    Understand the technical specifications of the RepoCloud platform
+  </Card>
+</CardGroup> 

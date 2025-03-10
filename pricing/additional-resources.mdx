@@ -1,0 +1,947 @@
+---
+title: 'Additional Resources'
+description: 'Customize your RepoCloud deployment with additional resources to meet your application needs'
+---
+
+## Additional Resources
+
+Beyond our standard [resource tiers](/pricing/tiers) and [elastic autoscaling](/pricing/autoscaling), RepoCloud offers a variety of additional resources that can be added to your account to customize your deployment and enhance performance.
+
+<Frame>
+  ![Additional Resources](/images/additional-resources.png)
+</Frame>
+
+## Storage Options
+
+<CardGroup cols={2}>
+  <Card title="SSD Storage" icon="hard-drive">
+    High-performance SSD storage for your applications and databases
+  </Card>
+  <Card title="Block Storage" icon="database">
+    Persistent block storage for data-intensive applications
+  </Card>
+  <Card title="Object Storage" icon="box-archive">
+    S3-compatible object storage for media, backups, and static assets
+  </Card>
+  <Card title="Backup Storage" icon="floppy-disk">
+    Automated backup solutions with configurable retention policies
+  </Card>
+</CardGroup>
+
+### SSD Storage
+
+All RepoCloud instances come with fast SSD storage included in their base price. However, you can add additional SSD storage to any instance as your needs grow.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Storage Size</Th>
+      <Th>Monthly Price</Th>
+      <Th>Performance</Th>
+      <Th>Best For</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>10GB</Td>
+      <Td>$1.00</Td>
+      <Td>Up to 5,000 IOPS</Td>
+      <Td>Small web applications, blogs</Td>
+    </Tr>
+    <Tr>
+      <Td>25GB</Td>
+      <Td>$2.50</Td>
+      <Td>Up to 6,000 IOPS</Td>
+      <Td>Medium websites, small databases</Td>
+    </Tr>
+    <Tr>
+      <Td>50GB</Td>
+      <Td>$5.00</Td>
+      <Td>Up to 7,500 IOPS</Td>
+      <Td>E-commerce sites, CMS platforms</Td>
+    </Tr>
+    <Tr>
+      <Td>100GB</Td>
+      <Td>$10.00</Td>
+      <Td>Up to 10,000 IOPS</Td>
+      <Td>Large databases, media-rich applications</Td>
+    </Tr>
+    <Tr>
+      <Td>250GB</Td>
+      <Td>$22.50</Td>
+      <Td>Up to 15,000 IOPS</Td>
+      <Td>Data-intensive applications</Td>
+    </Tr>
+    <Tr>
+      <Td>500GB</Td>
+      <Td>$40.00</Td>
+      <Td>Up to 20,000 IOPS</Td>
+      <Td>Enterprise databases, high-traffic applications</Td>
+    </Tr>
+    <Tr>
+      <Td>1TB</Td>
+      <Td>$70.00</Td>
+      <Td>Up to 25,000 IOPS</Td>
+      <Td>Large-scale applications, big data processing</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+<Note>
+  All SSD storage is provisioned with data redundancy to ensure high availability and durability.
+</Note>
+
+### Block Storage
+
+Block storage provides a reliable, high-performance storage option for applications that require consistent I/O performance and low-latency access to data.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Storage Size</Th>
+      <Th>Monthly Price</Th>
+      <Th>Performance</Th>
+      <Th>Best For</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>100GB</Td>
+      <Td>$12.00</Td>
+      <Td>Standard</Td>
+      <Td>Additional application storage, file systems</Td>
+    </Tr>
+    <Tr>
+      <Td>250GB</Td>
+      <Td>$27.50</Td>
+      <Td>Standard</Td>
+      <Td>Database storage, media libraries</Td>
+    </Tr>
+    <Tr>
+      <Td>500GB</Td>
+      <Td>$50.00</Td>
+      <Td>Standard</Td>
+      <Td>High-performance database storage</Td>
+    </Tr>
+    <Tr>
+      <Td>1TB</Td>
+      <Td>$90.00</Td>
+      <Td>Standard</Td>
+      <Td>Enterprise applications, large databases</Td>
+    </Tr>
+    <Tr>
+      <Td>2TB</Td>
+      <Td>$170.00</Td>
+      <Td>Standard</Td>
+      <Td>Data warehousing, large-scale applications</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### Object Storage
+
+Our S3-compatible object storage is ideal for storing unstructured data such as media files, backups, and static assets. It's highly scalable and accessible via API.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Storage Size</Th>
+      <Th>Monthly Price</Th>
+      <Th>Bandwidth Included</Th>
+      <Th>Best For</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>50GB</Td>
+      <Td>$5.00</Td>
+      <Td>100GB</Td>
+      <Td>Static website assets, small media files</Td>
+    </Tr>
+    <Tr>
+      <Td>100GB</Td>
+      <Td>$9.00</Td>
+      <Td>250GB</Td>
+      <Td>Image hosting, document storage</Td>
+    </Tr>
+    <Tr>
+      <Td>500GB</Td>
+      <Td>$40.00</Td>
+      <Td>1TB</Td>
+      <Td>Media libraries, backup storage</Td>
+    </Tr>
+    <Tr>
+      <Td>1TB</Td>
+      <Td>$70.00</Td>
+      <Td>2TB</Td>
+      <Td>Video hosting, large media libraries</Td>
+    </Tr>
+    <Tr>
+      <Td>5TB</Td>
+      <Td>$300.00</Td>
+      <Td>10TB</Td>
+      <Td>Enterprise media storage, archive data</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+<Note>
+  Additional bandwidth beyond what's included is charged at $0.01 per GB.
+</Note>
+
+### Backup Storage
+
+Automated backup storage for your applications and databases, with configurable retention policies and point-in-time recovery options.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Storage Size</Th>
+      <Th>Monthly Price</Th>
+      <Th>Retention Options</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>50GB</Td>
+      <Td>$4.50</Td>
+      <Td>7, 14, or 30 days</Td>
+      <Td>Daily backups, point-in-time recovery</Td>
+    </Tr>
+    <Tr>
+      <Td>100GB</Td>
+      <Td>$8.00</Td>
+      <Td>7, 14, 30, or 60 days</Td>
+      <Td>Daily backups, point-in-time recovery</Td>
+    </Tr>
+    <Tr>
+      <Td>250GB</Td>
+      <Td>$17.50</Td>
+      <Td>7, 14, 30, 60, or 90 days</Td>
+      <Td>Daily backups, point-in-time recovery, export options</Td>
+    </Tr>
+    <Tr>
+      <Td>500GB</Td>
+      <Td>$30.00</Td>
+      <Td>Up to 180 days</Td>
+      <Td>Daily backups, point-in-time recovery, export options</Td>
+    </Tr>
+    <Tr>
+      <Td>1TB</Td>
+      <Td>$50.00</Td>
+      <Td>Up to 365 days</Td>
+      <Td>Daily backups, point-in-time recovery, export options, encryption</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+## Network Resources
+
+<CardGroup cols={2}>
+  <Card title="Bandwidth" icon="network-wired">
+    Additional data transfer capacity for high-traffic applications
+  </Card>
+  <Card title="Static IP Addresses" icon="globe">
+    Dedicated IPv4 and IPv6 addresses for your applications
+  </Card>
+  <Card title="Load Balancers" icon="server">
+    Distribute traffic across multiple instances for improved reliability
+  </Card>
+  <Card title="CDN Integration" icon="bolt">
+    Content delivery network for faster global content distribution
+  </Card>
+</CardGroup>
+
+### Bandwidth
+
+All RepoCloud instances include a generous bandwidth allocation. Additional bandwidth can be purchased for applications with high traffic requirements.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Bandwidth</Th>
+      <Th>Monthly Price</Th>
+      <Th>Overage Rate</Th>
+      <Th>Best For</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>1TB</Td>
+      <Td>$10.00</Td>
+      <Td>$0.01/GB</Td>
+      <Td>Medium traffic websites, small API services</Td>
+    </Tr>
+    <Tr>
+      <Td>5TB</Td>
+      <Td>$40.00</Td>
+      <Td>$0.008/GB</Td>
+      <Td>High-traffic websites, busy API endpoints</Td>
+    </Tr>
+    <Tr>
+      <Td>10TB</Td>
+      <Td>$70.00</Td>
+      <Td>$0.007/GB</Td>
+      <Td>Media streaming, large file downloads</Td>
+    </Tr>
+    <Tr>
+      <Td>25TB</Td>
+      <Td>$150.00</Td>
+      <Td>$0.006/GB</Td>
+      <Td>Content distribution, video platforms</Td>
+    </Tr>
+    <Tr>
+      <Td>50TB</Td>
+      <Td>$250.00</Td>
+      <Td>$0.005/GB</Td>
+      <Td>Enterprise applications, major content providers</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+<Note>
+  Bandwidth is measured based on data transferred out from your instances. Inbound data transfer is free.
+</Note>
+
+### Static IP Addresses
+
+Secure a dedicated IP address for your application to ensure consistent connectivity and support for IP-based authentication or whitelisting.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Type</Th>
+      <Th>Monthly Price</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>IPv4 Address</Td>
+      <Td>$3.50</Td>
+      <Td>Static dedicated IPv4 address</Td>
+    </Tr>
+    <Tr>
+      <Td>IPv6 Address</Td>
+      <Td>$1.00</Td>
+      <Td>Static dedicated IPv6 address</Td>
+    </Tr>
+    <Tr>
+      <Td>IP Address Block (/29)</Td>
+      <Td>$20.00</Td>
+      <Td>Block of 8 IPv4 addresses</Td>
+    </Tr>
+    <Tr>
+      <Td>IPv6 Subnet (/64)</Td>
+      <Td>$5.00</Td>
+      <Td>IPv6 subnet with trillions of addresses</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### Load Balancers
+
+Distribute traffic across multiple instances to improve application availability, performance, and scalability.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Type</Th>
+      <Th>Monthly Price</Th>
+      <Th>Features</Th>
+      <Th>Best For</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Standard Load Balancer</Td>
+      <Td>$10.00</Td>
+      <Td>Layer 4 balancing, health checks</Td>
+      <Td>Basic load distribution, small applications</Td>
+    </Tr>
+    <Tr>
+      <Td>Application Load Balancer</Td>
+      <Td>$20.00</Td>
+      <Td>Layer 7 balancing, SSL termination, path-based routing</Td>
+      <Td>Web applications, microservices</Td>
+    </Tr>
+    <Tr>
+      <Td>Enterprise Load Balancer</Td>
+      <Td>$50.00</Td>
+      <Td>Advanced routing, WAF integration, high throughput</Td>
+      <Td>High-traffic applications, enterprise solutions</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### CDN Integration
+
+Accelerate content delivery with our integrated Content Delivery Network, caching your static assets at edge locations around the world.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Plan</Th>
+      <Th>Monthly Price</Th>
+      <Th>Included Bandwidth</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Basic CDN</Td>
+      <Td>$15.00</Td>
+      <Td>500GB</Td>
+      <Td>Global edge caching, HTTP/HTTPS support</Td>
+    </Tr>
+    <Tr>
+      <Td>Advanced CDN</Td>
+      <Td>$30.00</Td>
+      <Td>2TB</Td>
+      <Td>Custom caching rules, HTTP/2, image optimization</Td>
+    </Tr>
+    <Tr>
+      <Td>Enterprise CDN</Td>
+      <Td>$75.00</Td>
+      <Td>5TB</Td>
+      <Td>Advanced security features, DDoS protection, analytics</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+<Note>
+  Additional CDN bandwidth beyond what's included is charged at $0.08 per GB.
+</Note>
+
+## Database Resources
+
+<CardGroup cols={2}>
+  <Card title="Managed MySQL" icon="database">
+    Fully managed MySQL database instances
+  </Card>
+  <Card title="Managed PostgreSQL" icon="database">
+    Fully managed PostgreSQL database instances
+  </Card>
+  <Card title="Redis Cache" icon="memory">
+    In-memory caching for high-performance applications
+  </Card>
+  <Card title="MongoDB" icon="database">
+    Managed MongoDB instances for document-based storage
+  </Card>
+</CardGroup>
+
+### Managed MySQL
+
+Fully managed MySQL database instances, optimized for performance and reliability.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Plan</Th>
+      <Th>Monthly Price</Th>
+      <Th>Resources</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Micro DB</Td>
+      <Td>$15.00</Td>
+      <Td>1GB RAM, 1vCPU, 10GB Storage</Td>
+      <Td>Automated backups, basic monitoring</Td>
+    </Tr>
+    <Tr>
+      <Td>Small DB</Td>
+      <Td>$30.00</Td>
+      <Td>2GB RAM, 1vCPU, 25GB Storage</Td>
+      <Td>Automated backups, monitoring, daily snapshots</Td>
+    </Tr>
+    <Tr>
+      <Td>Medium DB</Td>
+      <Td>$60.00</Td>
+      <Td>4GB RAM, 2vCPU, 50GB Storage</Td>
+      <Td>Automated backups, advanced monitoring, HA option</Td>
+    </Tr>
+    <Tr>
+      <Td>Large DB</Td>
+      <Td>$120.00</Td>
+      <Td>8GB RAM, 4vCPU, 100GB Storage</Td>
+      <Td>Automated backups, advanced monitoring, HA, read replicas</Td>
+    </Tr>
+    <Tr>
+      <Td>XL DB</Td>
+      <Td>$240.00</Td>
+      <Td>16GB RAM, 8vCPU, 200GB Storage</Td>
+      <Td>Automated backups, advanced monitoring, HA, read replicas, priority support</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### Managed PostgreSQL
+
+Fully managed PostgreSQL database instances, optimized for performance and reliability.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Plan</Th>
+      <Th>Monthly Price</Th>
+      <Th>Resources</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Micro DB</Td>
+      <Td>$18.00</Td>
+      <Td>1GB RAM, 1vCPU, 10GB Storage</Td>
+      <Td>Automated backups, basic monitoring</Td>
+    </Tr>
+    <Tr>
+      <Td>Small DB</Td>
+      <Td>$35.00</Td>
+      <Td>2GB RAM, 1vCPU, 25GB Storage</Td>
+      <Td>Automated backups, monitoring, daily snapshots</Td>
+    </Tr>
+    <Tr>
+      <Td>Medium DB</Td>
+      <Td>$70.00</Td>
+      <Td>4GB RAM, 2vCPU, 50GB Storage</Td>
+      <Td>Automated backups, advanced monitoring, HA option</Td>
+    </Tr>
+    <Tr>
+      <Td>Large DB</Td>
+      <Td>$140.00</Td>
+      <Td>8GB RAM, 4vCPU, 100GB Storage</Td>
+      <Td>Automated backups, advanced monitoring, HA, read replicas</Td>
+    </Tr>
+    <Tr>
+      <Td>XL DB</Td>
+      <Td>$280.00</Td>
+      <Td>16GB RAM, 8vCPU, 200GB Storage</Td>
+      <Td>Automated backups, advanced monitoring, HA, read replicas, priority support</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### Redis Cache
+
+In-memory caching for high-performance applications, fully managed and optimized.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Plan</Th>
+      <Th>Monthly Price</Th>
+      <Th>Memory</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Mini Cache</Td>
+      <Td>$10.00</Td>
+      <Td>256MB</Td>
+      <Td>Single node, basic persistence</Td>
+    </Tr>
+    <Tr>
+      <Td>Small Cache</Td>
+      <Td>$20.00</Td>
+      <Td>1GB</Td>
+      <Td>Single node, persistence, monitoring</Td>
+    </Tr>
+    <Tr>
+      <Td>Medium Cache</Td>
+      <Td>$40.00</Td>
+      <Td>2GB</Td>
+      <Td>Single node, persistence, advanced monitoring</Td>
+    </Tr>
+    <Tr>
+      <Td>Large Cache</Td>
+      <Td>$75.00</Td>
+      <Td>4GB</Td>
+      <Td>High availability, persistence, advanced monitoring</Td>
+    </Tr>
+    <Tr>
+      <Td>XL Cache</Td>
+      <Td>$140.00</Td>
+      <Td>8GB</Td>
+      <Td>High availability, cluster mode, persistence, advanced monitoring</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### MongoDB
+
+Managed MongoDB instances for document-based storage, fully optimized and maintained.
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Plan</Th>
+      <Th>Monthly Price</Th>
+      <Th>Resources</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Micro MongoDB</Td>
+      <Td>$20.00</Td>
+      <Td>1GB RAM, 1vCPU, 10GB Storage</Td>
+      <Td>Automated backups, basic monitoring</Td>
+    </Tr>
+    <Tr>
+      <Td>Small MongoDB</Td>
+      <Td>$40.00</Td>
+      <Td>2GB RAM, 1vCPU, 25GB Storage</Td>
+      <Td>Automated backups, monitoring, daily snapshots</Td>
+    </Tr>
+    <Tr>
+      <Td>Medium MongoDB</Td>
+      <Td>$80.00</Td>
+      <Td>4GB RAM, 2vCPU, 50GB Storage</Td>
+      <Td>Automated backups, advanced monitoring, replica set</Td>
+    </Tr>
+    <Tr>
+      <Td>Large MongoDB</Td>
+      <Td>$160.00</Td>
+      <Td>8GB RAM, 4vCPU, 100GB Storage</Td>
+      <Td>Automated backups, advanced monitoring, replica set, sharding</Td>
+    </Tr>
+    <Tr>
+      <Td>XL MongoDB</Td>
+      <Td>$320.00</Td>
+      <Td>16GB RAM, 8vCPU, 200GB Storage</Td>
+      <Td>Automated backups, advanced monitoring, replica set, sharding, priority support</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+## Security & Compliance
+
+<CardGroup cols={2}>
+  <Card title="SSL Certificates" icon="shield-check">
+    Secure your applications with SSL/TLS certificates
+  </Card>
+  <Card title="Firewall Rules" icon="fire">
+    Configure custom firewall rules for enhanced security
+  </Card>
+  <Card title="VPN Access" icon="lock">
+    Secure VPN access to your instances and databases
+  </Card>
+  <Card title="Compliance Packages" icon="clipboard-check">
+    Add-ons for regulatory compliance requirements
+  </Card>
+</CardGroup>
+
+### SSL Certificates
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Type</Th>
+      <Th>Price</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Let's Encrypt SSL</Td>
+      <Td>Free</Td>
+      <Td>Auto-renewing certificates, wildcard support</Td>
+    </Tr>
+    <Tr>
+      <Td>Standard SSL</Td>
+      <Td>$50.00/year</Td>
+      <Td>Business validation, wildcard support, priority support</Td>
+    </Tr>
+    <Tr>
+      <Td>EV SSL</Td>
+      <Td>$200.00/year</Td>
+      <Td>Extended validation, green address bar, highest trust level</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### Firewall Rules
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Plan</Th>
+      <Th>Monthly Price</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Basic Firewall</Td>
+      <Td>Included</Td>
+      <Td>Up to 10 custom rules, basic traffic filtering</Td>
+    </Tr>
+    <Tr>
+      <Td>Advanced Firewall</Td>
+      <Td>$15.00</Td>
+      <Td>Up to 50 custom rules, advanced filtering, rate limiting</Td>
+    </Tr>
+    <Tr>
+      <Td>Enterprise Firewall</Td>
+      <Td>$40.00</Td>
+      <Td>Unlimited rules, DDoS protection, advanced security features</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### VPN Access
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Plan</Th>
+      <Th>Monthly Price</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Basic VPN</Td>
+      <Td>$10.00</Td>
+      <Td>Up to 5 concurrent connections, OpenVPN support</Td>
+    </Tr>
+    <Tr>
+      <Td>Team VPN</Td>
+      <Td>$25.00</Td>
+      <Td>Up to 20 concurrent connections, OpenVPN and WireGuard support</Td>
+    </Tr>
+    <Tr>
+      <Td>Enterprise VPN</Td>
+      <Td>$50.00</Td>
+      <Td>Unlimited connections, multiple protocols, dedicated IP</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### Compliance Packages
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Compliance Type</Th>
+      <Th>Monthly Price</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>GDPR Compliance</Td>
+      <Td>$30.00</Td>
+      <Td>Data processing agreements, EU data residency, compliance documentation</Td>
+    </Tr>
+    <Tr>
+      <Td>HIPAA Compliance</Td>
+      <Td>$100.00</Td>
+      <Td>BAA, encryption, access controls, audit logs, compliance documentation</Td>
+    </Tr>
+    <Tr>
+      <Td>PCI DSS Compliance</Td>
+      <Td>$75.00</Td>
+      <Td>Security controls, network isolation, vulnerability scanning, compliance reporting</Td>
+    </Tr>
+    <Tr>
+      <Td>SOC 2 Compliance</Td>
+      <Td>$125.00</Td>
+      <Td>Enhanced security controls, audit logs, compliance documentation, regular assessments</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+## Support & Management
+
+<CardGroup cols={2}>
+  <Card title="Support Plans" icon="headset">
+    Enhanced support options for your RepoCloud deployment
+  </Card>
+  <Card title="Managed Services" icon="wrench">
+    Let our experts manage your infrastructure for you
+  </Card>
+  <Card title="Monitoring" icon="chart-line">
+    Advanced monitoring and alerting solutions
+  </Card>
+  <Card title="Professional Services" icon="user-tie">
+    Custom development and consulting services
+  </Card>
+</CardGroup>
+
+### Support Plans
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Plan</Th>
+      <Th>Monthly Price</Th>
+      <Th>Response Time</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Basic Support</Td>
+      <Td>Included</Td>
+      <Td>24-48 hours</Td>
+      <Td>Email support, knowledge base, community forums</Td>
+    </Tr>
+    <Tr>
+      <Td>Developer Support</Td>
+      <Td>$29.00</Td>
+      <Td>12 hours</Td>
+      <Td>Email and ticket support, knowledge base, community forums</Td>
+    </Tr>
+    <Tr>
+      <Td>Business Support</Td>
+      <Td>$99.00</Td>
+      <Td>4 hours</Td>
+      <Td>Email, ticket, and phone support, knowledge base, community forums</Td>
+    </Tr>
+    <Tr>
+      <Td>Enterprise Support</Td>
+      <Td>$299.00</Td>
+      <Td>1 hour</Td>
+      <Td>24/7 email, ticket, and phone support, dedicated account manager, priority response</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### Managed Services
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Service</Th>
+      <Th>Monthly Price</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Managed Updates</Td>
+      <Td>$50.00</Td>
+      <Td>Scheduled OS and application updates, security patches</Td>
+    </Tr>
+    <Tr>
+      <Td>Database Management</Td>
+      <Td>$75.00</Td>
+      <Td>Database optimization, performance tuning, backup verification</Td>
+    </Tr>
+    <Tr>
+      <Td>Security Management</Td>
+      <Td>$100.00</Td>
+      <Td>Security audits, vulnerability scanning, remediation</Td>
+    </Tr>
+    <Tr>
+      <Td>Full Stack Management</Td>
+      <Td>$200.00</Td>
+      <Td>Complete infrastructure management, 24/7 monitoring, proactive optimization</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+### Advanced Monitoring
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Plan</Th>
+      <Th>Monthly Price</Th>
+      <Th>Features</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Basic Monitoring</Td>
+      <Td>Included</Td>
+      <Td>Resource usage, uptime monitoring, basic alerts</Td>
+    </Tr>
+    <Tr>
+      <Td>Advanced Monitoring</Td>
+      <Td>$25.00</Td>
+      <Td>Detailed metrics, custom dashboards, advanced alerts, 30-day history</Td>
+    </Tr>
+    <Tr>
+      <Td>Enterprise Monitoring</Td>
+      <Td>$75.00</Td>
+      <Td>Full-stack monitoring, APM, distributed tracing, custom metrics, 90-day history</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+## How to Add Resources
+
+Adding resources to your RepoCloud deployment is simple:
+
+<Steps>
+  <Step title="Access Resource Management">
+    Navigate to your application's management page in the RepoCloud dashboard and select "Resources"
+  </Step>
+  <Step title="Select Resource Type">
+    Choose the type of resource you want to add from the available categories
+  </Step>
+  <Step title="Configure Resource">
+    Select the specific plan or configuration for your resource
+  </Step>
+  <Step title="Review Changes">
+    Review the resource details, pricing, and impact on your overall deployment
+  </Step>
+  <Step title="Confirm and Apply">
+    Confirm your selection and apply the changes to add the resource to your deployment
+  </Step>
+</Steps>
+
+<Note>
+  Most resources can be added instantly without downtime. Some resources may require a brief restart of your application.
+</Note>
+
+## Resource Management Best Practices
+
+To optimize your RepoCloud deployment and manage costs effectively:
+
+1. **Regular Monitoring**: Review your resource usage regularly to identify opportunities for optimization
+2. **Right-sizing**: Choose resources that match your actual needs rather than over-provisioning
+3. **Consider Autoscaling**: Use [elastic autoscaling](/pricing/autoscaling) when appropriate to balance performance and cost
+4. **Scheduled Resources**: For test or development environments, consider scheduling resources to be available only during working hours
+5. **Resource Alerts**: Set up alerts for resource usage to avoid unexpected costs
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I change my resources after deployment?">
+    Yes, most resources can be adjusted at any time. You can scale up or down as needed, add new resources, or remove existing ones. Changes typically take effect within minutes.
+  </Accordion>
+  <Accordion title="How am I billed for additional resources?">
+    Additional resources are billed on a monthly basis, prorated for the time they are active. If you add a resource in the middle of a billing cycle, you'll only be charged for the days it was active.
+  </Accordion>
+  <Accordion title="Are there long-term commitments for additional resources?">
+    No, most additional resources can be added or removed at any time without long-term commitments. Some services like annual SSL certificates have a minimum duration by nature.
+  </Accordion>
+  <Accordion title="Can I preview the cost impact before adding resources?">
+    Yes, the RepoCloud dashboard provides a cost estimate for any resource changes before you confirm them, allowing you to understand the financial impact.
+  </Accordion>
+  <Accordion title="Are there discounts for adding multiple resources?">
+    Yes, volume discounts are available for customers with multiple instances or resources. Contact our sales team for details on enterprise pricing.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Resource Tiers" icon="layer-group" href="/pricing/tiers">
+    Explore our fixed resource tier options
+  </Card>
+  <Card title="Elastic Autoscaling" icon="arrows-up-down" href="/pricing/autoscaling">
+    Learn about our dynamic scaling options
+  </Card>
+  <Card title="Price Comparison" icon="scale-balanced" href="/pricing/comparison">
+    Compare RepoCloud pricing with other cloud providers
+  </Card>
+</CardGroup> 

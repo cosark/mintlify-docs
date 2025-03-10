@@ -1,55 +1,106 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "RepoCloud Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0A82CC",
+    "light": "#3DB0FF",
+    "dark": "#0665A3"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Getting Started",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Introduction",
             "pages": [
               "introduction",
-              "quickstart",
-              "development"
+              "quickstart"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Platform Overview",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "platform/how-it-works",
+              "platform/technical-details",
+              "platform/supported-apps"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "User Guide",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Deployments",
             "pages": [
-              "api-reference/introduction"
+              "user-guide/deployment-basics",
+              "user-guide/one-click-deployment",
+              "user-guide/managing-instances",
+              "user-guide/custom-domains"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Instance Management",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "user-guide/scaling",
+              "user-guide/updates",
+              "user-guide/environment-variables",
+              "user-guide/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Platform Apps",
+        "groups": [
+          {
+            "group": "Advanced Control",
+            "pages": [
+              "platforms/introduction",
+              "platforms/coolify",
+              "platforms/dokploy"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Pricing & Billing",
+        "groups": [
+          {
+            "group": "Pricing",
+            "pages": [
+              "pricing/overview",
+              "pricing/tiers",
+              "pricing/comparison"
+            ]
+          },
+          {
+            "group": "Billing",
+            "pages": [
+              "pricing/autoscaling",
+              "pricing/additional-resources"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resources",
+        "groups": [
+          {
+            "group": "Program",
+            "pages": [
+              "resources/affiliate-program",
+              "resources/submit-app"
+            ]
+          },
+          {
+            "group": "Legal",
+            "pages": [
+              "resources/privacy-policy",
+              "resources/terms-conditions"
             ]
           }
         ]
@@ -58,18 +109,18 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "RepoCloud Home",
+          "href": "https://repocloud.io",
+          "icon": "house"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "Marketplace",
+          "href": "https://repocloud.io/marketplace",
+          "icon": "store"
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://repocloud.io/blog",
           "icon": "newspaper"
         }
       ]
@@ -83,20 +134,20 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:team@repocloud.io"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://repocloud.io/dashboard"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "twitter": "https://twitter.com/repocloudio",
+      "github": "https://github.com/repocloud",
+      "linkedin": "https://linkedin.com/company/repocloud"
     }
   }
 }

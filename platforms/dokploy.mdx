@@ -1,0 +1,291 @@
+---
+title: 'Dokploy'
+description: 'A container management platform with dedicated IPv4 for deploying and managing Docker applications'
+---
+
+## Dokploy on RepoCloud
+
+Dokploy is a powerful container management platform available as a platform app on RepoCloud. It provides a streamlined experience for deploying and managing Docker applications with the benefits of root access and a dedicated IPv4 address.
+
+<Frame>
+  ![Dokploy Platform](/images/dokploy-platform.png)
+</Frame>
+
+## What is Dokploy?
+
+Dokploy is a self-hosted platform designed specifically for Docker container management, offering a simplified interface for application deployment, monitoring, and scaling. It combines the power of Docker with an intuitive UI, making it accessible to developers of all experience levels.
+
+<CardGroup cols={2}>
+  <Card title="Container-Focused" icon="docker">
+    Purpose-built for Docker container management
+  </Card>
+  <Card title="Full Control" icon="key">
+    Root access and complete environment control
+  </Card>
+  <Card title="Dedicated IP" icon="network-wired">
+    Your own dedicated IPv4 address
+  </Card>
+  <Card title="Simple UI" icon="display">
+    Intuitive interface for container management
+  </Card>
+</CardGroup>
+
+## Key Features
+
+### Container Management
+
+Dokploy excels at managing Docker containers with features like:
+
+- **One-Click Deployments**: Deploy containers with a simple interface
+- **Container Monitoring**: Real-time monitoring of container status and logs
+- **Container Orchestration**: Manage multiple containers and their relationships
+- **Volume Management**: Easily manage persistent storage for your containers
+- **Network Controls**: Configure container networking and port mappings
+
+### Application Templates
+
+Dokploy provides a library of application templates for quick deployment:
+
+- **Web Applications**: Ready-to-deploy web servers and applications
+- **Databases**: MySQL, PostgreSQL, MongoDB, and more
+- **Development Tools**: CI/CD tools, code servers, and utilities
+- **Media Servers**: Plex, Jellyfin, and other media applications
+- **Custom Templates**: Create and save your own container templates
+
+### Advanced Features
+
+Dokploy includes advanced features for enhanced container management:
+
+- **Resource Limits**: Define CPU, memory, and storage limits for containers
+- **Environment Variables**: Manage environment variables and secrets
+- **Auto-Restart Policies**: Configure container restart behaviors
+- **Custom Networks**: Create isolated networks for container groups
+- **Persistent Storage**: Manage volumes for data persistence
+- **Scheduling**: Set up container scheduling and maintenance windows
+
+## Getting Started with Dokploy
+
+### Deploying Dokploy on RepoCloud
+
+<Steps>
+  <Step title="Access Marketplace">
+    Navigate to the RepoCloud marketplace and search for "Dokploy"
+  </Step>
+  <Step title="Select Resources">
+    Choose resources for your Dokploy instance (we recommend at least 2GB RAM / 1 vCPU)
+  </Step>
+  <Step title="Configure Settings">
+    Set up basic configuration options, including admin credentials
+  </Step>
+  <Step title="Deploy">
+    Click "Deploy" to launch your Dokploy instance
+  </Step>
+  <Step title="Access Dokploy Dashboard">
+    Once deployment is complete, click on the provided URL to access your Dokploy dashboard
+  </Step>
+</Steps>
+
+<Note>
+  Dokploy requires more resources than standard applications due to its platform nature. As your container count grows, you may need to scale up your Dokploy instance.
+</Note>
+
+### Initial Configuration
+
+After accessing your Dokploy dashboard for the first time, complete the initial setup:
+
+<Steps>
+  <Step title="Create Admin Account">
+    Set up your administrator account with a secure password
+  </Step>
+  <Step title="Configure Storage">
+    Set up storage locations for container data and volumes
+  </Step>
+  <Step title="Set Default Networks">
+    Configure default network settings for your containers
+  </Step>
+  <Step title="Import or Create Templates">
+    Import existing Docker Compose files or create new container templates
+  </Step>
+</Steps>
+
+## Deploying Applications with Dokploy
+
+### Using the Container Wizard
+
+<Steps>
+  <Step title="Access Container Wizard">
+    In the Dokploy dashboard, click "New Container" to open the container wizard
+  </Step>
+  <Step title="Select Image">
+    Choose a Docker image from Docker Hub or a custom registry
+  </Step>
+  <Step title="Configure Container">
+    Set container name, port mappings, volumes, and environment variables
+  </Step>
+  <Step title="Set Resource Limits">
+    Define CPU and memory limits for your container
+  </Step>
+  <Step title="Deploy">
+    Click "Deploy" to launch your container
+  </Step>
+</Steps>
+
+### Using Application Templates
+
+<Steps>
+  <Step title="Access Templates">
+    In the Dokploy dashboard, navigate to the "Templates" section
+  </Step>
+  <Step title="Select Template">
+    Browse available templates and select one that matches your needs
+  </Step>
+  <Step title="Configure Settings">
+    Adjust settings specific to the selected template
+  </Step>
+  <Step title="Deploy">
+    Click "Deploy" to provision your application from the template
+  </Step>
+</Steps>
+
+### Using Docker Compose
+
+<Steps>
+  <Step title="Prepare Docker Compose File">
+    Create or modify a Docker Compose YAML file
+  </Step>
+  <Step title="Import Compose File">
+    In the Dokploy dashboard, go to "Stacks" and click "Import Compose"
+  </Step>
+  <Step title="Upload File">
+    Upload your Docker Compose file
+  </Step>
+  <Step title="Configure Stack">
+    Adjust any settings if needed
+  </Step>
+  <Step title="Deploy Stack">
+    Click "Deploy" to launch all services defined in the Compose file
+  </Step>
+</Steps>
+
+### Managing Deployed Applications
+
+Once your containers are deployed, you can manage them through the Dokploy dashboard:
+
+- **Container Management**: Start, stop, restart, or delete containers
+- **Logs and Monitoring**: View real-time logs and resource usage
+- **Configuration Updates**: Update container settings and environment variables
+- **Volume Management**: Manage persistent storage and backups
+- **Network Configuration**: Adjust network settings and port mappings
+- **Terminal Access**: Access container shells for direct interaction
+
+<Tip>
+  Dokploy provides terminal access to both the Dokploy host and individual containers, giving you powerful troubleshooting and management capabilities.
+</Tip>
+
+## Comparison with Standard Applications
+
+<AccordionGroup>
+  <Accordion title="Control & Management">
+    **Standard RepoCloud Applications**:
+    - No terminal/SSH access
+    - Managed through RepoCloud dashboard only
+    - Limited to provided configuration options
+    
+    **Dokploy Platform**:
+    - Full terminal/SSH access
+    - Root access to the host environment
+    - Direct container management
+    - Access to Docker CLI and other tools
+  </Accordion>
+  <Accordion title="Networking">
+    **Standard RepoCloud Applications**:
+    - Shared IP address
+    - Limited port exposure
+    
+    **Dokploy Platform**:
+    - Dedicated IPv4 address
+    - Full control over port exposure
+    - Custom network creation
+    - Advanced network configurations
+  </Accordion>
+  <Accordion title="Application Support">
+    **Standard RepoCloud Applications**:
+    - Limited to applications in the RepoCloud marketplace
+    
+    **Dokploy Platform**:
+    - Deploy any Docker container
+    - Custom Docker images support
+    - Docker Compose support
+    - Multi-container applications
+  </Accordion>
+</AccordionGroup>
+
+## Technical Considerations
+
+When using Dokploy on RepoCloud, keep these technical considerations in mind:
+
+- **Resource Planning**: Plan resources based on the number and type of containers you'll be running
+- **Manual Scaling**: Dokploy instances don't support autoscaling and must be manually scaled
+- **Security Responsibilities**: With root access comes responsibility for security hardening
+- **Backup Strategy**: Implement a backup strategy for your container data
+- **Update Management**: You're responsible for keeping containers updated
+
+## Advanced Usage
+
+### Command Line Access
+
+Dokploy provides terminal access to both the host system and individual containers:
+
+- **Host Terminal**: Access the Dokploy host to run Docker commands, install tools, and manage the system
+- **Container Terminal**: Access individual container shells for application-specific operations
+
+### Custom Docker Images
+
+You can use custom Docker images with Dokploy:
+
+1. Build your Docker image locally or in a CI/CD pipeline
+2. Push the image to Docker Hub or a private registry
+3. Configure Dokploy to authenticate with your registry if it's private
+4. Deploy containers using your custom image
+
+### Persistent Data Management
+
+Dokploy offers several options for managing persistent data:
+
+- **Named Volumes**: Create and manage Docker volumes for data persistence
+- **Bind Mounts**: Mount host directories into containers
+- **Backup Solutions**: Implement backup solutions using Docker volume backup tools
+- **External Storage**: Connect to external storage services for data persistence
+
+## Use Cases for Dokploy
+
+Dokploy is ideal for users who:
+
+- Need to deploy custom Docker containers
+- Prefer a container-focused management interface
+- Require full control over container configuration
+- Need to deploy applications not available in the standard RepoCloud marketplace
+- Want to manage multiple related containers
+- Have experience with Docker and container management
+
+## Getting Help
+
+If you encounter issues with Dokploy:
+
+- **Dokploy Documentation**: Available through the Dokploy dashboard
+- **Docker Documentation**: [https://docs.docker.com](https://docs.docker.com)
+- **RepoCloud Support**: [team@repocloud.io](mailto:team@repocloud.io)
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Coolify" icon="snowflake" href="/platforms/coolify">
+    Explore another platform option with a focus on full-stack applications
+  </Card>
+  <Card title="Platform Overview" icon="server" href="/platforms/introduction">
+    Learn more about platform apps on RepoCloud
+  </Card>
+  <Card title="Technical Details" icon="gears" href="/platform/technical-details">
+    Understand the technical specifications of the RepoCloud platform
+  </Card>
+</CardGroup> 

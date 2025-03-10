@@ -1,0 +1,158 @@
+---
+title: 'Pricing Overview'
+description: 'Understanding RepoCloud's cost-efficient pricing model'
+---
+
+## Pricing Philosophy
+
+RepoCloud is built on the principle that cloud hosting should be powerful, flexible, and affordable. Our pricing model is designed to provide significant cost savings compared to major cloud providers while delivering enterprise-grade performance and reliability.
+
+<Frame>
+  ![RepoCloud Pricing](/images/pricing-comparison.png)
+</Frame>
+
+## Elastic Hourly Autoscaling
+
+Our signature pricing feature is Elastic Hourly Autoscaling, which allows you to pay only for what you actually use.
+
+<CardGroup cols={2}>
+  <Card title="Traditional Cloud Pricing" icon="server">
+    With traditional cloud providers, you pay for peak capacity 24/7, even when your server is idle, leading to wasted resources and higher costs.
+  </Card>
+  <Card title="RepoCloud Autoscaling" icon="chart-line">
+    Our system dynamically adjusts resources based on actual usage, scaling up instantly when needed and down when not required, with per-hour metering.
+  </Card>
+</CardGroup>
+
+### How Autoscaling Works
+
+1. Your application starts with minimum necessary resources
+2. As demand increases, resources scale up instantly without downtime
+3. During periods of low activity, resources scale down automatically
+4. You're billed hourly based on actual resource consumption
+
+**Example Savings:** Instead of allocating a fixed 16GB RAM instance at $48/month, RepoCloud might adjust your actual usage down to an average of 1GB RAM at $3/month during low-traffic periods, potentially resulting in up to 93% cost savings.
+
+## Resource Tiers
+
+If you prefer predictable, fixed pricing, we offer set resource tiers that you can choose from:
+
+| Tier | RAM | vCPU | SSD Storage | Hourly Price | Monthly Price |
+|------|-----|------|-------------|--------------|---------------|
+| 1    | 1 GB | 1    | 20 GB       | $0.0042      | $3.00         |
+| 2    | 2 GB | 1    | 50 GB       | $0.0083      | $6.00         |
+| 3    | 2 GB | 2    | 60 GB       | $0.0125      | $9.00         |
+| 4    | 4 GB | 2    | 80 GB       | $0.0167      | $12.00        |
+| 5    | 8 GB | 4    | 160 GB      | $0.0333      | $24.00        |
+| 6    | 16 GB | 8   | 240 GB      | $0.0667      | $48.00        |
+| 7    | 32 GB | 16  | 360 GB      | $0.1333      | $96.00        |
+
+<Note>
+  All plans include powerful Intel vCPU, NVMe SSD, DDR4 ECC RAM, SSL certificates, custom domain support, 1 Gbps connections, and unlimited bandwidth.
+</Note>
+
+## Additional Resources
+
+Beyond the base resource tiers, you can also add:
+
+- **Additional NVMe SSD storage**: $0.10 per GB per month
+- **Data Transfer In**: $0 per GB (free)
+- **Data Transfer Out**: $0.10 per GB
+
+## Billing Model
+
+RepoCloud operates on a simple, transparent billing model:
+
+- **Hourly Billing**: Resources are metered and billed on an hourly basis
+- **Minimum Charge**: $3.00 per month minimum per application
+- **No Hidden Fees**: What you see is what you pay
+- **No Long-term Contracts**: Pay as you go with no lock-in
+
+When you sign up, you'll receive free deployment hours to test and run your applications. Once these are exhausted, standard pricing applies.
+
+## Cost Comparison
+
+RepoCloud's pricing is designed to be approximately half that of major cloud providers:
+
+<Tabs>
+  <Tab title="1GB RAM / 1 vCPU">
+    | Cloud Provider | RAM | vCPU | Monthly Cost |
+    |----------------|-----|------|-------------|
+    | RepoCloud      | 1 GB | 1    | $3.00       |
+    | AWS EC2        | 1 GB | 1    | $6.00       |
+    | Azure          | 1 GB | 1    | $6.00       |
+    | DigitalOcean   | 1 GB | 1    | $6.00       |
+    | Google Cloud   | 1 GB | 1    | $28.00      |
+    | Railway        | 1 GB | 1    | $36.00      |
+    | Render         | 0.5 GB | 0.5  | $7.00      |
+  </Tab>
+  <Tab title="4GB RAM / 2 vCPU">
+    | Cloud Provider | RAM | vCPU | Monthly Cost |
+    |----------------|-----|------|-------------|
+    | RepoCloud      | 4 GB | 2    | $12.00      |
+    | AWS EC2        | 4 GB | 2    | $24.00      |
+    | Azure          | 4 GB | 2    | $24.00      |
+    | DigitalOcean   | 4 GB | 2    | $24.00      |
+    | Google Cloud   | 4 GB | 2    | $64.00      |
+    | Railway        | 4 GB | 2    | $100.00     |
+    | Render         | 4 GB | 2    | $85.00      |
+  </Tab>
+  <Tab title="16GB RAM / 8 vCPU">
+    | Cloud Provider | RAM | vCPU | Monthly Cost |
+    |----------------|-----|------|-------------|
+    | RepoCloud      | 16 GB | 8   | $48.00      |
+    | AWS EC2        | 16 GB | 4   | $96.00      |
+    | Azure          | 16 GB | 4   | $96.00      |
+    | DigitalOcean   | 16 GB | 8   | $96.00      |
+    | Google Cloud   | 16 GB | 8   | $248.00     |
+    | Railway        | 16 GB | 8   | $320.00     |
+    | Render         | 16 GB | 4   | $225.00     |
+  </Tab>
+</Tabs>
+
+## Choosing the Right Plan
+
+When selecting a plan, consider these factors:
+
+1. **Application Requirements**: Different applications have different resource needs
+2. **Expected Traffic**: Higher traffic requires more resources
+3. **Usage Patterns**: Variable usage benefits most from autoscaling
+4. **Budget Constraints**: Fixed plans offer predictable monthly costs
+
+<Tip>
+  For most users, we recommend starting with autoscaling enabled. This allows your application to find its natural resource usage pattern, and you can switch to a fixed plan later if desired.
+</Tip>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I change plans after deployment?">
+    Yes, you can switch between resource tiers or toggle autoscaling at any time through the dashboard.
+  </Accordion>
+  <Accordion title="Is there a free trial?">
+    Yes, new accounts receive free deployment hours to test the platform.
+  </Accordion>
+  <Accordion title="How is billing calculated for autoscaling?">
+    With autoscaling, we measure your resource usage hourly and charge based on the resources consumed during that hour.
+  </Accordion>
+  <Accordion title="Are there any long-term commitments?">
+    No, RepoCloud operates on a pay-as-you-go model with no long-term contracts.
+  </Accordion>
+  <Accordion title="What payment methods are accepted?">
+    We accept all major credit cards and some cryptocurrency payments.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Tier Details" icon="layer-group" href="/pricing/tiers">
+    Explore detailed specifications for each resource tier
+  </Card>
+  <Card title="Autoscaling" icon="chart-line" href="/pricing/autoscaling">
+    Learn more about how autoscaling works
+  </Card>
+  <Card title="Price Comparison" icon="scale-balanced" href="/pricing/comparison">
+    See detailed comparisons with other cloud providers
+  </Card>
+</CardGroup> 

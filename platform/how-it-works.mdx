@@ -1,0 +1,100 @@
+---
+title: 'How RepoCloud Works'
+description: 'Understanding the architecture and workflow of the RepoCloud platform'
+---
+
+## Platform Architecture
+
+RepoCloud simplifies the deployment and management of open-source applications through a streamlined architecture designed for performance, reliability, and ease of use.
+
+### Container-Based Deployments
+
+All applications on RepoCloud are deployed as containerized instances, which provides several benefits:
+
+<CardGroup cols={2}>
+  <Card title="Isolation" icon="shield-halved">
+    Each application runs in its own isolated environment for enhanced security
+  </Card>
+  <Card title="Resource Efficiency" icon="leaf">
+    Containers share system resources efficiently while maintaining separation
+  </Card>
+  <Card title="Consistent Environments" icon="clone">
+    Applications run in identical environments across development and production
+  </Card>
+  <Card title="Fast Deployment" icon="bolt">
+    Containers can be deployed and scaled in seconds rather than minutes
+  </Card>
+</CardGroup>
+
+### Managed Infrastructure
+
+RepoCloud handles the underlying infrastructure so you don't have to:
+
+- **Automated updates**: Security patches and application updates are managed automatically
+- **Resource management**: CPU, RAM, and storage are allocated dynamically based on your needs
+- **High availability**: Infrastructure is designed for redundancy and reliability
+- **Network optimization**: Fast connections with built-in CDN capabilities
+
+## Deployment Workflow
+
+<Steps>
+  <Step title="Application Selection">
+    Browse our catalog of over 200 pre-configured applications and select the one you want to deploy.
+  </Step>
+  <Step title="Configuration">
+    Configure basic settings like resource allocation, environment variables, and domain settings. Most applications have sensible defaults that work out of the box.
+  </Step>
+  <Step title="Deployment">
+    RepoCloud automatically provisions the necessary infrastructure, deploys your application container, and configures networking and storage.
+  </Step>
+  <Step title="Management">
+    Once deployed, you can manage your application through our intuitive dashboard, including scaling, updates, backups, and monitoring.
+  </Step>
+</Steps>
+
+## Technical Implementation
+
+Under the hood, RepoCloud uses industry-standard technology to ensure reliable and efficient operations:
+
+- **Docker containers**: Applications are packaged as Docker containers for consistency and portability
+- **Orchestration**: We use advanced container orchestration to manage deployments, scaling, and availability
+- **Storage solutions**: Persistent data is stored using high-performance storage systems with automated backups
+- **Networking layer**: Custom networking stack with automatic SSL certificate management and DNS configuration
+
+<Note>
+  While RepoCloud abstracts away most of the technical complexity, users do not have direct terminal access (SSH/CLI) to their instances. This design choice allows us to maintain security, reliability, and simplified management.
+</Note>
+
+## Unique Features
+
+### Elastic Hourly Autoscaling
+
+Our elastic hourly autoscaling feature continuously monitors your application's resource usage and automatically adjusts resources as needed:
+
+- Scales up instantly when demand increases
+- Scales down when resources aren't needed
+- Charges only for the resources you actually use
+- Provides significant cost savings compared to fixed-size instances
+
+### Dynamic Application Updates
+
+RepoCloud ensures your applications always run the latest stable versions:
+
+1. We maintain an updated repository of application templates
+2. When you click "Rebuild," your instance updates to the latest version
+3. Your data remains intact during the update process
+4. The update process typically takes only a few minutes
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Technical Details" icon="gears" href="/platform/technical-details">
+    Explore detailed technical specifications of the RepoCloud platform
+  </Card>
+  <Card title="Supported Applications" icon="apps" href="/platform/supported-apps">
+    Browse the catalog of applications available for one-click deployment
+  </Card>
+  <Card title="Deployment Guide" icon="rocket" href="/user-guide/deployment-basics">
+    Learn how to deploy and manage your applications
+  </Card>
+</CardGroup> 

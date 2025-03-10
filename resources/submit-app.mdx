@@ -1,0 +1,402 @@
+---
+title: 'Submit Your App'
+description: 'Partner with RepoCloud by submitting your application to our Platform App directory'
+---
+
+## Become a RepoCloud Platform Partner
+
+RepoCloud welcomes developers and companies to submit their applications to our growing Platform App directory. By listing your application in our marketplace, you gain access to our expanding user base and provide value to cloud developers worldwide.
+
+<Frame>
+  ![Platform Apps Directory](/images/platform-apps-directory.png)
+</Frame>
+
+## Benefits of Becoming a Partner
+
+<CardGroup cols={2}>
+  <Card title="Built-in User Base" icon="users">
+    Immediate access to RepoCloud's growing community of developers
+  </Card>
+  <Card title="Simplified Distribution" icon="box">
+    Streamlined deployment process with automated installation
+  </Card>
+  <Card title="Revenue Opportunities" icon="money-bill-wave">
+    Optional monetization through subscription or one-time purchase models
+  </Card>
+  <Card title="Marketing Support" icon="bullhorn">
+    Promotion of your app through RepoCloud's channels
+  </Card>
+</CardGroup>
+
+## Types of Apps We Accept
+
+RepoCloud accepts a wide variety of applications that enhance the cloud development experience:
+
+<AccordionGroup>
+  <Accordion title="Development Tools">
+    IDEs, code editors, version control tools, testing frameworks, CI/CD solutions, and other tools that enhance the development workflow.
+  </Accordion>
+  <Accordion title="Deployment Platforms">
+    Application platforms, PaaS solutions, container orchestration tools, and serverless frameworks that simplify deployment.
+  </Accordion>
+  <Accordion title="Databases & Storage">
+    Database systems, object storage, caching solutions, and other data storage or management tools.
+  </Accordion>
+  <Accordion title="Monitoring & Observability">
+    APM tools, log management solutions, metric collection systems, and dashboards for monitoring application performance.
+  </Accordion>
+  <Accordion title="Security Tools">
+    Vulnerability scanners, security testing tools, compliance checkers, and identity management solutions.
+  </Accordion>
+  <Accordion title="Content Management Systems">
+    Headless CMS platforms, traditional CMS solutions, and other content management tools.
+  </Accordion>
+  <Accordion title="E-commerce Platforms">
+    Online store platforms, payment processing systems, and e-commerce enablement tools.
+  </Accordion>
+  <Accordion title="Analytics Solutions">
+    Data analytics platforms, business intelligence tools, and reporting systems.
+  </Accordion>
+</AccordionGroup>
+
+## Application Requirements
+
+To ensure a quality experience for our users, all platform applications must meet certain requirements:
+
+### Technical Requirements
+
+1. **Docker Compatibility**: Applications must be containerized with Docker or compatible with our container platform
+2. **Documentation**: Comprehensive documentation for installation, configuration, and usage
+3. **Security**: Adherence to security best practices with no known critical vulnerabilities
+4. **Performance**: Efficient resource usage and appropriate performance characteristics
+5. **Scalability**: Support for horizontal or vertical scaling when applicable
+6. **High Availability**: Support for redundancy configurations when applicable
+
+### Business Requirements
+
+1. **Support**: Clear support channels for users (email, chat, or ticket system)
+2. **SLA**: Defined service level agreements for paid applications
+3. **Privacy Policy**: Clear privacy policy that complies with relevant regulations
+4. **Terms of Service**: Transparent terms of service outlining usage rights
+5. **Pricing**: Transparent pricing model if the application is not free
+
+## Submission Process
+
+<Steps>
+  <Step title="Create a RepoCloud Partner Account">
+    Sign up for a partner account at [partners.repocloud.io](https://partners.repocloud.io)
+  </Step>
+  <Step title="Complete the Application Form">
+    Fill out the detailed application form with information about your app, including technical specifications, resource requirements, and business details
+  </Step>
+  <Step title="Prepare Technical Documentation">
+    Create comprehensive documentation for your application following our [documentation guidelines](/resources/app-documentation-guidelines)
+  </Step>
+  <Step title="Submit Application Package">
+    Upload your application package, including Docker images, configuration files, and documentation
+  </Step>
+  <Step title="Technical Review">
+    Our team will review your application for technical compliance, security, and performance
+  </Step>
+  <Step title="Business Review">
+    We'll evaluate your support capabilities, terms of service, and pricing model
+  </Step>
+  <Step title="Integration Testing">
+    Work with our team to ensure smooth integration with the RepoCloud platform
+  </Step>
+  <Step title="Final Approval">
+    Receive final approval and prepare for launch in our Platform App directory
+  </Step>
+</Steps>
+
+<Note>
+  The review process typically takes 2-4 weeks, depending on the complexity of your application and current submission volume.
+</Note>
+
+## Technical Integration
+
+RepoCloud provides several integration options for Platform Apps:
+
+<Tabs>
+  <Tab title="Docker Container">
+    The simplest integration method is to provide a Docker container that can be deployed directly on our platform.
+
+    ```dockerfile
+    # Example Dockerfile structure
+    FROM node:16-alpine
+    WORKDIR /app
+    COPY package*.json ./
+    RUN npm install
+    COPY . .
+    EXPOSE 3000
+    CMD ["npm", "start"]
+    ```
+
+    Your app must include a `repocloud.yaml` configuration file that specifies resource requirements, exposed ports, and environment variables.
+  </Tab>
+  <Tab title="Helm Chart">
+    For more complex applications, especially those requiring multiple services, you can provide a Helm chart.
+
+    ```yaml
+    # Example values.yaml structure
+    replicaCount: 1
+    
+    image:
+      repository: your-app/image
+      tag: latest
+      pullPolicy: Always
+    
+    service:
+      type: ClusterIP
+      port: 80
+    
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 0.5
+        memory: 512Mi
+    ```
+
+    Helm charts must be compatible with Kubernetes 1.20+ and include all necessary dependencies.
+  </Tab>
+  <Tab title="API Integration">
+    If your application is hosted elsewhere, you can integrate via our API.
+
+    ```json
+    // Example API integration manifest
+    {
+      "name": "Your App Name",
+      "version": "1.0.0",
+      "api_endpoints": {
+        "authentication": "https://api.yourapp.com/auth",
+        "provisioning": "https://api.yourapp.com/provision",
+        "management": "https://api.yourapp.com/manage"
+      },
+      "webhook_handlers": {
+        "user_creation": "https://api.yourapp.com/webhooks/user-created",
+        "user_deletion": "https://api.yourapp.com/webhooks/user-deleted"
+      },
+      "oauth": {
+        "client_id": "client_id_placeholder",
+        "scopes": ["read", "write"]
+      }
+    }
+    ```
+
+    API integrations must implement our standard authentication flow and support webhook notifications.
+  </Tab>
+</Tabs>
+
+## App Listing Guidelines
+
+Your app listing is the main way users will discover your application. Here's how to create an effective listing:
+
+### App Listing Components
+
+1. **App Name**: Clear, unique name (50 characters max)
+2. **Short Description**: Concise summary (150 characters max)
+3. **Long Description**: Detailed explanation (5000 characters max)
+4. **Category**: Primary and secondary categories
+5. **Screenshots**: 3-10 high-quality screenshots (1920x1080px recommended)
+6. **Logo**: Square logo (512x512px, PNG with transparency)
+7. **Feature List**: Bullet points highlighting key features
+8. **Pricing Information**: Free or paid with pricing details
+9. **Support Links**: Website, documentation, support email
+10. **Video**: Optional demo video (2-5 minutes recommended)
+
+### Effective Listing Tips
+
+<CardGroup cols={2}>
+  <Card title="Be Clear and Specific" icon="bullseye">
+    Clearly state what your app does and who it's for
+  </Card>
+  <Card title="Highlight Value Proposition" icon="star">
+    Emphasize the unique benefits and problems your app solves
+  </Card>
+  <Card title="Show, Don't Just Tell" icon="image">
+    Use high-quality screenshots that demonstrate key features
+  </Card>
+  <Card title="Be Honest About Capabilities" icon="check-double">
+    Don't oversell features or make claims you can't deliver on
+  </Card>
+</CardGroup>
+
+## Monetization Options
+
+RepoCloud offers several monetization models for Platform Apps:
+
+<CardGroup cols={3}>
+  <Card title="Free" icon="gift">
+    Offer your app at no cost to maximize adoption
+  </Card>
+  <Card title="One-Time Purchase" icon="tag">
+    Charge a single fee for permanent access
+  </Card>
+  <Card title="Subscription" icon="repeat">
+    Recurring revenue with monthly or annual billing
+  </Card>
+  <Card title="Freemium" icon="layer-group">
+    Free basic tier with paid premium features
+  </Card>
+  <Card title="Usage-Based" icon="chart-line">
+    Charges based on actual usage metrics
+  </Card>
+  <Card title="Enterprise" icon="building">
+    Custom pricing for high-volume customers
+  </Card>
+</CardGroup>
+
+### Revenue Sharing
+
+For paid applications, RepoCloud operates on a revenue-sharing model:
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Pricing Model</Th>
+      <Th>Developer Share</Th>
+      <Th>RepoCloud Share</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>One-Time Purchase</Td>
+      <Td>80%</Td>
+      <Td>20%</Td>
+    </Tr>
+    <Tr>
+      <Td>Subscription</Td>
+      <Td>80%</Td>
+      <Td>20%</Td>
+    </Tr>
+    <Tr>
+      <Td>Usage-Based</Td>
+      <Td>75%</Td>
+      <Td>25%</Td>
+    </Tr>
+    <Tr>
+      <Td>Enterprise</Td>
+      <Td>85%</Td>
+      <Td>15%</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+<Note>
+  Revenue share percentages may vary based on the volume of sales and other factors. Contact our partner team for custom arrangements.
+</Note>
+
+## App Maintenance and Updates
+
+Once your app is published, you'll need to maintain it and provide regular updates:
+
+### Update Process
+
+<Steps>
+  <Step title="Prepare New Version">
+    Develop and test your application update
+  </Step>
+  <Step title="Submit Update Request">
+    Log into the partner portal and submit an update request
+  </Step>
+  <Step title="Version Documentation">
+    Provide release notes and updated documentation
+  </Step>
+  <Step title="Technical Review">
+    Updates undergo a streamlined technical review
+  </Step>
+  <Step title="Release Scheduling">
+    Schedule the release date for your update
+  </Step>
+</Steps>
+
+### Version Support
+
+We recommend supporting at least the current and previous major versions of your application. For critical security updates, you may need to patch older versions as well.
+
+## Developer Support
+
+RepoCloud provides comprehensive support for platform partners:
+
+<CardGroup cols={2}>
+  <Card title="Technical Support" icon="code">
+    Development assistance and platform integration help
+  </Card>
+  <Card title="Marketing Support" icon="megaphone">
+    Promotion through RepoCloud channels and co-marketing opportunities
+  </Card>
+  <Card title="Partner Dashboard" icon="gauge">
+    Analytics on app usage, performance, and revenue
+  </Card>
+  <Card title="Developer Community" icon="users">
+    Private community for RepoCloud platform partners
+  </Card>
+</CardGroup>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How long does the review process take?">
+    The initial review process typically takes 2-4 weeks, depending on the complexity of your application and current submission volume. Updates to existing applications are usually reviewed within 1-2 weeks.
+  </Accordion>
+  <Accordion title="Can I update my app after it's published?">
+    Yes, you can submit updates through the partner portal. Updates will go through a streamlined review process before being published.
+  </Accordion>
+  <Accordion title="What are the costs associated with listing my app?">
+    There is no fee to submit or list your application in our Platform App directory. For paid applications, RepoCloud takes a percentage of the revenue as described in the Revenue Sharing section.
+  </Accordion>
+  <Accordion title="Can I offer a free trial of my paid app?">
+    Yes, you can offer free trials ranging from 7 to 30 days. You can also offer a freemium model with limited features in the free tier.
+  </Accordion>
+  <Accordion title="How do users discover my app?">
+    Apps are discoverable through the RepoCloud Platform App directory, which is accessible from the main dashboard. We also promote new and notable apps through our blog, newsletter, and social media channels.
+  </Accordion>
+  <Accordion title="Do I need to host the app, or does RepoCloud host it?">
+    It depends on your integration method. For Docker containers and Helm charts, RepoCloud hosts the application. For API integrations, you host the application and RepoCloud provides the integration layer.
+  </Accordion>
+  <Accordion title="What happens if my app doesn't meet the requirements?">
+    If your app doesn't meet our requirements, you'll receive detailed feedback on what needs to be improved. You can make the necessary changes and resubmit your application.
+  </Accordion>
+</AccordionGroup>
+
+## Get Started
+
+Ready to submit your application? Follow these steps to begin the process:
+
+<Steps>
+  <Step title="Review Requirements">
+    Ensure your application meets all technical and business requirements
+  </Step>
+  <Step title="Prepare Materials">
+    Gather all necessary materials, including documentation, screenshots, and Docker images
+  </Step>
+  <Step title="Create Partner Account">
+    Sign up for a partner account at [partners.repocloud.io](https://partners.repocloud.io)
+  </Step>
+  <Step title="Submit Application">
+    Complete the application form and upload your materials
+  </Step>
+</Steps>
+
+<Card title="Start Your Partner Application" icon="rocket" href="https://partners.repocloud.io">
+  Begin the process of listing your application in the RepoCloud Platform App directory
+</Card>
+
+## Additional Resources
+
+<CardGroup>
+  <Card title="Partner Program FAQ" icon="question-circle" href="/resources/partner-faq">
+    Detailed answers to common questions about our partner program
+  </Card>
+  <Card title="App Documentation Guidelines" icon="file-alt" href="/resources/app-documentation-guidelines">
+    Guidelines for creating effective documentation for your app
+  </Card>
+  <Card title="Integration API Reference" icon="code" href="/resources/api-reference">
+    Technical reference for API integration with RepoCloud
+  </Card>
+  <Card title="Marketing Guide" icon="ad" href="/resources/partner-marketing">
+    Tips and resources for marketing your app to RepoCloud users
+  </Card>
+</CardGroup> 

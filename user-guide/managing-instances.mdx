@@ -1,0 +1,178 @@
+---
+title: 'Managing Instances'
+description: 'Learn how to monitor, maintain, and manage your deployed applications'
+---
+
+## Instance Management
+
+Once you've deployed an application on RepoCloud, you'll need to monitor, maintain, and manage it effectively. This guide covers all the essential management tasks available through the RepoCloud dashboard.
+
+<Frame>
+  ![Instance Management Dashboard](/images/instance-management.png)
+</Frame>
+
+## Dashboard Overview
+
+The instance management dashboard provides a comprehensive view of your deployed applications and allows you to perform common management tasks:
+
+<CardGroup cols={3}>
+  <Card title="Status & Metrics" icon="chart-simple">
+    View application status, uptime, and resource utilization
+  </Card>
+  <Card title="Configuration" icon="gear">
+    Manage application settings and environment variables
+  </Card>
+  <Card title="Updates" icon="arrows-rotate">
+    Apply application updates and security patches
+  </Card>
+  <Card title="Scaling" icon="diagram-project">
+    Adjust resource allocation based on needs
+  </Card>
+  <Card title="Domains" icon="globe">
+    Configure custom domains and SSL certificates
+  </Card>
+  <Card title="Logs" icon="file-lines">
+    View application logs for troubleshooting
+  </Card>
+</CardGroup>
+
+## Common Management Tasks
+
+### Monitoring Your Instance
+
+RepoCloud provides several monitoring capabilities:
+
+1. **Resource Usage**: Track CPU, RAM, and storage utilization over time
+2. **Status Checks**: Monitor application health and uptime
+3. **Performance Metrics**: View response times and request handling statistics
+
+<Note>
+  Resource usage monitoring is particularly useful when using autoscaling, as it helps you understand how resources are being allocated and billed.
+</Note>
+
+### Starting and Stopping Instances
+
+You can control the state of your instance from the dashboard:
+
+- **Start**: Resume a stopped instance
+- **Stop**: Pause an instance (billing continues as resources remain allocated)
+- **Restart**: Quickly restart an application to apply changes
+
+<Warning>
+  Stopping an instance does not stop billing, as resources remain allocated. To stop billing, you would need to delete the instance.
+</Warning>
+
+### Backup and Restore
+
+Most applications on RepoCloud have built-in backup and restore functionality:
+
+1. Access your application's built-in backup tools through the application interface
+2. Create regular backups of your important data
+3. Store backups externally or download them for safekeeping
+4. Use the application's restore functionality when needed
+
+For applications without built-in backup tools, we recommend:
+
+- Regularly exporting important data
+- Using a version control system for code and configurations
+- Documenting your setup for easy recreation if needed
+
+### Deleting Instances
+
+When you no longer need an instance:
+
+<Steps>
+  <Step title="Backup Important Data">
+    Ensure you've backed up any important data from the application
+  </Step>
+  <Step title="Navigate to Instance Management">
+    Go to the instance management page for the application you want to delete
+  </Step>
+  <Step title="Delete Instance">
+    Click the "Delete" button and confirm the deletion
+  </Step>
+</Steps>
+
+<Warning>
+  Instance deletion is permanent and cannot be undone. All data associated with the instance will be permanently deleted.
+</Warning>
+
+## Advanced Management Features
+
+### Managing Access
+
+If your application supports user management:
+
+1. Create secure administrator accounts
+2. Set up multi-factor authentication when available
+3. Implement proper role-based access control
+4. Regularly audit user accounts and permissions
+
+### Performance Optimization
+
+Optimize your application's performance by:
+
+- Monitoring resource usage and scaling appropriately
+- Using caching when available in your application
+- Optimizing database queries and indexes
+- Implementing CDN for static content when appropriate
+
+### Automated Management
+
+Some applications support webhook integrations that allow for automated management:
+
+1. Set up webhooks for events like deployments, updates, or scaling
+2. Connect your application to CI/CD pipelines if supported
+3. Implement automated backup schedules
+
+## Application-Specific Management
+
+Different applications have different management requirements. Here are some common examples:
+
+<AccordionGroup>
+  <Accordion title="WordPress Management">
+    - Install security plugins
+    - Set up caching for performance
+    - Regularly update themes and plugins
+    - Implement backup schedules
+  </Accordion>
+  <Accordion title="Database Management">
+    - Monitor database performance
+    - Optimize queries and indexes
+    - Set up replication if needed
+    - Implement backup and recovery procedures
+  </Accordion>
+  <Accordion title="Web Server Management">
+    - Configure caching policies
+    - Set up appropriate redirects
+    - Monitor error rates
+    - Optimize for high traffic
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+If you encounter issues with your instance:
+
+1. Check the application logs for error messages
+2. Verify resource utilization to ensure you have enough resources
+3. Restart the application if it's unresponsive
+4. Check for recent changes or updates that might have caused the issue
+5. Consult the [troubleshooting guide](/user-guide/troubleshooting) for common solutions
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Custom Domains" icon="globe" href="/user-guide/custom-domains">
+    Learn how to set up custom domains for your applications
+  </Card>
+  <Card title="Scaling Resources" icon="chart-line" href="/user-guide/scaling">
+    Discover how to scale your application resources
+  </Card>
+  <Card title="Application Updates" icon="arrows-rotate" href="/user-guide/updates">
+    Keep your applications secure and up-to-date
+  </Card>
+  <Card title="Environment Variables" icon="gear" href="/user-guide/environment-variables">
+    Configure your applications with environment variables
+  </Card>
+</CardGroup> 

@@ -1,0 +1,134 @@
+---
+title: 'Deployment Basics'
+description: 'Learn the fundamentals of deploying applications on RepoCloud'
+---
+
+## Understanding RepoCloud Deployments
+
+Deploying applications on RepoCloud is designed to be straightforward and user-friendly. This guide will walk you through the core concepts and steps for successful deployments.
+
+## Deployment Lifecycle
+
+<Steps>
+  <Step title="Select an Application">
+    Browse our marketplace to find the application you want to deploy. We offer over 200 pre-configured applications across different categories.
+  </Step>
+  <Step title="Configure Resources">
+    Choose the resource tier that fits your needs. You can select from various combinations of RAM, CPU, and storage, or enable autoscaling to let RepoCloud optimize resource allocation automatically.
+  </Step>
+  <Step title="Application-Specific Settings">
+    Configure settings specific to your chosen application, such as admin username and password, database preferences, or other customization options.
+  </Step>
+  <Step title="Deploy">
+    Click the "Deploy" button to initiate the deployment process. RepoCloud will provision the necessary resources, set up your application container, and configure the networking.
+  </Step>
+  <Step title="Access and Configure">
+    Once deployment is complete, you'll receive a URL to access your application. Most applications will have a setup wizard or admin interface for further configuration.
+  </Step>
+</Steps>
+
+## Key Deployment Concepts
+
+### Resource Tiers
+
+RepoCloud offers several resource tiers to accommodate different needs:
+
+| Tier | RAM | vCPU | Storage | Best For |
+|------|-----|------|---------|----------|
+| 1 | 1 GB | 1 | 20 GB | Small blogs, simple tools, development environments |
+| 2 | 2 GB | 1 | 50 GB | Personal websites, small team collaboration |
+| 3 | 2 GB | 2 | 60 GB | Production websites, small business applications |
+| 4 | 4 GB | 2 | 80 GB | Medium traffic sites, larger databases |
+| 5 | 8 GB | 4 | 160 GB | High-traffic websites, data-intensive applications |
+| 6+ | 16-32 GB | 8-16 | 240-360 GB | Enterprise applications, large databases |
+
+### Autoscaling vs. Fixed Resources
+
+<CardGroup cols={2}>
+  <Card title="Autoscaling" icon="chart-line">
+    **Benefits:**
+    - Pay only for resources you actually use
+    - Automatically handles traffic spikes
+    - Scales down during low-activity periods
+    - Cost-efficient for variable workloads
+  </Card>
+  <Card title="Fixed Resources" icon="lock">
+    **Benefits:**
+    - Predictable monthly costs
+    - Guaranteed resources at all times
+    - Simpler to budget and plan
+    - Better for consistent workloads
+  </Card>
+</CardGroup>
+
+<Note>
+  Autoscaling monitors your application's resource usage and adjusts resources in real-time, charging on an hourly basis for what you actually use.
+</Note>
+
+## Deployment Regions
+
+RepoCloud offers multiple deployment regions to help you serve your users with lower latency. When deploying an application, you can choose the region closest to your target audience:
+
+- North America (East)
+- North America (West)
+- Europe
+- Asia Pacific
+- Oceania
+
+<Tip>
+  Choosing a region closer to your users will reduce latency and improve the user experience.
+</Tip>
+
+## Application Persistence
+
+Applications deployed on RepoCloud maintain data persistence across restarts and updates:
+
+- **Persistent Storage**: Application data is stored on reliable NVMe SSD storage
+- **Database Persistence**: Databases maintain data integrity across updates
+- **Configuration Persistence**: Your application settings remain intact when updating or scaling
+
+## Security Considerations
+
+Every deployment on RepoCloud includes:
+
+- **SSL Certificates**: Automatic SSL for secure HTTPS connections
+- **Application Isolation**: Containerized deployments for security isolation
+- **Regular Updates**: Latest security patches and application updates
+- **Secure Networking**: Protected networking environment
+
+## Common Deployment Questions
+
+<AccordionGroup>
+  <Accordion title="How long does deployment take?">
+    Most applications deploy within 1-2 minutes. Larger applications with more complex setups might take up to 5 minutes.
+  </Accordion>
+  <Accordion title="Can I migrate my existing application?">
+    Yes, most applications have built-in migration tools. For example, WordPress sites can be migrated using plugins, and databases can be imported through application-specific tools.
+  </Accordion>
+  <Accordion title="What happens if I need more resources?">
+    You can scale your resources at any time through the management dashboard. Scaling is typically performed without downtime.
+  </Accordion>
+  <Accordion title="Can I use my own domain name?">
+    Yes, you can connect your custom domain to any deployment through the "Custom Domain" section in the management dashboard.
+  </Accordion>
+  <Accordion title="How are applications updated?">
+    RepoCloud maintains the latest stable versions of all applications. You can update your instance by clicking the "Rebuild" button in the management dashboard.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup>
+  <Card title="One-Click Deployment" icon="rocket" href="/user-guide/one-click-deployment">
+    Learn about our one-click deployment process
+  </Card>
+  <Card title="Managing Instances" icon="sliders" href="/user-guide/managing-instances">
+    Discover how to manage your deployed applications
+  </Card>
+  <Card title="Custom Domains" icon="globe" href="/user-guide/custom-domains">
+    Set up custom domains for your applications
+  </Card>
+  <Card title="Environment Variables" icon="gear" href="/user-guide/environment-variables">
+    Configure your applications with environment variables
+  </Card>
+</CardGroup> 

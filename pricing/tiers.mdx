@@ -1,0 +1,324 @@
+---
+title: 'Pricing Tiers'
+description: 'Detailed information on RepoCloud's pricing tiers and resource specifications'
+---
+
+## Resource Tiers Overview
+
+RepoCloud offers flexible resource tiers designed to accommodate a wide range of applications and workloads. Each tier provides a balanced combination of CPU, RAM, and storage resources at a fraction of the cost of major cloud providers.
+
+<Frame>
+  ![Resource Tiers](/images/resource-tiers.png)
+</Frame>
+
+## Tier Specifications
+
+RepoCloud provides seven resource tiers, each offering progressively more computing power, memory, and storage capacity:
+
+| Tier | RAM | vCPU | SSD Storage | Hourly Price | Monthly Price |
+|------|-----|------|-------------|--------------|---------------|
+| 1    | 1 GB | 1    | 20 GB       | $0.0042      | $3.00         |
+| 2    | 2 GB | 1    | 50 GB       | $0.0083      | $6.00         |
+| 3    | 2 GB | 2    | 60 GB       | $0.0125      | $9.00         |
+| 4    | 4 GB | 2    | 80 GB       | $0.0167      | $12.00        |
+| 5    | 8 GB | 4    | 160 GB      | $0.0333      | $24.00        |
+| 6    | 16 GB | 8   | 240 GB      | $0.0667      | $48.00        |
+| 7    | 32 GB | 16  | 360 GB      | $0.1333      | $96.00        |
+
+## Tier Specifications in Detail
+
+### Tier 1: Basic
+
+**Specifications**: 1 GB RAM, 1 vCPU, 20 GB SSD Storage  
+**Pricing**: $0.0042/hour ($3.00/month)
+
+**Best For**:
+- Small personal blogs
+- Simple static websites
+- Development environments
+- Basic testing instances
+- Low-traffic applications
+
+**Limitations**:
+- Limited processing power for resource-intensive applications
+- Sufficient only for low concurrent user counts
+- Not recommended for database-heavy applications
+
+### Tier 2: Starter
+
+**Specifications**: 2 GB RAM, 1 vCPU, 50 GB SSD Storage  
+**Pricing**: $0.0083/hour ($6.00/month)
+
+**Best For**:
+- Personal websites with moderate traffic
+- Small WordPress installations
+- Development environments for larger projects
+- Basic content management systems
+- Small team collaboration tools
+
+**Limitations**:
+- Limited to a single CPU core
+- May struggle with more demanding applications
+- Moderate concurrent user capacity
+
+### Tier 3: Standard
+
+**Specifications**: 2 GB RAM, 2 vCPU, 60 GB SSD Storage  
+**Pricing**: $0.0125/hour ($9.00/month)
+
+**Best For**:
+- Small business websites
+- Multiple web applications
+- Development and staging environments
+- Content management systems
+- Light e-commerce sites
+
+**Limitations**:
+- Memory-intensive applications may need more RAM
+- Moderate concurrent user capacity
+- Not ideal for large databases
+
+### Tier 4: Professional
+
+**Specifications**: 4 GB RAM, 2 vCPU, 80 GB SSD Storage  
+**Pricing**: $0.0167/hour ($12.00/month)
+
+**Best For**:
+- Small to medium business websites
+- E-commerce platforms
+- Content-rich websites
+- More demanding CMS installations
+- Development environments for larger applications
+
+**Limitations**:
+- May need more CPU for compute-intensive applications
+- Moderate database capacity
+- Medium concurrent user capacity
+
+### Tier 5: Business
+
+**Specifications**: 8 GB RAM, 4 vCPU, 160 GB SSD Storage  
+**Pricing**: $0.0333/hour ($24.00/month)
+
+**Best For**:
+- High-traffic websites
+- Medium-sized e-commerce stores
+- Database-intensive applications
+- Small data analytics applications
+- Media streaming platforms
+
+**Limitations**:
+- Very resource-intensive applications may need more power
+- Large database operations may require higher tiers
+- High but not enterprise-level concurrent user capacity
+
+### Tier 6: Enterprise
+
+**Specifications**: 16 GB RAM, 8 vCPU, 240 GB SSD Storage  
+**Pricing**: $0.0667/hour ($48.00/month)
+
+**Best For**:
+- Large business applications
+- High-traffic e-commerce platforms
+- Media processing applications
+- Data analytics workloads
+- Multi-container deployments
+
+**Limitations**:
+- The most demanding enterprise applications may require Tier 7
+- Very high concurrent user capacity
+- Handles most workloads efficiently
+
+### Tier 7: Ultimate
+
+**Specifications**: 32 GB RAM, 16 vCPU, 360 GB SSD Storage  
+**Pricing**: $0.1333/hour ($96.00/month)
+
+**Best For**:
+- Very high-traffic websites and applications
+- Enterprise-grade deployments
+- Large database systems
+- Advanced data analytics
+- Media processing and transcoding
+- Computationally intensive workloads
+
+**Limitations**:
+- Our highest tier available
+- For extremely demanding workloads beyond this tier, multiple instances may be needed
+
+## Technical Specifications
+
+All resource tiers on RepoCloud include the following technical specifications:
+
+### Compute
+
+- **CPU Type**: Intel Xeon processors
+- **CPU Performance**: High-performance vCPU with dedicated resources
+- **CPU Scheduling**: Optimized for maximum responsiveness
+- **Instruction Sets**: Support for modern CPU instruction sets (AVX2, etc.)
+
+### Memory
+
+- **RAM Type**: DDR4 ECC RAM
+- **Memory Access**: Dedicated memory allocation
+- **Swap Configuration**: Optimized swap settings for performance
+
+### Storage
+
+- **Storage Type**: NVMe SSD for all tiers
+- **I/O Performance**: High I/O operations per second (IOPS)
+- **Throughput**: High read/write throughput
+- **Reliability**: Enterprise-grade storage reliability
+- **Redundancy**: Data redundancy and regular backups
+
+### Networking
+
+- **Network Speed**: 1 Gbps connections
+- **Bandwidth**: Unlimited data transfer
+- **Network Security**: DDoS protection and basic firewall
+- **SSL Support**: Free SSL certificates included
+
+## Choosing the Right Tier
+
+When selecting a resource tier, consider these factors:
+
+### Application Requirements
+
+Different applications have different resource needs:
+
+<AccordionGroup>
+  <Accordion title="WordPress">
+    - **Small Blog**: Tier 1-2
+    - **Medium Site**: Tier 3-4
+    - **Large Site**: Tier 5+
+    - **WooCommerce**: Tier 4+ (depending on product count)
+  </Accordion>
+  <Accordion title="Databases">
+    - **Small Database**: Tier 2-3
+    - **Medium Database**: Tier 4-5
+    - **Large Database**: Tier 6-7
+  </Accordion>
+  <Accordion title="Development Tools">
+    - **Git Repositories**: Tier 2-3
+    - **CI/CD Tools**: Tier 3-5
+    - **Code Servers**: Tier 3-4
+  </Accordion>
+  <Accordion title="Content Management">
+    - **Small CMS**: Tier 2-3
+    - **Medium CMS**: Tier 3-4
+    - **Enterprise CMS**: Tier 5+
+  </Accordion>
+</AccordionGroup>
+
+### Traffic Patterns
+
+Consider your expected traffic patterns:
+
+- **Low Traffic** (< 10,000 visits/month): Tier 1-2
+- **Medium Traffic** (10,000-50,000 visits/month): Tier 3-4
+- **High Traffic** (50,000-200,000 visits/month): Tier 5-6
+- **Very High Traffic** (200,000+ visits/month): Tier 6-7
+
+### Data Processing Needs
+
+Different data workloads require different resources:
+
+- **Basic Data Storage**: Tier 1-3
+- **Data Analysis**: Tier 4-5
+- **Large Datasets**: Tier 5-7
+- **Real-time Processing**: Tier 5-7
+
+## Scaling Between Tiers
+
+RepoCloud makes it easy to scale your resources as your needs change:
+
+### Upgrading Resources
+
+<Steps>
+  <Step title="Navigate to Instance Settings">
+    Go to your application's management page
+  </Step>
+  <Step title="Access Scaling Options">
+    Click on the "Scale" tab
+  </Step>
+  <Step title="Select New Tier">
+    Choose your desired resource tier from the available options
+  </Step>
+  <Step title="Apply Changes">
+    Click "Apply Changes" to update your instance resources
+  </Step>
+</Steps>
+
+<Note>
+  Most scaling operations occur without downtime or with minimal interruption. Your data and configuration remain intact when scaling between tiers.
+</Note>
+
+### Downgrading Resources
+
+You can also downgrade to a lower tier if you find you've over-provisioned:
+
+<Steps>
+  <Step title="Check Resource Usage">
+    Monitor your actual resource usage to determine an appropriate tier
+  </Step>
+  <Step title="Navigate to Instance Settings">
+    Go to your application's management page
+  </Step>
+  <Step title="Access Scaling Options">
+    Click on the "Scale" tab
+  </Step>
+  <Step title="Select Lower Tier">
+    Choose a lower resource tier
+  </Step>
+  <Step title="Apply Changes">
+    Click "Apply Changes" to update your instance resources
+  </Step>
+</Steps>
+
+<Warning>
+  Before downgrading, ensure your application can operate properly with fewer resources. Downgrading to a tier with insufficient resources may cause performance issues or application failures.
+</Warning>
+
+## Autoscaling vs. Fixed Tiers
+
+RepoCloud offers two approaches to resource allocation:
+
+### Fixed Tiers
+
+- **Predictable Costs**: Fixed monthly pricing based on the selected tier
+- **Guaranteed Resources**: Consistent resource allocation regardless of usage
+- **Simplicity**: No need to monitor or manage scaling
+- **Best For**: Applications with consistent resource needs
+
+### Elastic Autoscaling
+
+- **Cost Efficiency**: Pay only for resources actually used
+- **Dynamic Adjustment**: Resources scale up and down based on actual needs
+- **Optimal Performance**: Automatically handles traffic spikes
+- **Best For**: Applications with variable resource needs
+
+<Tip>
+  For most users, we recommend starting with autoscaling enabled. This allows your application to find its natural resource usage pattern, and you can switch to a fixed tier later if desired.
+</Tip>
+
+## Additional Resources
+
+Beyond the base resource tiers, you can also add:
+
+- **Additional NVMe SSD storage**: $0.10 per GB per month
+- **Data Transfer In**: $0 per GB (free)
+- **Data Transfer Out**: $0.10 per GB
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Price Comparison" icon="scale-balanced" href="/pricing/comparison">
+    See how RepoCloud pricing compares to other cloud providers
+  </Card>
+  <Card title="Autoscaling" icon="chart-line" href="/pricing/autoscaling">
+    Learn more about RepoCloud's elastic autoscaling
+  </Card>
+  <Card title="Additional Resources" icon="server" href="/pricing/additional-resources">
+    Explore additional resource options beyond the standard tiers
+  </Card>
+</CardGroup> 

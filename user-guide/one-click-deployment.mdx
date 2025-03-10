@@ -1,0 +1,139 @@
+---
+title: 'One-Click Deployment'
+description: 'Deploy applications instantly with RepoCloud's one-click deployment feature'
+---
+
+## One-Click Deployment
+
+RepoCloud's one-click deployment feature allows you to launch fully-configured applications in minutes without complex setup or technical knowledge.
+
+<Frame>
+  ![One-Click Deployment Process](/images/one-click-deployment.png)
+</Frame>
+
+## How It Works
+
+RepoCloud's one-click deployment process simplifies what would traditionally require hours or days of DevOps work into a streamlined, user-friendly experience:
+
+<Steps>
+  <Step title="Select Application">
+    Browse our [marketplace](https://repocloud.io/marketplace) of over 200 applications and click on the application you want to deploy.
+  </Step>
+  <Step title="Configure (Optional)">
+    While most applications work with default settings, you can customize resource allocation, environment variables, and application-specific settings if desired.
+  </Step>
+  <Step title="Deploy">
+    Click the "Deploy" button and RepoCloud will handle everything else, including:
+    - Provisioning container infrastructure
+    - Setting up networking and DNS
+    - Configuring the application with optimal settings
+    - Securing the deployment with SSL
+  </Step>
+  <Step title="Access">
+    Once deployment completes (typically in 1-2 minutes), you'll receive a URL to access your application and can begin using it immediately.
+  </Step>
+</Steps>
+
+## Benefits of One-Click Deployment
+
+<CardGroup cols={2}>
+  <Card title="Time Savings" icon="clock">
+    Deploy in minutes instead of hours or days of manual setup
+  </Card>
+  <Card title="Reduced Complexity" icon="wand-magic-sparkles">
+    No need to understand containerization, networking, or server administration
+  </Card>
+  <Card title="Optimized Configurations" icon="sliders">
+    Pre-configured for optimal performance and security
+  </Card>
+  <Card title="Instant Productivity" icon="bolt">
+    Start using your application immediately after deployment
+  </Card>
+</CardGroup>
+
+## Deployment Examples
+
+### WordPress Deployment
+
+<Steps>
+  <Step title="Select WordPress">
+    Find WordPress in our marketplace and click on it to view details.
+  </Step>
+  <Step title="Choose Resources">
+    Select a resource tier (we recommend at least 1GB RAM for WordPress), or enable autoscaling.
+  </Step>
+  <Step title="Configure Settings">
+    You can optionally set:
+    - Admin username and password
+    - Database name and credentials
+    - PHP version preference
+  </Step>
+  <Step title="Deploy">
+    Click "Deploy" and wait for the deployment to complete (typically 1-2 minutes).
+  </Step>
+  <Step title="Access WordPress">
+    Use the provided URL to access your WordPress installation and complete the setup wizard.
+  </Step>
+</Steps>
+
+### Database Deployment
+
+<Steps>
+  <Step title="Select Database">
+    Choose from MySQL, PostgreSQL, MongoDB, or other database options in our marketplace.
+  </Step>
+  <Step title="Configure Resources">
+    Select appropriate resources based on your expected database size and workload.
+  </Step>
+  <Step title="Security Settings">
+    Set your database username, password, and other security configurations.
+  </Step>
+  <Step title="Deploy">
+    Click "Deploy" to launch your database instance.
+  </Step>
+  <Step title="Connect">
+    Use the provided connection information to connect to your database from your applications or management tools.
+  </Step>
+</Steps>
+
+## After Deployment
+
+Once your application is deployed, you can:
+
+1. **Add a custom domain**: Connect your own domain name to your application
+2. **Configure settings**: Adjust application settings through the application's admin interface
+3. **Monitor usage**: Track resource usage through our dashboard
+4. **Scale resources**: Adjust resources up or down as needed
+5. **Update**: Keep your application up-to-date with one-click rebuilds
+
+## Limitations
+
+While one-click deployments are powerful, there are some limitations to be aware of:
+
+- **Customization**: Some advanced customizations may not be available through the interface
+- **Shell Access**: Direct shell access is not provided for standard applications
+- **Custom Software**: Only applications in our marketplace can be deployed with one click
+
+<Note>
+  For use cases requiring more control, consider our platform apps like [Coolify](/platforms/coolify) or [Dokploy](/platforms/dokploy), which provide advanced capabilities including root access and custom application deployment.
+</Note>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I deploy multiple applications at once?">
+    Each application requires a separate deployment. However, you can deploy as many different applications as needed for your projects.
+  </Accordion>
+  <Accordion title="How are my applications isolated?">
+    Each application runs in its own isolated container, ensuring that one application cannot affect the performance or security of another.
+  </Accordion>
+  <Accordion title="Can I migrate existing data to my deployment?">
+    Yes, most applications provide ways to import existing data. For example, WordPress has import/export plugins, and databases have import tools.
+  </Accordion>
+  <Accordion title="What happens if deployment fails?">
+    If a deployment fails, you won't be charged. Our system will provide information about the failure, and you can try again with adjusted settings if needed.
+  </Accordion>
+  <Accordion title="Can I change settings after deployment?">
+    Yes, many settings can be changed through the application's admin interface or through environment variables in the RepoCloud dashboard.
+  </Accordion>
+</AccordionGroup> 

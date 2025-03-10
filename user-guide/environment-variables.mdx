@@ -1,0 +1,230 @@
+---
+title: 'Environment Variables'
+description: 'Configure application behavior using environment variables on RepoCloud'
+---
+
+## Using Environment Variables
+
+Environment variables are a powerful way to configure your applications without modifying code. They allow you to customize your application's behavior, store configuration settings, and manage sensitive information like API keys and database credentials.
+
+<Frame>
+  ![Environment Variables](/images/environment-variables.png)
+</Frame>
+
+## What Are Environment Variables?
+
+Environment variables are dynamic values that can affect the way running processes behave on a computer. In the context of containerized applications, they provide a way to:
+
+- Configure application settings
+- Store API keys and credentials
+- Toggle features on and off
+- Set configuration options
+- Define connection parameters
+
+## Managing Environment Variables on RepoCloud
+
+RepoCloud makes it easy to set, update, and manage environment variables for your applications through a simple web interface.
+
+### Accessing Environment Variables
+
+<Steps>
+  <Step title="Navigate to Instance Management">
+    Go to your application's management page in the RepoCloud dashboard
+  </Step>
+  <Step title="Open Environment Variables">
+    Click on the "Environment Variables" tab
+  </Step>
+  <Step title="View Current Variables">
+    You'll see a list of all currently configured environment variables
+  </Step>
+</Steps>
+
+### Adding Environment Variables
+
+<Steps>
+  <Step title="Navigate to Environment Variables">
+    Access the Environment Variables section as described above
+  </Step>
+  <Step title="Add New Variable">
+    Click the "Add Variable" button
+  </Step>
+  <Step title="Enter Key and Value">
+    Enter the variable name (key) and its value
+    
+    Example:
+    - Key: `DATABASE_URL`
+    - Value: `mysql://user:password@localhost:3306/mydatabase`
+  </Step>
+  <Step title="Save Changes">
+    Click "Save" or "Apply Changes" to update your application's environment
+  </Step>
+  <Step title="Restart Application">
+    In most cases, your application will automatically restart to apply the new variables
+  </Step>
+</Steps>
+
+### Editing and Deleting Variables
+
+<Steps>
+  <Step title="Navigate to Environment Variables">
+    Access the Environment Variables section
+  </Step>
+  <Step title="Edit a Variable">
+    Click the edit icon next to the variable you want to modify, then update its value
+  </Step>
+  <Step title="Delete a Variable">
+    Click the delete icon next to the variable you want to remove
+  </Step>
+  <Step title="Save Changes">
+    Click "Save" or "Apply Changes" to update your application's environment
+  </Step>
+</Steps>
+
+<Note>
+  Changes to environment variables typically require an application restart to take effect. RepoCloud automatically handles this for most applications.
+</Note>
+
+## Sensitive Information and Security
+
+Environment variables are commonly used to store sensitive information like API keys, passwords, and tokens. RepoCloud implements security measures to protect this data:
+
+- **Encryption**: Environment variable values are encrypted at rest
+- **Masked Display**: Sensitive values are masked in the interface (displayed as `••••••••`)
+- **Access Control**: Only authorized users can view and modify environment variables
+- **No Logging**: Sensitive values are not written to application logs
+
+<Warning>
+  Despite these precautions, you should never store extremely sensitive secrets (like private keys) as environment variables. For such cases, consider using a dedicated secrets management solution.
+</Warning>
+
+## Common Environment Variables
+
+Different applications use different environment variables, but some common categories include:
+
+<AccordionGroup>
+  <Accordion title="Database Connection Strings">
+    Variables that define how your application connects to a database:
+    ```
+    DATABASE_URL=postgresql://user:password@hostname:port/database
+    DB_HOST=hostname
+    DB_USER=username
+    DB_PASSWORD=password
+    DB_NAME=database
+    ```
+  </Accordion>
+  <Accordion title="API Keys and Authentication">
+    Variables for third-party service integration:
+    ```
+    API_KEY=your_api_key_here
+    AWS_ACCESS_KEY_ID=your_access_key
+    AWS_SECRET_ACCESS_KEY=your_secret_key
+    STRIPE_API_KEY=sk_test_abcdefghijklmnopqrstuvwxyz
+    ```
+  </Accordion>
+  <Accordion title="Application Settings">
+    Variables that control application behavior:
+    ```
+    DEBUG=true
+    LOG_LEVEL=info
+    CACHE_TTL=3600
+    FEATURE_X_ENABLED=true
+    ```
+  </Accordion>
+  <Accordion title="Email Configuration">
+    Variables for email service configuration:
+    ```
+    SMTP_HOST=smtp.example.com
+    SMTP_PORT=587
+    SMTP_USER=user@example.com
+    SMTP_PASSWORD=password
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Application-Specific Variables
+
+Each application has its own set of supported environment variables. Here are examples for some popular applications:
+
+<AccordionGroup>
+  <Accordion title="WordPress">
+    Common WordPress configuration variables:
+    ```
+    WORDPRESS_DB_HOST=mysql_host
+    WORDPRESS_DB_USER=db_user
+    WORDPRESS_DB_PASSWORD=db_password
+    WORDPRESS_DB_NAME=wordpress
+    WORDPRESS_TABLE_PREFIX=wp_
+    ```
+  </Accordion>
+  <Accordion title="Node.js Applications">
+    Common Node.js application variables:
+    ```
+    NODE_ENV=production
+    PORT=3000
+    SESSION_SECRET=your_session_secret
+    CORS_ORIGIN=https://example.com
+    ```
+  </Accordion>
+  <Accordion title="PostgreSQL">
+    PostgreSQL configuration variables:
+    ```
+    POSTGRES_USER=postgres
+    POSTGRES_PASSWORD=password
+    POSTGRES_DB=mydb
+    PGDATA=/var/lib/postgresql/data
+    ```
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Check your application's documentation to understand which environment variables are available and what they do. Many applications include a list of supported variables in their documentation.
+</Tip>
+
+## Best Practices
+
+Follow these best practices when working with environment variables:
+
+1. **Use descriptive names**: Choose clear, descriptive names for your variables
+2. **Separate development and production**: Use different values for development and production environments
+3. **Document your variables**: Keep a record of what each variable does and why it's needed
+4. **Minimize sensitive data**: Only store sensitive information in environment variables when necessary
+5. **Use standard formats**: Follow established formats for connection strings and other structured data
+6. **Avoid hardcoding**: Never hardcode values that should be configurable in your application code
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Application Not Recognizing Variables">
+    If your application doesn't recognize environment variables:
+    - Verify the variable name is correct (including case)
+    - Ensure the application has restarted after changes
+    - Check application logs for environment-related errors
+    - Verify the application is designed to use the variables you're setting
+  </Accordion>
+  <Accordion title="Syntax Errors">
+    Some common syntax issues:
+    - Avoid spaces around the equals sign (use `KEY=value`, not `KEY = value`)
+    - Be careful with quotes (some values may need to be quoted)
+    - Watch for special characters that might need escaping
+  </Accordion>
+  <Accordion title="Changes Not Taking Effect">
+    If changes don't seem to apply:
+    - Manually restart the application after changing variables
+    - Check if the application caches configuration and needs a specific refresh
+    - Verify you've saved the changes in the dashboard
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Scaling" icon="chart-line" href="/user-guide/scaling">
+    Learn how to scale your application resources
+  </Card>
+  <Card title="Updates" icon="arrows-rotate" href="/user-guide/updates">
+    Keep your application updated with the latest features and security patches
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/user-guide/troubleshooting">
+    Resolve common issues with your RepoCloud applications
+  </Card>
+</CardGroup> 

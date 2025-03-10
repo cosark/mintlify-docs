@@ -1,0 +1,115 @@
+---
+title: 'Technical Details'
+description: 'Technical specifications and architecture details of the RepoCloud platform'
+---
+
+## Infrastructure Overview
+
+RepoCloud is built on a modern, scalable infrastructure designed to provide reliable and efficient application hosting. Our architecture allows for rapid deployment, seamless scaling, and simplified management of containerized applications.
+
+### Deployment Architecture
+
+<Frame>
+  ![RepoCloud Architecture](/images/architecture-diagram.png)
+</Frame>
+
+Our platform is designed with these key components:
+
+- **Container Runtime**: Applications run in isolated Docker containers
+- **Orchestration Layer**: Manages container deployment, scaling, and lifecycle
+- **Networking Stack**: Handles traffic routing, load balancing, and SSL/TLS termination
+- **Storage System**: Provides persistent storage for application data
+- **Management API**: Powers the dashboard and enables programmatic control
+- **Monitoring System**: Tracks application health and resource usage
+
+## Technical Specifications
+
+### Compute Resources
+
+RepoCloud offers flexible compute resources to accommodate various application needs:
+
+| Tier | RAM | vCPU | SSD Storage | Price (Monthly) |
+|------|-----|------|-------------|-----------------|
+| 1    | 1 GB | 1    | 20 GB       | $3.00           |
+| 2    | 2 GB | 1    | 50 GB       | $6.00           |
+| 3    | 2 GB | 2    | 60 GB       | $9.00           |
+| 4    | 4 GB | 2    | 80 GB       | $12.00          |
+| 5    | 8 GB | 4    | 160 GB      | $24.00          |
+| 6    | 16 GB | 8   | 240 GB      | $48.00          |
+| 7    | 32 GB | 16  | 360 GB      | $96.00          |
+
+All compute resources feature:
+- Intel vCPU processors
+- NVMe SSD storage
+- DDR4 ECC RAM
+- 1 Gbps network connectivity
+
+### Networking Capabilities
+
+Our networking infrastructure provides:
+
+- **Automatic SSL**: Free SSL certificates for all applications
+- **Custom Domains**: Support for your own domain names
+- **CDN Integration**: Content delivery optimization for faster global access
+- **DDoS Protection**: Basic protection against common attacks
+- **Shared IP**: Applications share IP addresses for efficient resource utilization
+
+<Note>
+  RepoCloud uses shared hosting without dedicated IPv4 addresses for regular applications. For workloads requiring dedicated IPs or root access, consider our platform apps like Coolify or Dokploy.
+</Note>
+
+### Storage Architecture
+
+Storage on RepoCloud is designed for performance and reliability:
+
+- **Persistent Storage**: Data persists across container restarts and updates
+- **Performance Optimization**: NVMe SSDs for high I/O performance
+- **Scalability**: Storage can be expanded as needed
+- **Backup System**: Application-specific backup mechanisms
+
+## Technical Limitations
+
+While RepoCloud offers substantial flexibility, there are some technical limitations to be aware of:
+
+1. **No SSH/Console Access**: Users interact with instances through the GUI only; terminal access is not provided for regular applications
+2. **No Dedicated IPv4**: Applications use shared IP addresses by default
+3. **Container Restrictions**: Applications run as containers, not VMs, which limits certain types of customization
+4. **Resource Limits**: Each tier has defined resource limits that cannot be exceeded without upgrading
+
+For use cases requiring greater control, our platform apps (Coolify and Dokploy) provide enhanced capabilities including:
+
+- Dedicated IPv4 addresses
+- Full root access
+- CI/CD integration
+- Heroku/Vercel/Netlify-like interfaces
+
+## Application Updates and Management
+
+RepoCloud ensures your applications stay up-to-date and secure:
+
+- **Automatic Template Updates**: Application templates are regularly updated with the latest stable versions
+- **One-Click Rebuilds**: Update your instance to the latest version with a single click
+- **Configuration Persistence**: Application data and configurations persist across updates
+- **Environment Variable Management**: Easily modify application settings through environment variables
+
+## Data Management
+
+Each application on RepoCloud has its own mechanisms for data management:
+
+- **Application-Specific Migrations**: For example, WordPress uses plugins for migrations
+- **Built-in Backup Tools**: Many applications include their own backup functionality
+- **Data Persistence**: Application data is stored in persistent volumes
+
+## Additional Resources
+
+<CardGroup>
+  <Card title="Platform Apps" icon="server" href="/platforms/introduction">
+    Explore our platform apps for advanced control
+  </Card>
+  <Card title="Pricing Details" icon="money-bill" href="/pricing/overview">
+    Learn more about our pricing model
+  </Card>
+  <Card title="Autoscaling" icon="chart-line" href="/pricing/autoscaling">
+    Understand how autoscaling works and can save you money
+  </Card>
+</CardGroup> 

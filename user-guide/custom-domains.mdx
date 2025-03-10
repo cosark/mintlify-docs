@@ -1,0 +1,165 @@
+---
+title: 'Custom Domains'
+description: 'Connect your own domain name to your RepoCloud applications'
+---
+
+## Using Custom Domains
+
+By default, every application deployed on RepoCloud receives a subdomain on the `repocloud.app` domain (e.g., `your-app.repocloud.app`). However, you can connect your own domain name to provide a professional, branded experience for your users.
+
+<Frame>
+  ![Custom Domain Setup](/images/custom-domain.png)
+</Frame>
+
+## Why Use a Custom Domain?
+
+<CardGroup cols={2}>
+  <Card title="Professional Branding" icon="briefcase">
+    Present a cohesive brand identity with your own domain
+  </Card>
+  <Card title="Better SEO" icon="magnifying-glass">
+    Establish and maintain search engine optimization
+  </Card>
+  <Card title="Business Credibility" icon="handshake">
+    Enhance trust with a professional domain name
+  </Card>
+  <Card title="Marketing Consistency" icon="bullhorn">
+    Maintain consistent branding across all channels
+  </Card>
+</CardGroup>
+
+## Setting Up a Custom Domain
+
+Adding a custom domain to your RepoCloud application is a straightforward process:
+
+<Steps>
+  <Step title="Access Domain Settings">
+    Navigate to your application's management page and click on the "Custom Domain" tab.
+  </Step>
+  <Step title="Add Your Domain">
+    Enter your domain (e.g., `yourdomain.com` or `app.yourdomain.com`) in the input field and click "Add Domain".
+  </Step>
+  <Step title="Verify Domain Ownership">
+    RepoCloud will provide DNS records that you need to add to your domain registrar to verify ownership.
+  </Step>
+  <Step title="Configure DNS Records">
+    Log in to your domain registrar's dashboard and add the required DNS records. You'll typically need to add:
+    
+    - A CNAME record pointing to your RepoCloud application URL
+    - TXT records for domain verification
+    
+    <Note>
+      The exact DNS records needed will be displayed in the RepoCloud dashboard.
+    </Note>
+  </Step>
+  <Step title="Wait for DNS Propagation">
+    DNS changes can take up to 24-48 hours to propagate globally, though they often take effect much sooner.
+  </Step>
+  <Step title="Verification and SSL Setup">
+    Once DNS propagation is complete, RepoCloud automatically verifies your domain and issues an SSL certificate.
+  </Step>
+</Steps>
+
+## DNS Record Types Explained
+
+When setting up a custom domain, you may need to configure different DNS record types:
+
+<AccordionGroup>
+  <Accordion title="CNAME Record">
+    A CNAME (Canonical Name) record maps an alias domain to a true or canonical domain. For RepoCloud, this typically maps your domain to your application's RepoCloud URL.
+    
+    Example: `app.yourdomain.com` → `your-app.repocloud.app`
+  </Accordion>
+  <Accordion title="A Record">
+    An A (Address) record maps a domain directly to an IP address. This is sometimes required for apex domains (e.g., `yourdomain.com` without any subdomain).
+    
+    Example: `yourdomain.com` → `203.0.113.1`
+  </Accordion>
+  <Accordion title="TXT Record">
+    TXT records store text information in the DNS. These are often used for domain verification purposes.
+    
+    Example: `_repocloud-verification.yourdomain.com` → `verify-domain-12345`
+  </Accordion>
+</AccordionGroup>
+
+## Using Apex Domains
+
+An apex domain (also called a root domain or naked domain) is a domain without a subdomain prefix, like `example.com` instead of `www.example.com`.
+
+To use an apex domain with RepoCloud:
+
+1. Some DNS providers support CNAME-like functionality for apex domains through features like:
+   - ALIAS records
+   - ANAME records
+   - CNAME flattening
+
+2. If your DNS provider doesn't support these features, you can:
+   - Use a subdomain (like `www.yourdomain.com`) instead
+   - Consider switching to a DNS provider that supports ALIAS/ANAME records, such as Cloudflare, Route 53, or DNSimple
+
+<Tip>
+  Using `www.yourdomain.com` instead of just `yourdomain.com` often provides better flexibility and performance.
+</Tip>
+
+## SSL Certificates
+
+RepoCloud automatically provisions and manages SSL certificates for your custom domains:
+
+- **Automatic Provisioning**: SSL certificates are automatically issued once domain verification is complete
+- **Automatic Renewal**: Certificates are renewed automatically before they expire
+- **Let's Encrypt Integration**: We use Let's Encrypt to provide industry-standard SSL certificates
+- **HTTPS Enforcement**: All traffic to your application is automatically redirected to HTTPS
+
+<Note>
+  SSL certificate issuance typically takes a few minutes after DNS verification is complete.
+</Note>
+
+## Managing Multiple Domains
+
+You can add multiple domains to a single application:
+
+1. Follow the same process for each domain you want to add
+2. All domains will point to the same application
+3. Each domain will receive its own SSL certificate
+
+This is useful for:
+- Supporting multiple brands or regions
+- Migrating from an old domain to a new one
+- Creating specialized landing pages
+
+## Troubleshooting Custom Domains
+
+<AccordionGroup>
+  <Accordion title="DNS Verification Failed">
+    - Verify that you've added the correct DNS records at your domain registrar
+    - Check for typos in the DNS record values
+    - Allow sufficient time for DNS propagation (up to 48 hours)
+    - Use a DNS lookup tool like [DNS Checker](https://dnschecker.org) to verify your records are visible
+  </Accordion>
+  <Accordion title="SSL Certificate Issues">
+    - Ensure domain verification is complete
+    - Check that your DNS records are correctly configured
+    - Wait at least 30 minutes for the SSL certificate to be issued
+    - If issues persist for more than 24 hours, contact support
+  </Accordion>
+  <Accordion title="Domain Shows "Not Secure"">
+    - This typically means the SSL certificate hasn't been issued yet
+    - Verify that DNS configuration is correct
+    - Wait for SSL certificate issuance to complete
+    - Check that you're accessing the site via HTTPS, not HTTP
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Environment Variables" icon="gear" href="/user-guide/environment-variables">
+    Configure application-specific settings through environment variables
+  </Card>
+  <Card title="Scaling" icon="chart-line" href="/user-guide/scaling">
+    Learn how to scale your application resources
+  </Card>
+  <Card title="Updates" icon="arrows-rotate" href="/user-guide/updates">
+    Keep your application updated with the latest features and security patches
+  </Card>
+</CardGroup> 

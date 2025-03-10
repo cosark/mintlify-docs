@@ -1,0 +1,280 @@
+---
+title: 'Elastic Autoscaling'
+description: 'Pay only for the resources you actually use with RepoCloud's dynamic scaling system'
+---
+
+## Elastic Hourly Autoscaling
+
+RepoCloud's Elastic Hourly Autoscaling is an intelligent resource management system that automatically adjusts your application's resources based on actual usage, helping you optimize performance while minimizing costs.
+
+<Frame>
+  ![Elastic Autoscaling](/images/autoscaling-diagram.png)
+</Frame>
+
+## How Autoscaling Works
+
+Traditional cloud hosting requires you to choose a fixed resource tier and pay for those resources 24/7, regardless of actual usage. With RepoCloud's autoscaling:
+
+<Steps>
+  <Step title="Real-time Monitoring">
+    Our system continuously monitors your application's resource utilization (CPU, RAM, and storage).
+  </Step>
+  <Step title="Dynamic Resource Allocation">
+    When demand increases, additional resources are instantly allocated to maintain performance.
+  </Step>
+  <Step title="Automatic Optimization">
+    During periods of lower activity, resources scale down automatically to reduce costs.
+  </Step>
+  <Step title="Hourly Billing">
+    You're billed hourly based on the actual resources consumed, rather than a fixed monthly amount.
+  </Step>
+</Steps>
+
+## The Autoscaling Advantage
+
+<CardGroup cols={2}>
+  <Card title="Cost Efficiency" icon="money-bill-wave">
+    Pay only for what you use, reducing waste from idle resources
+  </Card>
+  <Card title="Performance Optimization" icon="gauge-high">
+    Automatically handle traffic spikes without manual intervention
+  </Card>
+  <Card title="Resource Efficiency" icon="leaf">
+    Stop paying for idle servers during low-traffic periods
+  </Card>
+  <Card title="Simplified Management" icon="sliders">
+    No need to predict exact resource requirements in advance
+  </Card>
+</CardGroup>
+
+## Understanding Resource Scaling
+
+RepoCloud's autoscaling works by dynamically adjusting three primary resources:
+
+### CPU Scaling
+
+<AccordionGroup>
+  <Accordion title="How CPU Scaling Works">
+    - CPU usage is monitored in real-time
+    - When CPU utilization exceeds thresholds, additional CPU cores are allocated
+    - During low CPU utilization, resources are reduced to the minimum needed
+    - Scaling occurs without interruption to your application
+  </Accordion>
+  <Accordion title="Benefits of CPU Scaling">
+    - Handle processing-intensive tasks efficiently
+    - Maintain application responsiveness during peak loads
+    - Reduce costs during periods of low computational demand
+    - Avoid over-provisioning CPU resources
+  </Accordion>
+</AccordionGroup>
+
+### Memory (RAM) Scaling
+
+<AccordionGroup>
+  <Accordion title="How RAM Scaling Works">
+    - Memory usage is continuously monitored
+    - When RAM utilization approaches capacity, additional memory is allocated
+    - When memory needs decrease, allocation is reduced
+    - Scaling ensures your application always has sufficient memory without waste
+  </Accordion>
+  <Accordion title="Benefits of RAM Scaling">
+    - Prevent out-of-memory errors during traffic spikes
+    - Support memory-intensive operations when needed
+    - Optimize costs based on actual memory requirements
+    - Scale memory independently from CPU resources
+  </Accordion>
+</AccordionGroup>
+
+### Storage Scaling
+
+<AccordionGroup>
+  <Accordion title="How Storage Scaling Works">
+    - Storage usage is monitored
+    - Additional storage is automatically allocated as needed
+    - You're billed only for the storage you actually use
+    - Scaling occurs without application downtime
+  </Accordion>
+  <Accordion title="Benefits of Storage Scaling">
+    - Never run out of disk space unexpectedly
+    - Pay only for the storage you utilize
+    - Accommodate growing data needs without manual intervention
+    - Optimize costs for applications with variable storage requirements
+  </Accordion>
+</AccordionGroup>
+
+## Real-World Savings Examples
+
+### Example 1: Blog with Variable Traffic
+
+A blog typically receives most of its traffic during business hours and very little overnight:
+
+- **Fixed Tier Approach**: Would require provisioning for peak traffic (4GB RAM, 2vCPU) at $12/month
+- **With Autoscaling**: Average resource usage might be only 1.5GB RAM and 0.8vCPU across 24 hours
+- **Resulting Billing**: Approximately $4.50/month (62.5% savings)
+
+### Example 2: Business Application with Weekend Drop-offs
+
+An internal business application used primarily Monday to Friday:
+
+- **Fixed Tier Approach**: Requires 8GB RAM, 4vCPU at $24/month
+- **With Autoscaling**: Resources scale down by 80% during weekends (28.6% of the month)
+- **Resulting Billing**: Approximately $18.85/month (21.5% savings)
+
+### Example 3: E-commerce with Seasonal Peaks
+
+An e-commerce store with significant traffic during holiday seasons:
+
+- **Fixed Tier Approach**: Would need to provision for peak season (16GB RAM, 8vCPU) at $48/month year-round
+- **With Autoscaling**: Resources might average 4GB RAM, 2vCPU during regular periods
+- **Resulting Billing**: Averaged across the year, approximately $18/month (62.5% savings)
+
+<Tip>
+  Applications with highly variable usage patterns typically see the greatest savings from autoscaling, sometimes reaching 70-90% cost reduction compared to fixed-tier pricing.
+</Tip>
+
+## Setting Up Autoscaling
+
+Enabling autoscaling for your RepoCloud application is simple:
+
+<Steps>
+  <Step title="Navigate to Instance Management">
+    Go to your application's management page in the RepoCloud dashboard
+  </Step>
+  <Step title="Access Scaling Options">
+    Click on the "Scale" tab to view resource management options
+  </Step>
+  <Step title="Enable Autoscaling">
+    Toggle the "Elastic Autoscaling" option to enable it
+  </Step>
+  <Step title="Set Resource Boundaries (Optional)">
+    Optionally, set minimum and maximum resource limits to control scaling boundaries
+  </Step>
+  <Step title="Save Changes">
+    Click "Apply Changes" to enable autoscaling for your application
+  </Step>
+</Steps>
+
+## Autoscaling Controls
+
+When setting up autoscaling, you have several controls to fine-tune the behavior:
+
+### Minimum Resources
+
+Set the minimum resources that your application should always have available. This ensures that your application always has at least a baseline level of performance, even during very low usage periods.
+
+### Maximum Resources
+
+Define the upper limit for scaling to prevent unexpected costs. By setting a maximum, you ensure that your application won't scale beyond your budget, even during unexpected traffic spikes.
+
+### Scaling Sensitivity
+
+Adjust how quickly the system responds to changes in resource demand:
+
+- **High Sensitivity**: Scales quickly in response to small changes in demand
+- **Medium Sensitivity**: Balanced approach to scaling (default)
+- **Low Sensitivity**: Waits for sustained changes before scaling
+
+## Monitoring and Analytics
+
+RepoCloud provides comprehensive monitoring tools to help you understand your application's resource usage:
+
+<CardGroup cols={2}>
+  <Card title="Resource Graphs" icon="chart-line">
+    Visualize CPU, RAM, and storage usage over time
+  </Card>
+  <Card title="Scaling Events" icon="arrows-up-down">
+    Track when your application scaled up or down
+  </Card>
+  <Card title="Cost Projections" icon="calculator">
+    Estimate costs based on current usage patterns
+  </Card>
+  <Card title="Usage Insights" icon="lightbulb">
+    Get recommendations to optimize resource utilization
+  </Card>
+</CardGroup>
+
+## Billing with Autoscaling
+
+With autoscaling enabled, your billing works differently from fixed-tier pricing:
+
+1. **Hourly Metering**: Resources are measured on an hourly basis
+2. **Usage Calculation**: We calculate the average resource usage for each hour
+3. **Hourly Rate**: Each hour is billed based on the resources consumed during that hour
+4. **Monthly Billing**: All hourly charges are aggregated for your monthly bill
+5. **Minimum Charge**: A minimum of $3.00 per month applies to all applications
+
+<Note>
+  Billing for autoscaled applications is transparent and predictable. You can view detailed usage reports in your dashboard to understand exactly what you're being charged for.
+</Note>
+
+## Autoscaling Limitations
+
+While autoscaling is powerful, there are some limitations to be aware of:
+
+- **Platform Apps**: Autoscaling is not available for [Platform Apps](/platforms/introduction) (Coolify and Dokploy)
+- **Minimum Charge**: All applications have a minimum charge of $3.00 per month
+- **Resource Constraints**: Some applications may have minimum resource requirements to function properly
+- **Scaling Delays**: There may be a brief delay (typically seconds) in responding to sudden, extreme spikes in demand
+
+## When to Choose Fixed Resources
+
+While autoscaling works well for most applications, fixed resources might be better in some scenarios:
+
+<AccordionGroup>
+  <Accordion title="Predictable Workloads">
+    If your application has very consistent resource needs with minimal variation, a fixed tier might provide more predictable billing.
+  </Accordion>
+  <Accordion title="Budget Certainty">
+    When you need absolute certainty about your monthly costs for budgeting purposes, fixed tiers provide guaranteed pricing.
+  </Accordion>
+  <Accordion title="Performance Guarantees">
+    Applications requiring guaranteed resources at all times, regardless of actual usage, may benefit from fixed allocation.
+  </Accordion>
+  <Accordion title="Resource-Intensive Applications">
+    Applications that consistently use near-maximum resources won't benefit as much from autoscaling.
+  </Accordion>
+</AccordionGroup>
+
+## Optimizing for Autoscaling
+
+To get the most from autoscaling, consider these best practices:
+
+1. **Monitor Usage Patterns**: Understand your application's typical resource usage patterns
+2. **Set Appropriate Limits**: Configure minimum and maximum resources based on your application's needs
+3. **Design for Variability**: Structure your application to efficiently handle variable resources
+4. **Regular Review**: Periodically review scaling analytics to optimize your settings
+5. **Test Performance**: Verify that your application performs well at different resource levels
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How quickly does autoscaling respond to traffic spikes?">
+    Autoscaling typically responds within seconds to changes in resource needs. For most applications, this is fast enough to handle even sudden traffic spikes without noticeable performance degradation.
+  </Accordion>
+  <Accordion title="Will my application experience downtime during scaling?">
+    Most scaling operations occur without any downtime. In some cases, applications might experience a brief period (seconds) of reduced performance during scaling, but complete downtime is rare.
+  </Accordion>
+  <Accordion title="How is billing calculated with autoscaling?">
+    Resources are metered hourly, and you're billed based on the average resource utilization during each hour. These hourly charges are then aggregated for your monthly bill.
+  </Accordion>
+  <Accordion title="Can I set a maximum monthly budget?">
+    Yes, by setting maximum resource limits, you can effectively cap your potential spending. Our system will never scale beyond these limits, ensuring you stay within budget.
+  </Accordion>
+  <Accordion title="What happens if my application needs more resources than the maximum I set?">
+    Your application will be limited to the maximum resources you've specified. If additional resources are needed beyond this limit, you may need to manually increase your maximum or switch to a higher fixed tier.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Resource Tiers" icon="layer-group" href="/pricing/tiers">
+    Explore our fixed resource tier options
+  </Card>
+  <Card title="Price Comparison" icon="scale-balanced" href="/pricing/comparison">
+    Compare RepoCloud pricing with other cloud providers
+  </Card>
+  <Card title="Additional Resources" icon="server" href="/pricing/additional-resources">
+    Learn about additional resource options
+  </Card>
+</CardGroup> 

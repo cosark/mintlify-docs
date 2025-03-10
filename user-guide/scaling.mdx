@@ -1,0 +1,193 @@
+---
+title: 'Scaling Resources'
+description: 'Learn how to adjust resources for your applications to match demand'
+---
+
+## Scaling on RepoCloud
+
+As your application's needs evolve, you may need to adjust the resources allocated to ensure optimal performance. RepoCloud offers flexible scaling options to accommodate growing traffic, increased data storage, or more demanding workloads.
+
+<Frame>
+  ![Resource Scaling](/images/resource-scaling.png)
+</Frame>
+
+## Scaling Options
+
+RepoCloud provides two primary methods for scaling your applications:
+
+<CardGroup cols={2}>
+  <Card title="Elastic Autoscaling" icon="chart-line">
+    Automatically adjusts resources based on actual usage, with hourly billing
+  </Card>
+  <Card title="Manual Scaling" icon="sliders">
+    Manually select a specific resource tier with fixed allocation
+  </Card>
+</CardGroup>
+
+## Elastic Autoscaling
+
+Elastic Autoscaling is RepoCloud's intelligent resource management system that continuously monitors your application's resource utilization and automatically adjusts resources as needed.
+
+### How Autoscaling Works
+
+<Steps>
+  <Step title="Resource Monitoring">
+    Our system continuously monitors CPU, RAM, and storage utilization of your application.
+  </Step>
+  <Step title="Automatic Adjustment">
+    When resource usage increases, additional resources are instantly allocated to maintain performance.
+  </Step>
+  <Step title="Scaling Down">
+    During periods of lower activity, resources scale down automatically to reduce costs.
+  </Step>
+  <Step title="Hourly Billing">
+    You're billed on an hourly basis for the actual resources consumed, rather than a fixed monthly amount.
+  </Step>
+</Steps>
+
+### Benefits of Autoscaling
+
+- **Cost Efficiency**: Pay only for the resources you actually use
+- **Performance Optimization**: Automatically handle traffic spikes without manual intervention
+- **Resource Efficiency**: Reduce waste during low-traffic periods
+- **Simplicity**: No need to predict exact resource requirements
+
+### Enabling Autoscaling
+
+<Steps>
+  <Step title="Navigate to Instance Management">
+    Go to your application's management page in the RepoCloud dashboard.
+  </Step>
+  <Step title="Access Scaling Options">
+    Click on the "Scale" tab to view resource management options.
+  </Step>
+  <Step title="Enable Autoscaling">
+    Toggle the "Elastic Autoscaling" option to enable it.
+  </Step>
+  <Step title="Set Resource Limits (Optional)">
+    Optionally, set minimum and maximum resource limits to control scaling boundaries.
+  </Step>
+  <Step title="Save Changes">
+    Click "Apply Changes" to enable autoscaling for your application.
+  </Step>
+</Steps>
+
+<Note>
+  When enabling autoscaling, you can set limits to prevent unexpected resource usage. For example, you might set a maximum of 8GB RAM to ensure your application never exceeds a certain cost threshold.
+</Note>
+
+## Manual Scaling
+
+If you prefer predictable, fixed resources, you can manually select a specific resource tier for your application.
+
+### Available Resource Tiers
+
+| Tier | RAM | vCPU | Storage | Best For |
+|------|-----|------|---------|----------|
+| 1 | 1 GB | 1 | 20 GB | Small blogs, simple tools, development environments |
+| 2 | 2 GB | 1 | 50 GB | Personal websites, small team collaboration |
+| 3 | 2 GB | 2 | 60 GB | Production websites, small business applications |
+| 4 | 4 GB | 2 | 80 GB | Medium traffic sites, larger databases |
+| 5 | 8 GB | 4 | 160 GB | High-traffic websites, data-intensive applications |
+| 6 | 16 GB | 8 | 240 GB | Enterprise applications, large databases |
+| 7 | 32 GB | 16 | 360 GB | Very large databases, high-performance computing |
+
+### Manually Scaling Resources
+
+<Steps>
+  <Step title="Navigate to Instance Management">
+    Go to your application's management page in the RepoCloud dashboard.
+  </Step>
+  <Step title="Access Scaling Options">
+    Click on the "Scale" tab to view resource management options.
+  </Step>
+  <Step title="Select Manual Scaling">
+    Ensure that the "Elastic Autoscaling" toggle is disabled to use manual scaling.
+  </Step>
+  <Step title="Choose Resource Tier">
+    Select the appropriate resource tier from the available options.
+  </Step>
+  <Step title="Apply Changes">
+    Click "Apply Changes" to update your application's resource allocation.
+  </Step>
+</Steps>
+
+<Note>
+  Most scaling operations occur with minimal or no downtime. However, for some applications, a brief restart may be required when scaling resources.
+</Note>
+
+## Choosing the Right Scaling Method
+
+<AccordionGroup>
+  <Accordion title="When to Choose Autoscaling">
+    Autoscaling is ideal for:
+    - Applications with variable traffic patterns
+    - Websites with occasional traffic spikes
+    - Cost-sensitive deployments
+    - Development and testing environments
+    - When you're unsure about exact resource requirements
+  </Accordion>
+  <Accordion title="When to Choose Manual Scaling">
+    Manual scaling works best for:
+    - Applications with predictable, consistent traffic
+    - Workloads requiring guaranteed resources
+    - Situations where budget predictability is important
+    - Applications with specific performance requirements
+    - When you need to comply with fixed resource specifications
+  </Accordion>
+</AccordionGroup>
+
+## Storage Scaling
+
+In addition to CPU and RAM scaling, you can also adjust storage capacity:
+
+<Steps>
+  <Step title="Access Storage Settings">
+    Navigate to the "Scale" tab in your application's management dashboard.
+  </Step>
+  <Step title="Adjust Storage Allocation">
+    Use the storage slider or input field to specify the desired storage capacity.
+  </Step>
+  <Step title="Apply Changes">
+    Click "Apply Changes" to update your storage allocation.
+  </Step>
+</Steps>
+
+<Warning>
+  While storage can be increased at any time, decreasing storage is not always possible if the space is already being used by your application. Always back up important data before attempting to reduce storage allocation.
+</Warning>
+
+## Monitoring Resource Usage
+
+To make informed scaling decisions, monitor your application's resource usage:
+
+1. Navigate to the "Metrics" section of your application dashboard
+2. View CPU, RAM, and storage utilization over time
+3. Identify usage patterns and peak demand periods
+4. Use this information to optimize your scaling strategy
+
+<Tip>
+  For optimal cost efficiency, monitor resource usage for a week or two after deployment before deciding between autoscaling and fixed resources.
+</Tip>
+
+## Scaling Limitations
+
+Be aware of these scaling limitations:
+
+- **Minimum Resources**: Each application type has minimum resource requirements
+- **Maximum Tier**: Resources cannot exceed the highest available tier (32GB RAM, 16 vCPU)
+- **Platform Apps**: [Platform Apps](/platforms/introduction) (like Coolify and Dokploy) cannot use autoscaling and must be manually scaled
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Environment Variables" icon="gear" href="/user-guide/environment-variables">
+    Learn how to configure your application through environment variables
+  </Card>
+  <Card title="Updates" icon="arrows-rotate" href="/user-guide/updates">
+    Keep your application updated with the latest features and security patches
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/user-guide/troubleshooting">
+    Resolve common issues with your RepoCloud applications
+  </Card>
+</CardGroup> 

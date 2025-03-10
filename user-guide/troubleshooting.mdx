@@ -1,0 +1,325 @@
+---
+title: 'Troubleshooting'
+description: 'Resolve common issues and problems with your RepoCloud applications'
+---
+
+## Troubleshooting Guide
+
+Even with RepoCloud's streamlined deployment and management experience, you may occasionally encounter issues with your applications. This guide will help you diagnose and resolve common problems.
+
+<Frame>
+  ![Troubleshooting](/images/troubleshooting.png)
+</Frame>
+
+## General Troubleshooting Process
+
+When facing any issue with your RepoCloud application, follow this general process:
+
+<Steps>
+  <Step title="Check Application Status">
+    Verify if your application is showing as "Running" in the dashboard
+  </Step>
+  <Step title="Review Logs">
+    Check application logs for error messages or warnings
+  </Step>
+  <Step title="Monitor Resources">
+    Ensure your application has sufficient resources (CPU, RAM, storage)
+  </Step>
+  <Step title="Verify Configuration">
+    Check that environment variables and settings are properly configured
+  </Step>
+  <Step title="Restart Application">
+    Try restarting the application to resolve temporary issues
+  </Step>
+  <Step title="Contact Support">
+    If the issue persists, contact RepoCloud support at [team@repocloud.io](mailto:team@repocloud.io)
+  </Step>
+</Steps>
+
+## Common Issues and Solutions
+
+### Application Access Issues
+
+<AccordionGroup>
+  <Accordion title="Application Not Loading">
+    If your application URL returns an error or doesn't load:
+    
+    **Possible Causes:**
+    - Application is still deploying
+    - Application has crashed
+    - Resource limitations
+    
+    **Solutions:**
+    1. Wait a few minutes if the application was recently deployed
+    2. Check application logs for errors
+    3. Ensure the application has sufficient resources
+    4. Restart the application from the dashboard
+    5. Verify that all required environment variables are set correctly
+  </Accordion>
+  <Accordion title="SSL Certificate Errors">
+    If your browser shows SSL/certificate warnings:
+    
+    **Possible Causes:**
+    - New custom domain hasn't completed verification
+    - SSL certificate is still being issued
+    - DNS configuration issues
+    
+    **Solutions:**
+    1. Verify your DNS settings are correctly configured
+    2. Allow up to 24 hours for SSL certificate issuance and propagation
+    3. Ensure you're using https:// in the URL
+    4. Check the domain verification status in the dashboard
+  </Accordion>
+  <Accordion title="Slow Application Performance">
+    If your application is loading slowly:
+    
+    **Possible Causes:**
+    - Insufficient resources
+    - High database load
+    - Inefficient application code
+    - Network latency
+    
+    **Solutions:**
+    1. Scale up your application resources
+    2. Enable caching if your application supports it
+    3. Optimize database queries and indexes
+    4. Consider deploying to a region closer to your users
+  </Accordion>
+</AccordionGroup>
+
+### Deployment Issues
+
+<AccordionGroup>
+  <Accordion title="Deployment Fails">
+    If your application fails to deploy:
+    
+    **Possible Causes:**
+    - Invalid configuration
+    - Resource constraints
+    - Temporary platform issues
+    
+    **Solutions:**
+    1. Check the deployment logs for specific error messages
+    2. Verify that all required environment variables are correctly set
+    3. Ensure your resource tier is sufficient for the application
+    4. Try deploying again after a few minutes
+  </Accordion>
+  <Accordion title="Deployment Stuck">
+    If your deployment seems stuck for a long time:
+    
+    **Possible Causes:**
+    - Large application data
+    - Network issues
+    - Platform resource constraints
+    
+    **Solutions:**
+    1. For initial deployments, large applications may take up to 10 minutes
+    2. Check if there are any platform status notifications
+    3. Cancel the deployment and try again
+    4. Contact support if the issue persists
+  </Accordion>
+  <Accordion title="Application Crashes After Deployment">
+    If your application deploys successfully but crashes shortly after:
+    
+    **Possible Causes:**
+    - Missing or incorrect environment variables
+    - Application bugs
+    - Incompatible dependencies
+    - Resource limitations
+    
+    **Solutions:**
+    1. Check application logs for error messages
+    2. Verify all required environment variables are set properly
+    3. Ensure your application has sufficient resources
+    4. For custom applications, verify compatibility with the container environment
+  </Accordion>
+</AccordionGroup>
+
+### Database Issues
+
+<AccordionGroup>
+  <Accordion title="Database Connection Errors">
+    If your application can't connect to its database:
+    
+    **Possible Causes:**
+    - Incorrect connection string
+    - Database service is not running
+    - Authentication issues
+    
+    **Solutions:**
+    1. Verify database environment variables (host, user, password, database name)
+    2. Check if the database service is running
+    3. Restart both the application and database services
+    4. Ensure the database has not reached its connection limit
+  </Accordion>
+  <Accordion title="Database Performance Issues">
+    If database operations are slow:
+    
+    **Possible Causes:**
+    - Insufficient resources
+    - Missing indexes
+    - Inefficient queries
+    - Database size issues
+    
+    **Solutions:**
+    1. Scale up the database resources
+    2. Optimize database indexes
+    3. Review and optimize queries
+    4. Consider implementing caching
+    5. Purge unnecessary data or logs
+  </Accordion>
+  <Accordion title="Data Loss or Corruption">
+    If you experience data loss or corruption:
+    
+    **Possible Causes:**
+    - Application bugs
+    - Disk space issues
+    - Unexpected shutdowns
+    
+    **Solutions:**
+    1. Restore from a backup if available
+    2. Check for disk space issues
+    3. Verify application logs for errors during write operations
+    4. Contact support for assistance with data recovery
+  </Accordion>
+</AccordionGroup>
+
+### Update and Scaling Issues
+
+<AccordionGroup>
+  <Accordion title="Update Fails">
+    If an application update (rebuild) fails:
+    
+    **Possible Causes:**
+    - Incompatible configuration
+    - Resource constraints
+    - Application data migration issues
+    
+    **Solutions:**
+    1. Check logs for specific error messages
+    2. Verify that your configuration is compatible with the new version
+    3. Ensure sufficient resources for the update process
+    4. Try updating again after a few minutes
+    5. Contact support if the issue persists
+  </Accordion>
+  <Accordion title="Scaling Problems">
+    If scaling your application causes issues:
+    
+    **Possible Causes:**
+    - Application not designed for scaling
+    - Insufficient resources
+    - Configuration issues
+    
+    **Solutions:**
+    1. Start with a small resource increase
+    2. Check application logs after scaling
+    3. Verify the application can utilize additional resources
+    4. Ensure database connections can handle increased load
+    5. Consider application-specific optimizations for scaling
+  </Accordion>
+</AccordionGroup>
+
+### Custom Domain Issues
+
+<AccordionGroup>
+  <Accordion title="Custom Domain Not Working">
+    If your custom domain doesn't connect to your application:
+    
+    **Possible Causes:**
+    - Incorrect DNS configuration
+    - Domain verification pending
+    - DNS propagation delay
+    
+    **Solutions:**
+    1. Verify your DNS records match the ones provided in the dashboard
+    2. Check domain verification status in the dashboard
+    3. Allow up to 24-48 hours for DNS propagation
+    4. Test your DNS configuration using a tool like [DNSChecker](https://dnschecker.org)
+  </Accordion>
+  <Accordion title="Mixed Content Warnings">
+    If your site shows mixed content warnings:
+    
+    **Possible Causes:**
+    - Resources loaded over HTTP instead of HTTPS
+    - Hardcoded URLs in application code
+    
+    **Solutions:**
+    1. Update your application to use relative URLs or HTTPS URLs
+    2. Configure proper HTTP to HTTPS redirects
+    3. Check for hardcoded HTTP URLs in your application settings
+  </Accordion>
+</AccordionGroup>
+
+## Accessing and Understanding Logs
+
+Logs are a crucial tool for troubleshooting. RepoCloud provides access to application logs through the dashboard:
+
+<Steps>
+  <Step title="Navigate to Instance Management">
+    Go to your application's management page
+  </Step>
+  <Step title="Access Logs Tab">
+    Click on the "Logs" tab
+  </Step>
+  <Step title="View Application Logs">
+    Browse the logs for error messages, warnings, or other relevant information
+  </Step>
+  <Step title="Filter Logs (Optional)">
+    Use the search and filter options to find specific information in the logs
+  </Step>
+</Steps>
+
+<Tip>
+  Look for error messages that include terms like "Error", "Exception", "Failed", or "Fatal" in the logs. These often provide valuable clues about what's going wrong.
+</Tip>
+
+## Contact Support
+
+If you've tried the troubleshooting steps and still can't resolve your issue, don't hesitate to contact RepoCloud support:
+
+- **Email**: [team@repocloud.io](mailto:team@repocloud.io)
+- **Contact Form**: [https://repocloud.io/contact](https://repocloud.io/contact)
+
+When contacting support, please include:
+
+1. Your account information
+2. The application name and URL
+3. A detailed description of the issue
+4. Steps you've taken to troubleshoot
+5. Any relevant error messages or screenshots
+6. When the issue started occurring
+
+## Platform Status
+
+Check the RepoCloud status page to see if there are any ongoing platform issues or maintenance that might be affecting your applications:
+
+[https://status.repocloud.io](https://status.repocloud.io)
+
+## Application-Specific Troubleshooting
+
+Different applications have their own common issues and troubleshooting approaches. Here are some application-specific resources:
+
+<CardGroup cols={2}>
+  <Card title="WordPress Troubleshooting" icon="wordpress">
+    [WordPress Support](https://wordpress.org/support/)
+  </Card>
+  <Card title="MySQL Troubleshooting" icon="database">
+    [MySQL Documentation](https://dev.mysql.com/doc/refman/8.0/en/troubleshooting.html)
+  </Card>
+  <Card title="Node.js Troubleshooting" icon="node">
+    [Node.js Debugging Guide](https://nodejs.org/en/docs/guides/debugging-getting-started)
+  </Card>
+  <Card title="Nginx Troubleshooting" icon="server">
+    [Nginx Debugging](https://docs.nginx.com/nginx/admin-guide/monitoring/debugging/)
+  </Card>
+</CardGroup>
+
+## Preventative Measures
+
+Prevent issues before they happen with these best practices:
+
+1. **Regular Backups**: Ensure you have recent backups of critical data
+2. **Monitoring**: Regularly check your application's health and performance
+3. **Updates**: Keep your application updated with the latest version
+4. **Resource Planning**: Monitor usage and scale before you hit resource limits
+5. **Documentation**: Maintain documentation about your application's configuration and customizations 
