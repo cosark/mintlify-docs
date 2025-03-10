@@ -96,6 +96,15 @@
             ]
           },
           {
+            "group": "Partner Resources",
+            "pages": [
+              "resources/partner-faq",
+              "resources/app-documentation-guidelines",
+              "resources/api-reference",
+              "resources/partner-marketing"
+            ]
+          },
+          {
             "group": "Legal",
             "pages": [
               "resources/privacy-policy",
