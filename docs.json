@@ -24,7 +24,8 @@
             "group": "Platform Overview",
             "pages": [
               "platform/how-it-works",
-              "platform/technical-details"
+              "platform/technical-details",
+              "platform/supported-apps"
             ]
           }
         ]
