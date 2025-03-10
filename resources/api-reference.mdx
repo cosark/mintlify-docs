@@ -1,0 +1,269 @@
+---
+title: 'Integration API Reference'
+description: 'Technical specification for integrating your application with RepoCloud'
+---
+
+# RepoCloud Integration API Reference
+
+## Overview
+
+This reference guide provides detailed technical information for developers who want to integrate their applications with the RepoCloud platform. RepoCloud offers several integration methods, with API integration being one of the options for applications that are hosted externally.
+
+## Authentication
+
+### API Keys
+
+All requests to the RepoCloud API must include an API key for authentication.
+
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+To obtain an API key:
+
+1. Register as a RepoCloud partner at [partners.repocloud.io](https://partners.repocloud.io)
+2. Navigate to your account dashboard
+3. Select "API Integrations"
+4. Generate a new API key
+
+<Warning>
+  API keys provide full access to your partner account. Never share your API key or commit it to version control systems.
+</Warning>
+
+### Rate Limiting
+
+The RepoCloud API implements rate limiting to ensure platform stability:
+
+- **Standard tier**: 100 requests per minute
+- **Enterprise tier**: 1000 requests per minute
+
+Rate limit headers are included in all API responses:
+
+```
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 95
+X-RateLimit-Reset: 1612774486
+```
+
+## Application Integration Endpoints
+
+### Register Application
+
+Registers your application with RepoCloud for deployment.
+
+**Endpoint**: `POST /api/v1/applications`
+
+**Request Body**:
+
+```json
+{
+  "name": "Your Application Name",
+  "description": "Short description of your application",
+  "version": "1.0.0",
+  "repository_url": "https://github.com/your-org/your-repo",
+  "documentation_url": "https://docs.yourapplication.com",
+  "integration_type": "api", // One of: "docker", "helm", "api"
+  "api_endpoints": {
+    "authentication": "https://api.yourapplication.com/auth",
+    "provisioning": "https://api.yourapplication.com/provision",
+    "management": "https://api.yourapplication.com/manage"
+  },
+  "webhook_handlers": {
+    "user_creation": "https://api.yourapplication.com/webhooks/user-created",
+    "user_deletion": "https://api.yourapplication.com/webhooks/user-deleted"
+  },
+  "resource_requirements": {
+    "minimum_ram_mb": 1024,
+    "minimum_cpu_cores": 1,
+    "minimum_storage_gb": 10
+  }
+}
+```
+
+**Response (200 OK)**:
+
+```json
+{
+  "application_id": "app_12345678",
+  "status": "pending_review",
+  "created_at": "2023-07-01T12:00:00Z"
+}
+```
+
+### Update Application
+
+Updates an existing application registration.
+
+**Endpoint**: `PUT /api/v1/applications/{application_id}`
+
+**Path Parameters**:
+- `application_id`: ID of the application to update
+
+**Request Body**: Same as Register Application, with updated fields
+
+**Response (200 OK)**:
+
+```json
+{
+  "application_id": "app_12345678",
+  "status": "pending_review",
+  "updated_at": "2023-07-02T12:00:00Z"
+}
+```
+
+### Submit Version
+
+Submits a new version of your application.
+
+**Endpoint**: `POST /api/v1/applications/{application_id}/versions`
+
+**Path Parameters**:
+- `application_id`: ID of the application
+
+**Request Body**:
+
+```json
+{
+  "version": "1.1.0",
+  "release_notes": "Description of changes in this version",
+  "manifest_url": "https://yourapp.com/manifests/1.1.0/manifest.json"
+}
+```
+
+**Response (200 OK)**:
+
+```json
+{
+  "version_id": "ver_12345678",
+  "status": "pending_review",
+  "created_at": "2023-07-15T12:00:00Z"
+}
+```
+
+## Webhook Integration
+
+RepoCloud sends webhooks to your application to notify you of important events.
+
+### Webhook Format
+
+All webhooks are sent as HTTP POST requests with the following headers:
+
+```
+Content-Type: application/json
+X-RepoCloud-Signature: sha256=<HMAC signature>
+X-RepoCloud-Event: <event_type>
+```
+
+The signature is an HMAC-SHA256 hash of the request body using your webhook secret as the key. You should validate this signature to ensure the webhook is legitimate.
+
+### User Provisioning Webhook
+
+Sent when a new user signs up for your application through RepoCloud.
+
+**Event Type**: `user.created`
+
+**Request Body**:
+
+```json
+{
+  "event": "user.created",
+  "timestamp": "2023-07-20T15:30:00Z",
+  "data": {
+    "user_id": "usr_12345678",
+    "email": "user@example.com",
+    "name": "Example User",
+    "plan": "standard"
+  }
+}
+```
+
+### User Deletion Webhook
+
+Sent when a user removes your application or deletes their RepoCloud account.
+
+**Event Type**: `user.deleted`
+
+**Request Body**:
+
+```json
+{
+  "event": "user.deleted",
+  "timestamp": "2023-07-25T10:15:00Z",
+  "data": {
+    "user_id": "usr_12345678"
+  }
+}
+```
+
+## OAuth Integration
+
+If your application requires user authentication, you can implement OAuth 2.0 for seamless integration with RepoCloud accounts.
+
+### OAuth Flow
+
+1. **Register OAuth Client**: Register your OAuth client in the partner dashboard
+2. **Redirect to Authorization**: Redirect users to RepoCloud's authorization endpoint
+3. **Receive Authorization Code**: User approves access and is redirected back with a code
+4. **Exchange for Access Token**: Exchange the code for an access token
+5. **Use Access Token**: Use the token to make API calls on behalf of the user
+
+### OAuth Endpoints
+
+- **Authorization URL**: `https://auth.repocloud.io/oauth/authorize`
+- **Token URL**: `https://auth.repocloud.io/oauth/token`
+- **User Info URL**: `https://auth.repocloud.io/oauth/userinfo`
+
+### Example Authorization Request
+
+```
+GET https://auth.repocloud.io/oauth/authorize?
+  client_id=YOUR_CLIENT_ID&
+  response_type=code&
+  redirect_uri=https://yourapp.com/callback&
+  scope=profile email&
+  state=random_state_string
+```
+
+### Example Token Exchange
+
+```bash
+POST https://auth.repocloud.io/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code&
+code=AUTHORIZATION_CODE&
+client_id=YOUR_CLIENT_ID&
+client_secret=YOUR_CLIENT_SECRET&
+redirect_uri=https://yourapp.com/callback
+```
+
+## Testing and Debugging
+
+### Sandbox Environment
+
+A sandbox environment is available for testing your integration before going live:
+
+- **API Base URL**: `https://api-sandbox.repocloud.io/`
+- **OAuth Base URL**: `https://auth-sandbox.repocloud.io/`
+
+### Test Accounts
+
+You can create test accounts in the sandbox environment through the partner dashboard. These accounts will not be charged for any usage.
+
+### Webhook Testing
+
+To test webhook delivery, use the "Test Webhooks" feature in the partner dashboard to send example webhooks to your endpoint.
+
+## Best Practices
+
+1. **Implement Idempotency**: Design your webhook handlers to be idempotent to handle potential duplicate deliveries
+2. **Handle Rate Limits**: Implement backoff strategies for handling rate limits
+3. **Secure Storage**: Store API keys and secrets securely, never in client-side code
+4. **Validate Webhooks**: Always validate webhook signatures before processing
+5. **Monitor Errors**: Set up monitoring for API errors and webhook failures
+
+## Support
+
+If you encounter any issues with the API integration, please contact our partner support team at [partners@repocloud.io](mailto:partners@repocloud.io) or refer to our [Partner FAQ](/resources/partner-faq) for more information.
+
+For detailed examples and implementation guides, visit the [RepoCloud Developer Portal](https://developers.repocloud.io). 

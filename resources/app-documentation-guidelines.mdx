@@ -1,0 +1,254 @@
+---
+title: 'App Documentation Guidelines'
+description: 'Guidelines for creating effective documentation for your RepoCloud platform app'
+---
+
+# App Documentation Guidelines
+
+## Overview
+
+High-quality documentation is essential for user adoption and satisfaction with your application. This guide outlines best practices and requirements for documenting applications submitted to the RepoCloud platform marketplace.
+
+<Note>
+  Well-documented applications have higher user satisfaction, fewer support requests, and better overall success rates on our platform.
+</Note>
+
+## Documentation Requirements
+
+Every application submitted to RepoCloud must include comprehensive documentation covering the following areas:
+
+<CardGroup cols={2}>
+  <Card title="Installation Guide" icon="download">
+    Instructions for deploying and configuring your application
+  </Card>
+  <Card title="Feature Documentation" icon="list-check">
+    Detailed explanation of application features and capabilities
+  </Card>
+  <Card title="API Reference" icon="code">
+    Complete API documentation if your application provides APIs
+  </Card>
+  <Card title="Troubleshooting Guide" icon="wrench">
+    Solutions for common issues and error conditions
+  </Card>
+</CardGroup>
+
+## Documentation Format
+
+RepoCloud supports documentation in Markdown format, which should be submitted as part of your application package. Your documentation should follow this structure:
+
+```
+/docs
+  /getting-started
+    installation.md
+    configuration.md
+    quickstart.md
+  /guides
+    feature-a.md
+    feature-b.md
+    migrations.md
+  /api-reference
+    endpoints.md
+    authentication.md
+  /troubleshooting
+    common-issues.md
+    faq.md
+  README.md
+```
+
+<Tip>
+  We recommend using [Mintlify](https://mintlify.com) for documentation, as it provides a beautiful format that's compatible with RepoCloud's documentation system.
+</Tip>
+
+## Core Documentation Components
+
+### README.md
+
+The README.md file serves as the landing page for your application documentation and should include:
+
+1. **Application Overview**: Brief description of your application
+2. **Key Features**: List of main features and capabilities
+3. **Requirements**: System/resource requirements
+4. **Quick Start**: Basic steps to get started
+5. **License Information**: License details and any usage restrictions
+
+### Installation Guide
+
+Your installation guide should include:
+
+<Steps>
+  <Step title="Prerequisites">
+    Required dependencies, environment considerations, and resource requirements
+  </Step>
+  <Step title="Installation Steps">
+    Clear, step-by-step instructions for deploying the application on RepoCloud
+  </Step>
+  <Step title="Configuration">
+    Explanation of configuration options and environment variables
+  </Step>
+  <Step title="Verification">
+    Steps to verify successful installation and troubleshoot common installation issues
+  </Step>
+</Steps>
+
+### Feature Documentation
+
+For each major feature of your application, provide:
+
+1. **Feature Overview**: What the feature does and its purpose
+2. **Usage Instructions**: How to use the feature
+3. **Configuration Options**: How to customize the feature
+4. **Examples**: Real-world examples showing the feature in action
+5. **Limitations**: Any known limitations or constraints
+
+### API Reference
+
+If your application provides APIs, include:
+
+<AccordionGroup>
+  <Accordion title="Authentication">
+    Detailed explanation of authentication methods, token management, and security considerations.
+  </Accordion>
+  <Accordion title="Endpoints">
+    For each endpoint provide:
+    - HTTP method and URL
+    - Request parameters
+    - Request body format
+    - Response format
+    - Status codes and error handling
+    - Rate limits (if applicable)
+  </Accordion>
+  <Accordion title="Examples">
+    Code examples in multiple languages showing how to use the API.
+  </Accordion>
+  <Accordion title="SDKs">
+    Information about any client libraries or SDKs available for your API.
+  </Accordion>
+</AccordionGroup>
+
+### Troubleshooting Guide
+
+Your troubleshooting guide should include:
+
+1. **Common Issues**: List of frequently encountered problems
+2. **Diagnostic Steps**: Methods to diagnose issues
+3. **Solutions**: Step-by-step resolution procedures
+4. **Support Resources**: How to contact support or access additional help
+5. **FAQ**: Answers to frequently asked questions
+
+## Documentation Best Practices
+
+### Writing Style
+
+<CardGroup cols={2}>
+  <Card title="Be Clear and Concise" icon="pen">
+    Use simple, direct language and avoid unnecessary jargon
+  </Card>
+  <Card title="Use Active Voice" icon="comment">
+    Write in active voice for clarity ("Click the button" vs. "The button should be clicked")
+  </Card>
+  <Card title="Be Consistent" icon="arrows-repeat">
+    Use consistent terminology, formatting, and organization throughout
+  </Card>
+  <Card title="Assume Minimal Knowledge" icon="user">
+    Don't assume advanced knowledge; explain concepts or link to explanations
+  </Card>
+</CardGroup>
+
+### Visual Elements
+
+High-quality documentation should include:
+
+- **Screenshots**: Include annotated screenshots showing interface elements
+- **Diagrams**: Provide architecture diagrams, workflows, and process flows
+- **Code Blocks**: Use formatted code blocks with syntax highlighting
+- **Tables**: Use tables to organize structured information
+- **Callouts**: Highlight important notes, tips, warnings, and cautions
+
+<Tip>
+  When including screenshots, focus on relevant UI elements and consider using annotations to highlight important areas.
+</Tip>
+
+### Navigation
+
+Make your documentation easy to navigate:
+
+1. **Logical Organization**: Group related content together
+2. **Consistent Structure**: Use consistent headings and section ordering
+3. **Table of Contents**: Include a table of contents for longer documents
+4. **Cross-References**: Link to related sections and external resources
+5. **Search Optimization**: Use descriptive headings and include common search terms
+
+## Submission Process
+
+When submitting your application, include documentation in the following ways:
+
+<Steps>
+  <Step title="Include Docs Directory">
+    Include a `/docs` directory in your application repository with all documentation files
+  </Step>
+  <Step title="Provide README">
+    Include a comprehensive README.md in the root of your repository
+  </Step>
+  <Step title="Submit Documentation URL">
+    If you host documentation externally, provide the URL in your submission
+  </Step>
+  <Step title="Include Screenshots">
+    Upload high-quality screenshots showing your application's interface
+  </Step>
+</Steps>
+
+## Documentation Review Criteria
+
+During the review process, your documentation will be evaluated based on:
+
+1. **Completeness**: Coverage of all features, APIs, and configuration options
+2. **Clarity**: Clear explanations with appropriate examples
+3. **Accuracy**: Technical accuracy and currency of information
+4. **Organization**: Logical structure and ease of navigation
+5. **Visual Elements**: Effective use of screenshots, diagrams, and formatting
+
+<Warning>
+  Applications with incomplete or inadequate documentation may be rejected or delayed in the review process.
+</Warning>
+
+## Documentation Maintenance
+
+Once your application is approved:
+
+1. **Keep Documentation Current**: Update documentation when you release new features or changes
+2. **Version Documentation**: Clearly indicate which documentation applies to which version
+3. **Address Feedback**: Update documentation based on user feedback and common support issues
+4. **Announce Changes**: Include documentation updates in your release notes
+
+## Documentation Examples
+
+For inspiration, we recommend reviewing these well-documented applications on the RepoCloud platform:
+
+<CardGroup>
+  <Card title="Coolify" icon="snowflake" href="/platforms/coolify">
+    Example of comprehensive platform application documentation
+  </Card>
+  <Card title="Dokploy" icon="docker" href="/platforms/dokploy">
+    Example of well-structured technical documentation
+  </Card>
+</CardGroup>
+
+## Additional Resources
+
+<CardGroup>
+  <Card title="Markdown Guide" icon="markdown" href="https://www.markdownguide.org/">
+    Learn how to format your documentation using Markdown
+  </Card>
+  <Card title="Technical Writing Guide" icon="pen-to-square" href="https://developers.google.com/tech-writing">
+    Google's technical writing guidelines
+  </Card>
+  <Card title="Mintlify Documentation" icon="book" href="https://mintlify.com/docs/introduction">
+    Learn how to use Mintlify for beautiful documentation
+  </Card>
+</CardGroup>
+
+## Need Help?
+
+If you have questions about documenting your application, please contact our partner support team at [partners@repocloud.io](mailto:partners@repocloud.io).
+
+We also offer documentation review services to help ensure your documentation meets our standards before submission. 
