@@ -24,8 +24,7 @@
             "group": "Platform Overview",
             "pages": [
               "platform/how-it-works",
-              "platform/technical-details",
-              "platform/supported-apps"
+              "platform/technical-details"
             ]
           }
         ]
@@ -90,7 +89,7 @@
         "tab": "Resources",
         "groups": [
           {
-            "group": "Program",
+            "group": "Programs",
             "pages": [
               "resources/affiliate-program",
               "resources/submit-app"
