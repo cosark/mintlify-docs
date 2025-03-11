@@ -31,12 +31,12 @@
         ]
       },
       {
-        "tab": "User-Guide",
+        "tab": "user-guide",
         "groups": [
           {
             "group": "User Guide",
             "pages": [
-              "userguide",
+              "user-guide/introduction",
               "user-guide/deployment-basics",
               "user-guide/one-click-deployment",
               "user-guide/managing-instances",
@@ -50,7 +50,7 @@
         ]
       },
       {
-        "tab": "Platforms",
+        "tab": "Platform Apps",
         "groups": [
           {
             "group": "Advanced Control",
@@ -63,12 +63,12 @@
         ]
       },
       {
-        "tab": "Pricing",
+        "tab": "pricing",
         "groups": [
           {
             "group": "Pricing Plans",
             "pages": [
-              "pricing",
+              "pricing/introduction",
               "pricing/overview",
               "pricing/tiers",
               "pricing/comparison",
@@ -79,12 +79,12 @@
         ]
       },
       {
-        "tab": "Resources",
+        "tab": "resources",
         "groups": [
           {
             "group": "Resource Center",
             "pages": [
-              "resources",
+              "resources/introduction",
               "resources/affiliate-program",
               "resources/submit-app",
               "resources/partner-faq",
