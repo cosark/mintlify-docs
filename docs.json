@@ -31,8 +31,14 @@
         ]
       },
       {
-        "tab": "User-Guide",
+        "tab": "User Guide",
         "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "user-guide/introduction"
+            ]
+          },
           {
             "group": "Deployments",
             "pages": [
@@ -67,8 +73,14 @@
         ]
       },
       {
-        "tab": "Pricing",
+        "tab": "Pricing Plans",
         "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "pricing/introduction"
+            ]
+          },
           {
             "group": "Pricing",
             "pages": [
@@ -87,8 +99,14 @@
         ]
       },
       {
-        "tab": "Resources",
+        "tab": "Resource Center",
         "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "resources/introduction"
+            ]
+          },
           {
             "group": "Programs",
             "pages": [
