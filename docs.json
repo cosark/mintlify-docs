@@ -82,19 +82,19 @@
     },
     {
       "name": "User Guide",
-      "url": "user-guide/introduction"
+      "url": "user-guide"
     },
     {
       "name": "Platform Apps",
-      "url": "platforms/introduction"
+      "url": "platforms"
     },
     {
       "name": "Pricing Plans",
-      "url": "pricing/introduction"
+      "url": "pricing"
     },
     {
       "name": "Resource Center", 
-      "url": "resources/introduction"
+      "url": "resources"
     }
   ],
   "anchors": [
