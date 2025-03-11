@@ -10,7 +10,7 @@
   "favicon": "/favicon.svg",
   "navigation": [
     {
-      "group": "Introduction",
+      "group": "Getting Started",
       "pages": [
         "introduction",
         "quickstart"
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "group": "Platforms",
+      "group": "Platform Apps",
       "pages": [
         "platforms/introduction",
         "platforms/coolify",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "group": "Pricing",
+      "group": "Pricing Plans",
       "pages": [
         "pricing/introduction",
         "pricing/overview",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "group": "Resources",
+      "group": "Resource Center",
       "pages": [
         "resources/introduction",
         "resources/affiliate-program",
@@ -79,19 +79,19 @@
     },
     {
       "name": "User Guide",
-      "url": "user-guide/introduction"
+      "url": "user-guide"
     },
     {
       "name": "Platform Apps",
-      "url": "platforms/introduction"
+      "url": "platforms"
     },
     {
       "name": "Pricing Plans",
-      "url": "pricing/introduction"
+      "url": "pricing"
     },
     {
       "name": "Resource Center", 
-      "url": "resources/introduction"
+      "url": "resources"
     }
   ],
   "anchors": [
