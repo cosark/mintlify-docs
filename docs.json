@@ -8,6 +8,9 @@
     "dark": "#0665A3"
   },
   "favicon": "/favicon.svg",
+  "primaryTab": {
+    "name": "Getting Started"
+  },
   "navigation": [
     {
       "group": "Getting Started",
@@ -19,7 +22,7 @@
     {
       "group": "User Guide",
       "pages": [
-        "user-guide",
+        "user-guide/introduction",
         "user-guide/deployment-basics",
         "user-guide/one-click-deployment",
         "user-guide/managing-instances",
@@ -33,7 +36,7 @@
     {
       "group": "Platform Apps",
       "pages": [
-        "platforms",
+        "platforms/introduction",
         "platforms/coolify",
         "platforms/dokploy"
       ]
@@ -41,7 +44,7 @@
     {
       "group": "Pricing Plans",
       "pages": [
-        "pricing",
+        "pricing/introduction",
         "pricing/overview",
         "pricing/tiers",
         "pricing/comparison",
@@ -52,7 +55,7 @@
     {
       "group": "Resource Center",
       "pages": [
-        "resources",
+        "resources/introduction",
         "resources/affiliate-program",
         "resources/submit-app",
         "resources/partner-faq",
@@ -64,32 +67,22 @@
       ]
     }
   ],
-  "topAnchor": {
-    "name": "Getting Started"
-  },
   "tabs": [
     {
-      "name": "Getting Started"
-    },
-    {
       "name": "User Guide",
-      "url": "user-guide",
-      "path": "user-guide"
+      "url": "user-guide"
     },
     {
       "name": "Platform Apps",
-      "url": "platforms",
-      "path": "platforms"
+      "url": "platforms"
     },
     {
       "name": "Pricing Plans",
-      "url": "pricing",
-      "path": "pricing"
+      "url": "pricing"
     },
     {
-      "name": "Resource Center",
-      "url": "resources",
-      "path": "resources"
+      "name": "Resource Center", 
+      "url": "resources"
     }
   ],
   "anchors": [
