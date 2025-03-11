@@ -10,7 +10,7 @@
   "favicon": "/favicon.svg",
   "navigation": [
     {
-      "group": "Introduction",
+      "group": "Getting Started Guide",
       "pages": [
         "introduction",
         "quickstart"
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "group": "User Guide",
+      "group": "User Guide Contents",
       "pages": [
         "user-guide/introduction",
         "user-guide/deployment-basics",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "group": "Platform Apps",
+      "group": "Platform Apps Contents",
       "pages": [
         "platforms/introduction",
         "platforms/coolify",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "group": "Pricing",
+      "group": "Pricing Information",
       "pages": [
         "pricing/introduction",
         "pricing/overview",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "group": "Resources",
+      "group": "Resource Center Contents",
       "pages": [
         "resources/introduction",
         "resources/affiliate-program",
@@ -90,7 +90,7 @@
       "url": "pricing"
     },
     {
-      "name": "Resource Center",
+      "name": "Resource Center", 
       "url": "resources"
     }
   ],
