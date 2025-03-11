@@ -64,6 +64,34 @@
       ]
     }
   ],
+  "topAnchor": {
+    "name": "Getting Started"
+  },
+  "tabs": [
+    {
+      "name": "Getting Started"
+    },
+    {
+      "name": "User Guide",
+      "url": "user-guide",
+      "path": "user-guide"
+    },
+    {
+      "name": "Platform Apps",
+      "url": "platforms",
+      "path": "platforms"
+    },
+    {
+      "name": "Pricing Plans",
+      "url": "pricing",
+      "path": "pricing"
+    },
+    {
+      "name": "Resource Center",
+      "url": "resources",
+      "path": "resources"
+    }
+  ],
   "anchors": [
     {
       "name": "RepoCloud Home",
