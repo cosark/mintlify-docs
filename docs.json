@@ -34,23 +34,13 @@
         "tab": "User Guide",
         "groups": [
           {
-            "group": "Introduction",
+            "group": "User Guide",
             "pages": [
-              "user-guide/introduction"
-            ]
-          },
-          {
-            "group": "Deployments",
-            "pages": [
+              "userguide",
               "user-guide/deployment-basics",
               "user-guide/one-click-deployment",
               "user-guide/managing-instances",
-              "user-guide/custom-domains"
-            ]
-          },
-          {
-            "group": "Instance Management",
-            "pages": [
+              "user-guide/custom-domains",
               "user-guide/scaling",
               "user-guide/updates",
               "user-guide/environment-variables",
@@ -76,22 +66,12 @@
         "tab": "Pricing Plans",
         "groups": [
           {
-            "group": "Introduction",
+            "group": "Pricing Plans",
             "pages": [
-              "pricing/introduction"
-            ]
-          },
-          {
-            "group": "Pricing",
-            "pages": [
+              "pricing",
               "pricing/overview",
               "pricing/tiers",
-              "pricing/comparison"
-            ]
-          },
-          {
-            "group": "Billing",
-            "pages": [
+              "pricing/comparison",
               "pricing/autoscaling",
               "pricing/additional-resources"
             ]
@@ -102,30 +82,15 @@
         "tab": "Resource Center",
         "groups": [
           {
-            "group": "Introduction",
+            "group": "Resource Center",
             "pages": [
-              "resources/introduction"
-            ]
-          },
-          {
-            "group": "Programs",
-            "pages": [
+              "resources",
               "resources/affiliate-program",
-              "resources/submit-app"
-            ]
-          },
-          {
-            "group": "Partner Resources",
-            "pages": [
+              "resources/submit-app",
               "resources/partner-faq",
               "resources/app-documentation-guidelines",
               "resources/api-reference",
-              "resources/partner-marketing"
-            ]
-          },
-          {
-            "group": "Legal",
-            "pages": [
+              "resources/partner-marketing",
               "resources/privacy-policy",
               "resources/terms-conditions"
             ]
