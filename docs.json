@@ -32,23 +32,24 @@
       },
       {
         "tab": "User Guide",
+        "path": "/user-guide",
         "groups": [
           {
             "group": "Deployments",
             "pages": [
-              "user-guide/deployment-basics",
-              "user-guide/one-click-deployment",
-              "user-guide/managing-instances",
-              "user-guide/custom-domains"
+              "/user-guide/deployment-basics",
+              "/user-guide/one-click-deployment",
+              "/user-guide/managing-instances",
+              "/user-guide/custom-domains"
             ]
           },
           {
             "group": "Instance Management",
             "pages": [
-              "user-guide/scaling",
-              "user-guide/updates",
-              "user-guide/environment-variables",
-              "user-guide/troubleshooting"
+              "/user-guide/scaling",
+              "/user-guide/updates",
+              "/user-guide/environment-variables",
+              "/user-guide/troubleshooting"
             ]
           }
         ]
@@ -68,48 +69,50 @@
       },
       {
         "tab": "Pricing & Billing",
+        "path": "/pricing",
         "groups": [
           {
             "group": "Pricing",
             "pages": [
-              "pricing/overview",
-              "pricing/tiers",
-              "pricing/comparison"
+              "/pricing/overview",
+              "/pricing/tiers",
+              "/pricing/comparison"
             ]
           },
           {
             "group": "Billing",
             "pages": [
-              "pricing/autoscaling",
-              "pricing/additional-resources"
+              "/pricing/autoscaling",
+              "/pricing/additional-resources"
             ]
           }
         ]
       },
       {
         "tab": "Resources",
+        "path": "/resources",
         "groups": [
           {
             "group": "Programs",
             "pages": [
-              "resources/affiliate-program",
-              "resources/submit-app"
+              "/resources/affiliate-program",
+              "/resources/submit-app"
             ]
           },
           {
             "group": "Partner Resources",
             "pages": [
-              "resources/partner-faq",
-              "resources/app-documentation-guidelines",
-              "resources/api-reference",
-              "resources/partner-marketing"
+              "/resources/partner-faq",
+              "/resources/app-documentation-guidelines",
+              "/resources/api-reference",
+              "/resources/partner-marketing"
             ]
           },
           {
             "group": "Legal",
             "pages": [
-              "resources/privacy-policy",
-              "resources/terms-conditions"
+              "/resources/privacy-policy",
+              "/resources/terms-conditions"
             ]
           }
         ]
