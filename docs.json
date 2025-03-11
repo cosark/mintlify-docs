@@ -31,7 +31,7 @@
         ]
       },
       {
-        "tab": "User Guide",
+        "tab": "User-Guide",
         "groups": [
           {
             "group": "Deployments",
@@ -67,7 +67,7 @@
         ]
       },
       {
-        "tab": "Pricing Plans",
+        "tab": "Pricing",
         "groups": [
           {
             "group": "Pricing",
@@ -87,7 +87,7 @@
         ]
       },
       {
-        "tab": "Resource Center",
+        "tab": "Resources",
         "groups": [
           {
             "group": "Programs",
