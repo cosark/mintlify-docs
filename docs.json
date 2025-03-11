@@ -12,7 +12,6 @@
     "tabs": [
       {
         "tab": "Getting Started",
-        "url": "introduction",
         "groups": [
           {
             "group": "Introduction",
@@ -32,8 +31,7 @@
         ]
       },
       {
-        "tab": "User Guide",
-        "url": "user-guide/deployment-basics",
+        "tab": "Usage Guide",
         "groups": [
           {
             "group": "Deployments",
@@ -57,7 +55,6 @@
       },
       {
         "tab": "Platform Apps",
-        "url": "platforms/introduction",
         "groups": [
           {
             "group": "Advanced Control",
@@ -70,8 +67,7 @@
         ]
       },
       {
-        "tab": "Pricing & Billing",
-        "url": "pricing/overview",
+        "tab": "Pricing Plans",
         "groups": [
           {
             "group": "Pricing",
@@ -91,8 +87,7 @@
         ]
       },
       {
-        "tab": "Resources",
-        "url": "resources/affiliate-program",
+        "tab": "Resource Center",
         "groups": [
           {
             "group": "Programs",
