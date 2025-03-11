@@ -19,7 +19,7 @@
     {
       "group": "User Guide",
       "pages": [
-        "user-guide/introduction",
+        "user-guide",
         "user-guide/deployment-basics",
         "user-guide/one-click-deployment",
         "user-guide/managing-instances",
@@ -33,7 +33,7 @@
     {
       "group": "Platform Apps",
       "pages": [
-        "platforms/introduction",
+        "platforms",
         "platforms/coolify",
         "platforms/dokploy"
       ]
@@ -41,7 +41,7 @@
     {
       "group": "Pricing Plans",
       "pages": [
-        "pricing/introduction",
+        "pricing",
         "pricing/overview",
         "pricing/tiers",
         "pricing/comparison",
@@ -52,7 +52,7 @@
     {
       "group": "Resource Center",
       "pages": [
-        "resources/introduction",
+        "resources",
         "resources/affiliate-program",
         "resources/submit-app",
         "resources/partner-faq",
