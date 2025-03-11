@@ -8,83 +8,89 @@
     "dark": "#0665A3"
   },
   "favicon": "/favicon.svg",
-  "primaryTab": {
-    "name": "Getting Started"
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Getting Started",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "User Guide",
+        "groups": [
+          {
+            "group": "User Guide",
+            "pages": [
+              "user-guide/introduction",
+              "user-guide/deployment-basics",
+              "user-guide/one-click-deployment",
+              "user-guide/managing-instances",
+              "user-guide/custom-domains",
+              "user-guide/scaling",
+              "user-guide/updates",
+              "user-guide/environment-variables",
+              "user-guide/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Platform Apps",
+        "groups": [
+          {
+            "group": "Platform Apps",
+            "pages": [
+              "platforms/introduction",
+              "platforms/coolify",
+              "platforms/dokploy"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Pricing Plans",
+        "groups": [
+          {
+            "group": "Pricing Plans",
+            "pages": [
+              "pricing/introduction",
+              "pricing/overview",
+              "pricing/tiers",
+              "pricing/comparison",
+              "pricing/autoscaling",
+              "pricing/additional-resources"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resource Center",
+        "groups": [
+          {
+            "group": "Resource Center",
+            "pages": [
+              "resources/introduction",
+              "resources/affiliate-program",
+              "resources/submit-app",
+              "resources/partner-faq",
+              "resources/app-documentation-guidelines",
+              "resources/api-reference",
+              "resources/partner-marketing",
+              "resources/privacy-policy",
+              "resources/terms-conditions"
+            ]
+          }
+        ]
+      }
+    ]
   },
-  "navigation": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "introduction",
-        "quickstart"
-      ]
-    },
-    {
-      "group": "User Guide",
-      "pages": [
-        "user-guide/introduction",
-        "user-guide/deployment-basics",
-        "user-guide/one-click-deployment",
-        "user-guide/managing-instances",
-        "user-guide/custom-domains",
-        "user-guide/scaling",
-        "user-guide/updates",
-        "user-guide/environment-variables",
-        "user-guide/troubleshooting"
-      ]
-    },
-    {
-      "group": "Platform Apps",
-      "pages": [
-        "platforms/introduction",
-        "platforms/coolify",
-        "platforms/dokploy"
-      ]
-    },
-    {
-      "group": "Pricing Plans",
-      "pages": [
-        "pricing/introduction",
-        "pricing/overview",
-        "pricing/tiers",
-        "pricing/comparison",
-        "pricing/autoscaling",
-        "pricing/additional-resources"
-      ]
-    },
-    {
-      "group": "Resource Center",
-      "pages": [
-        "resources/introduction",
-        "resources/affiliate-program",
-        "resources/submit-app",
-        "resources/partner-faq",
-        "resources/app-documentation-guidelines",
-        "resources/api-reference",
-        "resources/partner-marketing",
-        "resources/privacy-policy",
-        "resources/terms-conditions"
-      ]
-    }
-  ],
-  "tabs": [
-    {
-      "name": "User Guide",
-      "url": "user-guide"
-    },
-    {
-      "name": "Platform Apps",
-      "url": "platforms"
-    },
-    {
-      "name": "Pricing Plans",
-      "url": "pricing"
-    },
-    {
-      "name": "Resource Center", 
-      "url": "resources"
-    }
-  ],
   "anchors": [
     {
       "name": "RepoCloud Home",
