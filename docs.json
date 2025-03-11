@@ -8,95 +8,109 @@
     "dark": "#0665A3"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Getting Started",
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": [
-              "introduction",
-              "quickstart"
-            ]
-          },
-          {
-            "group": "Platform Overview",
-            "pages": [
-              "platform/how-it-works",
-              "platform/technical-details",
-              "platform/supported-apps"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "User Guide",
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": [
-              "user-guide/introduction"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Platform Apps",
-        "groups": [
-          {
-            "group": "Advanced Control",
-            "pages": [
-              "platforms/introduction",
-              "platforms/coolify",
-              "platforms/dokploy"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Pricing Plans",
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": [
-              "pricing/introduction"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Resource Center",
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": [
-              "resources/introduction"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "RepoCloud Home",
-          "href": "https://repocloud.io",
-          "icon": "house"
-        },
-        {
-          "anchor": "Marketplace",
-          "href": "https://repocloud.io/marketplace",
-          "icon": "store"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://repocloud.io/blog",
-          "icon": "newspaper"
-        }
+  "navigation": [
+    {
+      "group": "Introduction",
+      "pages": [
+        "introduction",
+        "quickstart"
+      ]
+    },
+    {
+      "group": "Platform Overview",
+      "pages": [
+        "platform/how-it-works",
+        "platform/technical-details",
+        "platform/supported-apps"
+      ]
+    },
+    {
+      "group": "User Guide",
+      "pages": [
+        "user-guide/introduction",
+        "user-guide/deployment-basics",
+        "user-guide/one-click-deployment",
+        "user-guide/managing-instances",
+        "user-guide/custom-domains",
+        "user-guide/scaling",
+        "user-guide/updates",
+        "user-guide/environment-variables",
+        "user-guide/troubleshooting"
+      ]
+    },
+    {
+      "group": "Platform Apps",
+      "pages": [
+        "platforms/introduction",
+        "platforms/coolify",
+        "platforms/dokploy"
+      ]
+    },
+    {
+      "group": "Pricing",
+      "pages": [
+        "pricing/introduction",
+        "pricing/overview",
+        "pricing/tiers",
+        "pricing/comparison",
+        "pricing/autoscaling",
+        "pricing/additional-resources"
+      ]
+    },
+    {
+      "group": "Resources",
+      "pages": [
+        "resources/introduction",
+        "resources/affiliate-program",
+        "resources/submit-app",
+        "resources/partner-faq",
+        "resources/app-documentation-guidelines",
+        "resources/api-reference",
+        "resources/partner-marketing",
+        "resources/privacy-policy",
+        "resources/terms-conditions"
       ]
     }
-  },
+  ],
+  "tabs": [
+    {
+      "name": "Getting Started",
+      "url": "introduction"
+    },
+    {
+      "name": "User Guide",
+      "url": "user-guide"
+    },
+    {
+      "name": "Platform Apps",
+      "url": "platforms"
+    },
+    {
+      "name": "Pricing Plans",
+      "url": "pricing"
+    },
+    {
+      "name": "Resource Center",
+      "url": "resources"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "RepoCloud Home",
+      "icon": "house",
+      "url": "https://repocloud.io"
+    },
+    {
+      "name": "Marketplace",
+      "icon": "store",
+      "url": "https://repocloud.io/marketplace"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://repocloud.io/blog"
+    }
+  ],
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
