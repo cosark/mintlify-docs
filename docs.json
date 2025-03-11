@@ -31,7 +31,7 @@
         ]
       },
       {
-        "tab": "User Guide",
+        "tab": "User-Guide",
         "groups": [
           {
             "group": "User Guide",
@@ -50,7 +50,7 @@
         ]
       },
       {
-        "tab": "Platform Apps",
+        "tab": "Platforms",
         "groups": [
           {
             "group": "Advanced Control",
@@ -63,7 +63,7 @@
         ]
       },
       {
-        "tab": "Pricing Plans",
+        "tab": "Pricing",
         "groups": [
           {
             "group": "Pricing Plans",
@@ -79,7 +79,7 @@
         ]
       },
       {
-        "tab": "Resource Center",
+        "tab": "Resources",
         "groups": [
           {
             "group": "Resource Center",
