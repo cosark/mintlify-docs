@@ -19,7 +19,6 @@
               "introduction",
               "quickstart",
               "development",
-              "user-guide",
               "platform/how-it-works",
               "platform/technical-details",
               "platform/supported-apps",
@@ -103,7 +102,8 @@
   "footer": {
     "socials": {
       "twitter": "https://twitter.com/repocloudio",
-      "github": "https://github.com/repocloud"
+      "github": "https://github.com/repocloud",
+      "linkedin": "https://linkedin.com/company/repocloud"
     }
   }
 }
