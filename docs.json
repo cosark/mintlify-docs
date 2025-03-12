@@ -11,8 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "name": "Marketplace Overview",
-        "url": "introduction",
+        "tab": "Marketplace Overview",
         "groups": [
           {
             "group": "Marketplace Overview",
@@ -53,8 +52,7 @@
         ]
       },
       {
-        "name": "Platform Apps",
-        "url": "platforms/introduction",
+        "tab": "Platform Apps",
         "groups": [
           {
             "group": "Platform Apps",
