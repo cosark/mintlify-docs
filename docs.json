@@ -11,17 +11,24 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Marketplace Overview",
+        "tab": "Getting Started",
         "groups": [
           {
-            "group": "Marketplace Overview",
+            "group": "Getting Started",
             "pages": [
               "introduction",
               "quickstart",
-              "development",
-              "platform/how-it-works",
-              "platform/technical-details",
-              "platform/supported-apps",
+              "development"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "User Guide",
+        "groups": [
+          {
+            "group": "User Guide",
+            "pages": [
               "user-guide/introduction",
               "user-guide/deployment-basics",
               "user-guide/one-click-deployment",
@@ -30,22 +37,7 @@
               "user-guide/scaling",
               "user-guide/updates",
               "user-guide/environment-variables",
-              "user-guide/troubleshooting",
-              "pricing/introduction",
-              "pricing/overview",
-              "pricing/tiers",
-              "pricing/comparison",
-              "pricing/autoscaling",
-              "pricing/additional-resources",
-              "resources/introduction",
-              "resources/affiliate-program",
-              "resources/submit-app",
-              "resources/partner-faq",
-              "resources/app-documentation-guidelines",
-              "resources/api-reference",
-              "resources/partner-marketing",
-              "resources/privacy-policy",
-              "resources/terms-conditions"
+              "user-guide/troubleshooting"
             ]
           }
         ]
@@ -57,8 +49,46 @@
             "group": "Platform Apps",
             "pages": [
               "platforms/introduction",
+              "platform/how-it-works",
+              "platform/technical-details",
+              "platform/supported-apps",
               "platforms/coolify",
               "platforms/dokploy"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Pricing Plans",
+        "groups": [
+          {
+            "group": "Pricing Plans",
+            "pages": [
+              "pricing/introduction",
+              "pricing/overview",
+              "pricing/tiers",
+              "pricing/comparison",
+              "pricing/autoscaling",
+              "pricing/additional-resources"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resource Center",
+        "groups": [
+          {
+            "group": "Resource Center",
+            "pages": [
+              "resources/introduction",
+              "resources/affiliate-program",
+              "resources/submit-app",
+              "resources/partner-faq",
+              "resources/app-documentation-guidelines",
+              "resources/api-reference",
+              "resources/partner-marketing",
+              "resources/privacy-policy",
+              "resources/terms-conditions"
             ]
           }
         ]
