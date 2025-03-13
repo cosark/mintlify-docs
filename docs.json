@@ -82,13 +82,7 @@
             "pages": [
               "resources/introduction",
               "resources/affiliate-program",
-              "resources/submit-app",
-              "resources/partner-faq",
-              "resources/app-documentation-guidelines",
-              "resources/api-reference",
-              "resources/partner-marketing",
-              "resources/privacy-policy",
-              "resources/terms-conditions"
+              "resources/submit-app"
             ]
           }
         ]
