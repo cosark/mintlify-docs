@@ -93,12 +93,12 @@
     {
       "name": "RepoCloud Home",
       "icon": "house",
-      "url": "https://repocloud.io"
+      "href": "https://repocloud.io"
     },
     {
       "name": "Marketplace",
       "icon": "store",
-      "url": "https://repocloud.io/results"
+      "href": "https://repocloud.io/results"
     }
   ],
   "logo": {
