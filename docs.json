@@ -20,7 +20,8 @@
             "group": "Getting Started",
             "pages": [
               "introduction",
-              "quickstart"
+              "quickstart",
+              "platform/technical-details"
             ]
           }
         ]
@@ -52,7 +53,6 @@
             "pages": [
               "platforms/introduction",
               "platform/how-it-works",
-              "platform/technical-details",
               "platforms/coolify",
               "platforms/dokploy"
             ]
