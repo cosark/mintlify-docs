@@ -42,12 +42,12 @@ The instance management dashboard provides a comprehensive view of your deployed
 
 RepoCloud provides several monitoring capabilities:
 
-1. **Resource Usage**: Track CPU, RAM, and storage utilization over time
+1. **Resource Tier Tracking**: For instances using AutoScale, you can track which resource tier your application is using in real time
 2. **Status Checks**: Monitor application health and uptime
 3. **Performance Metrics**: View response times and request handling statistics
 
 <Note>
-  Resource usage monitoring is particularly useful when using autoscaling, as it helps you understand how resources are being allocated and billed.
+  Resource tier tracking is particularly useful when using autoscaling, as it helps you understand how resources are being allocated and billed on an hourly basis.
 </Note>
 
 ### Pausing and Deleting Instances
@@ -66,13 +66,14 @@ You can control the state of your instance from the dashboard:
 
 We recommend the following practices for managing your application data:
 
-1. Regularly export important data from your application 
-2. Store backups externally or download them for safekeeping
-3. Use version control systems for code and configurations
-4. Document your setup for easy recreation if needed
+1. Use the application's built-in backup features if available
+2. Regularly export important data from your application 
+3. Store backups externally or download them for safekeeping
+4. Use version control systems for code and configurations
+5. Document your setup for easy recreation if needed
 
 <Warning>
-  RepoCloud does not currently offer automatic backup and restore functionality. You are responsible for managing your own data backups.
+  RepoCloud does not offer dedicated backup services. Backups are only available if they are a built-in feature of the application itself. You are responsible for managing your own data backups.
 </Warning>
 
 ### Deleting Instances
@@ -95,28 +96,19 @@ When you no longer need an instance:
   Instance deletion is permanent and cannot be undone. All data associated with the instance will be permanently deleted.
 </Warning>
 
-## Application-Specific Management
+## Application Management
 
-Different applications have different management requirements. Here are some common examples:
+Different applications offer different management interfaces within the application itself. You can access these through the application's web interface:
 
 <AccordionGroup>
-  <Accordion title="WordPress Management">
-    - Install security plugins
-    - Set up caching for performance
-    - Regularly update themes and plugins
-    - Implement backup schedules
+  <Accordion title="Content Management Systems">
+    Most CMS platforms like WordPress provide admin dashboards for managing content, users, themes, and plugins.
   </Accordion>
-  <Accordion title="Database Management">
-    - Monitor database performance
-    - Optimize queries and indexes
-    - Set up replication if needed
-    - Implement backup and recovery procedures
+  <Accordion title="Project Management Tools">
+    Tools like Jira and Trello offer configuration options through their web interface for workflow customization.
   </Accordion>
-  <Accordion title="Web Server Management">
-    - Configure caching policies
-    - Set up appropriate redirects
-    - Monitor error rates
-    - Optimize for high traffic
+  <Accordion title="E-commerce Platforms">
+    Platforms like WooCommerce and Magento include store management, product catalog, and order processing interfaces.
   </Accordion>
 </AccordionGroup>
 
