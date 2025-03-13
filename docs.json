@@ -8,6 +8,9 @@
     "dark": "#0665A3"
   },
   "favicon": "/favicon.svg",
+  "modeToggle": {
+    "default": "light"
+  },
   "navigation": {
     "tabs": [
       {
@@ -103,7 +106,7 @@
     {
       "name": "Marketplace",
       "icon": "store",
-      "url": "https://repocloud.io/marketplace"
+      "url": "https://repocloud.io/results"
     },
     {
       "name": "Blog",
@@ -112,8 +115,8 @@
     }
   ],
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "https://repocloud.io/static/bluelogo.png",
+    "dark": "https://repocloud.io/static/bluelogo.png"
   },
   "navbar": {
     "links": [

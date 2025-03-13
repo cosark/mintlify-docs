@@ -50,32 +50,30 @@ RepoCloud provides several monitoring capabilities:
   Resource usage monitoring is particularly useful when using autoscaling, as it helps you understand how resources are being allocated and billed.
 </Note>
 
-### Starting and Stopping Instances
+### Pausing and Deleting Instances
 
 You can control the state of your instance from the dashboard:
 
-- **Start**: Resume a stopped instance
-- **Stop**: Pause an instance (billing continues as resources remain allocated)
-- **Restart**: Quickly restart an application to apply changes
+- **Pause**: Pause an instance (billing continues at 25% of the normal rate)
+- **Resume**: Resume a paused instance to full functionality
+- **Rebuild**: Quickly rebuild an application to apply updates
 
 <Warning>
-  Stopping an instance does not stop billing, as resources remain allocated. To stop billing, you would need to delete the instance.
+  Pausing an instance reduces billing to 25% of the normal rate, as some resources remain allocated. To stop billing completely, you would need to delete the instance.
 </Warning>
 
-### Backup and Restore
+### Data Management
 
-Most applications on RepoCloud have built-in backup and restore functionality:
+We recommend the following practices for managing your application data:
 
-1. Access your application's built-in backup tools through the application interface
-2. Create regular backups of your important data
-3. Store backups externally or download them for safekeeping
-4. Use the application's restore functionality when needed
+1. Regularly export important data from your application 
+2. Store backups externally or download them for safekeeping
+3. Use version control systems for code and configurations
+4. Document your setup for easy recreation if needed
 
-For applications without built-in backup tools, we recommend:
-
-- Regularly exporting important data
-- Using a version control system for code and configurations
-- Documenting your setup for easy recreation if needed
+<Warning>
+  RepoCloud does not currently offer automatic backup and restore functionality. You are responsible for managing your own data backups.
+</Warning>
 
 ### Deleting Instances
 
@@ -96,34 +94,6 @@ When you no longer need an instance:
 <Warning>
   Instance deletion is permanent and cannot be undone. All data associated with the instance will be permanently deleted.
 </Warning>
-
-## Advanced Management Features
-
-### Managing Access
-
-If your application supports user management:
-
-1. Create secure administrator accounts
-2. Set up multi-factor authentication when available
-3. Implement proper role-based access control
-4. Regularly audit user accounts and permissions
-
-### Performance Optimization
-
-Optimize your application's performance by:
-
-- Monitoring resource usage and scaling appropriately
-- Using caching when available in your application
-- Optimizing database queries and indexes
-- Implementing CDN for static content when appropriate
-
-### Automated Management
-
-Some applications support webhook integrations that allow for automated management:
-
-1. Set up webhooks for events like deployments, updates, or scaling
-2. Connect your application to CI/CD pipelines if supported
-3. Implement automated backup schedules
 
 ## Application-Specific Management
 
