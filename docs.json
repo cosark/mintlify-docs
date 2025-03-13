@@ -21,7 +21,8 @@
             "pages": [
               "introduction",
               "quickstart",
-              "platform/technical-details"
+              "platform/technical-details",
+              "platform/how-it-works"
             ]
           }
         ]
@@ -52,7 +53,6 @@
             "group": "Platform Apps",
             "pages": [
               "platforms/introduction",
-              "platform/how-it-works",
               "platforms/coolify",
               "platforms/dokploy"
             ]
