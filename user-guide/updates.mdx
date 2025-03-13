@@ -37,25 +37,22 @@ The primary method for updating your applications on RepoCloud is through the "R
 ### How Rebuilding Works
 
 <Steps>
-  <Step title="Prepare Update">
-    RepoCloud creates a new container with the latest version of your application
+  <Step title="Initiate Rebuild">
+    RepoCloud rebuilds your application's Docker image with the latest version
   </Step>
   <Step title="Preserve Data">
     Your application data stored in persistent volumes is preserved
   </Step>
   <Step title="Apply Configuration">
-    Your custom configurations and environment variables are applied to the new container
+    Your custom configurations and environment variables are maintained
   </Step>
-  <Step title="Switch Containers">
-    Traffic is redirected to the new container, minimizing downtime
-  </Step>
-  <Step title="Cleanup">
-    The old container is removed once the update is confirmed successful
+  <Step title="Restart Application">
+    The application restarts with the updated image
   </Step>
 </Steps>
 
 <Note>
-  The rebuild process typically takes just a few minutes, with only seconds of potential downtime during the final switch.
+  The rebuild process typically takes just a few minutes, with minimal downtime during the restart.
 </Note>
 
 ## Performing an Update
