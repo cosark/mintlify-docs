@@ -102,8 +102,8 @@
     }
   ],
   "logo": {
-    "light": "https://repocloud.io/static/bluelogo.png",
-    "dark": "https://repocloud.io/static/bluelogo.png"
+    "light": "/images/bluelogo.png",
+    "dark": "/images/bluelogo.png"
   },
   "navbar": {
     "links": [
