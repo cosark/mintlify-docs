@@ -104,25 +104,25 @@ RepoCloud's autoscaling works by dynamically adjusting three primary resources:
 
 A blog typically receives most of its traffic during business hours and very little overnight:
 
-- **Fixed Tier Approach**: Would require provisioning for peak traffic (4GB RAM, 2vCPU) at $12/month
+- **Fixed Tier Approach**: Would require provisioning for peak traffic (4GB RAM, 2vCPU) at &dollar;12/month
 - **With Autoscaling**: Average resource usage might be only 1.5GB RAM and 0.8vCPU across 24 hours
-- **Resulting Billing**: Approximately $4.50/month (62.5% savings)
+- **Resulting Billing**: Approximately &dollar;4.50/month (62.5% savings)
 
 ### Example 2: Business Application with Weekend Drop-offs
 
 An internal business application used primarily Monday to Friday:
 
-- **Fixed Tier Approach**: Requires 8GB RAM, 4vCPU at $24/month
+- **Fixed Tier Approach**: Requires 8GB RAM, 4vCPU at &dollar;24/month
 - **With Autoscaling**: Resources scale down by 80% during weekends (28.6% of the month)
-- **Resulting Billing**: Approximately $18.85/month (21.5% savings)
+- **Resulting Billing**: Approximately &dollar;18.85/month (21.5% savings)
 
 ### Example 3: E-commerce with Seasonal Peaks
 
 An e-commerce store with significant traffic during holiday seasons:
 
-- **Fixed Tier Approach**: Would need to provision for peak season (16GB RAM, 8vCPU) at $48/month year-round
+- **Fixed Tier Approach**: Would need to provision for peak season (16GB RAM, 8vCPU) at &dollar;48/month year-round
 - **With Autoscaling**: Resources might average 4GB RAM, 2vCPU during regular periods
-- **Resulting Billing**: Averaged across the year, approximately $18/month (62.5% savings)
+- **Resulting Billing**: Averaged across the year, approximately &dollar;18/month (62.5% savings)
 
 <Tip>
   Applications with highly variable usage patterns typically see the greatest savings from autoscaling, sometimes reaching 70-90% cost reduction compared to fixed-tier pricing.
@@ -197,7 +197,7 @@ With autoscaling enabled, your billing works differently from fixed-tier pricing
 2. **Usage Calculation**: We calculate the average resource usage for each hour
 3. **Hourly Rate**: Each hour is billed based on the resources consumed during that hour
 4. **Monthly Billing**: All hourly charges are aggregated for your monthly bill
-5. **Minimum Charge**: A minimum of $3.00 per month applies to all applications
+5. **Minimum Charge**: A minimum of &dollar;3.00 per month applies to all applications
 
 <Note>
   Billing for autoscaled applications is transparent and predictable. You can view detailed usage reports in your dashboard to understand exactly what you're being charged for.
@@ -208,7 +208,7 @@ With autoscaling enabled, your billing works differently from fixed-tier pricing
 While autoscaling is powerful, there are some limitations to be aware of:
 
 - **Platform Apps**: Autoscaling is not available for [Platform Apps](/platforms/introduction) (Coolify and Dokploy)
-- **Minimum Charge**: All applications have a minimum charge of $3.00 per month
+- **Minimum Charge**: All applications have a minimum charge of &dollar;3.00 per month
 - **Resource Constraints**: Some applications may have minimum resource requirements to function properly
 - **Scaling Delays**: There may be a brief delay (typically seconds) in responding to sudden, extreme spikes in demand
 
