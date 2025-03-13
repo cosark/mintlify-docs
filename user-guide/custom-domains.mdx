@@ -114,6 +114,54 @@ RepoCloud automatically provisions and manages SSL certificates for your custom 
   SSL certificate issuance typically takes a few minutes after DNS verification is complete.
 </Note>
 
+## SSL Certificate Issuance Method
+
+RepoCloud uses the ACME HTTP-01 challenge method for SSL certificate issuance through Let's Encrypt:
+
+### How ACME Challenges Work
+
+<Steps>
+  <Step title="Challenge Initiation">
+    When you add a domain, RepoCloud requests a certificate from Let's Encrypt
+  </Step>
+  <Step title="Verification File Creation">
+    RepoCloud places a unique verification file on your application's server
+  </Step>
+  <Step title="Domain Validation">
+    Let's Encrypt checks for this file at a specific URL on your domain
+  </Step>
+  <Step title="Certificate Issuance">
+    Once validated, Let's Encrypt issues the SSL certificate
+  </Step>
+</Steps>
+
+### Multiple Subdomains on the Same Domain
+
+If you're using multiple subdomains of the same domain (e.g., `app1.yourdomain.com` and `app2.yourdomain.com`) for different RepoCloud applications, there are some important considerations:
+
+<Warning>
+  When using standard DNS providers, each subdomain must resolve to the correct application for the ACME challenge to succeed. This can create complications when you have multiple applications using subdomains of the same root domain.
+</Warning>
+
+### Recommended Solution: Cloudflare
+
+<CardGroup cols={1}>
+  <Card title="Use Cloudflare for Multiple Subdomains" icon="cloud">
+    We strongly recommend using Cloudflare as your DNS provider when hosting multiple applications on different subdomains of the same domain. Cloudflare's proxy functionality helps resolve the ACME challenge validation issues.
+  </Card>
+</CardGroup>
+
+#### Benefits of Using Cloudflare:
+
+- **Proxy Mode**: Cloudflare's proxy capabilities help route ACME challenges correctly
+- **SSL Flexibility**: Better handling of multiple SSL certificates for different subdomains
+- **Performance**: Additional CDN and caching benefits
+- **Security**: Additional protection against DDoS and other attacks
+
+<Tip>
+  To set up Cloudflare for your domain, transfer your nameservers to Cloudflare and enable the proxy setting (orange cloud icon) for each subdomain record.
+</Tip>
+
 ## Managing Multiple Domains
 
 You can add multiple domains to a single application:
