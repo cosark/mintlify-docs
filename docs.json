@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "RepoCloud Documentation",
   "colors": {
-    "primary": "#0A82CC",
-    "light": "#3DB0FF",
-    "dark": "#0665A3"
+    "primary": "#3f00ff",
+    "light": "#8257ff",
+    "dark": "#3200cc"
   },
   "favicon": "/favicon.svg",
   "modeToggle": {
@@ -69,8 +69,7 @@
               "pricing/overview",
               "pricing/tiers",
               "pricing/comparison",
-              "pricing/autoscaling",
-              "pricing/additional-resources"
+              "pricing/autoscaling"
             ]
           }
         ]
