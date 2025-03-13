@@ -89,18 +89,6 @@
       }
     ]
   },
-  "anchors": [
-    {
-      "name": "RepoCloud Home",
-      "icon": "house",
-      "href": "https://repocloud.io"
-    },
-    {
-      "name": "Marketplace",
-      "icon": "store",
-      "href": "https://repocloud.io/results"
-    }
-  ],
   "logo": {
     "light": "/images/bluelogo.png",
     "dark": "/images/bluelogo.png"
@@ -109,7 +97,11 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:team@repocloud.io"
+        "href": "https://repocloud.io/results"
+      },
+      {
+        "label": "Marketplace",
+        "href": "https://repocloud.io/results"
       }
     ],
     "primary": {
